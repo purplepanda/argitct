@@ -49,4 +49,30 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+#one, #two, #three, #four {
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  display: inline-block;
+  margin: 0 -2px; }
+
+#one {
+  background-color: #411428; }
+
+#two {
+  background-color: #4B1932; }
+
+#three {
+  background-color: #55283C; }
+
+#four {
+  background-color: #87234B; }
+
+.forward {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  bottom: 15px;
+  right: 15px; }
+
 /* Web Fonts -------------------- */

@@ -1,3 +1,44 @@
 * {
   @include box-sizing(border-box);
 }
+
+
+
+#one, #two, #three, #four {
+  position: relative;
+  width: 25%;
+  height: 100vh;
+  display: inline-block;
+  margin: 0 -2px;
+}
+
+#one{
+  background-color: $aubergine_dark;
+}
+#two{
+  background-color: $aubergine_medium;
+}
+#three{
+  background-color: $aubergine_light;
+}
+#four{
+  background-color: $magenta;
+}
+
+.forward{
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  bottom: 15px;
+  right: 15px;
+}
+
+.back{
+
+}
+.plus{
+
+}
+.minus{
+
+}
