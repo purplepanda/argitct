@@ -1,0 +1,43 @@
+$iconSize: 10vw;
+
+.minus{
+  position: absolute;
+  top: 5vw;
+  right: 5vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/icon_minus_hover.png) center no-repeat transparent;
+  background-size: contain;
+  &:hover{
+    background: url(../../images/icons/icon_minus.png) center no-repeat transparent;
+    background-size: contain;
+  }
+}
+
+.plus{
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/icon_plus_hover.png) center no-repeat transparent;
+  background-size: contain;
+  &:hover{
+    background: url(../../images/icons/icon_plus.png) center no-repeat transparent;
+    background-size: contain;
+  }
+}
+
+.menu{
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/icon_menu_hover.png) center no-repeat transparent;
+  background-size: contain;
+  &:hover{
+    background: url(../../images/icons/icon_menu.png) center no-repeat transparent;
+    background-size: contain;
+  }
+}

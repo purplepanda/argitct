@@ -49,6 +49,18 @@ table {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  background-color: #411428;
+  width: 100%;
+  height: 100vh;
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 300; }
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #FFFFFF;
+  font-weight: 300; }
+
 #one, #two, #three, #four {
   position: relative;
   width: 25%;
@@ -56,23 +68,39 @@ table {
   display: inline-block;
   margin: 0 -2px; }
 
-#one {
-  background-color: #411428; }
-
-#two {
-  background-color: #4B1932; }
-
-#three {
-  background-color: #55283C; }
-
-#four {
-  background-color: #87234B; }
-
-.forward {
+/* Web Fonts -------------------- */
+.minus {
   position: absolute;
+  top: 5vw;
+  right: 5vw;
   width: 10vw;
   height: 10vw;
-  bottom: 15px;
-  right: 15px; }
+  background: url(../../images/icons/icon_minus_hover.png) center no-repeat transparent;
+  background-size: contain; }
+  .minus:hover {
+    background: url(../../images/icons/icon_minus.png) center no-repeat transparent;
+    background-size: contain; }
 
-/* Web Fonts -------------------- */
+.plus {
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  width: 10vw;
+  height: 10vw;
+  background: url(../../images/icons/icon_plus_hover.png) center no-repeat transparent;
+  background-size: contain; }
+  .plus:hover {
+    background: url(../../images/icons/icon_plus.png) center no-repeat transparent;
+    background-size: contain; }
+
+.menu {
+  position: absolute;
+  top: 5vw;
+  left: 5vw;
+  width: 10vw;
+  height: 10vw;
+  background: url(../../images/icons/icon_menu_hover.png) center no-repeat transparent;
+  background-size: contain; }
+  .menu:hover {
+    background: url(../../images/icons/icon_menu.png) center no-repeat transparent;
+    background-size: contain; }
