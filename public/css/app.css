@@ -61,20 +61,13 @@ h1, h2, h3 {
   color: #FFFFFF;
   font-weight: 300; }
 
-#one, #two, #three, #four {
-  position: relative;
-  width: 25%;
-  height: 100vh;
-  display: inline-block;
-  margin: 0 -2px; }
-
 /* Web Fonts -------------------- */
 .minus {
   position: absolute;
   top: 5vw;
   right: 5vw;
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vw;
   background: url(../../images/icons/icon_minus_hover.png) center no-repeat transparent;
   background-size: contain; }
   .minus:hover {
@@ -85,8 +78,8 @@ h1, h2, h3 {
   position: absolute;
   bottom: 5vw;
   right: 5vw;
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vw;
   background: url(../../images/icons/icon_plus_hover.png) center no-repeat transparent;
   background-size: contain; }
   .plus:hover {
@@ -97,10 +90,45 @@ h1, h2, h3 {
   position: absolute;
   top: 5vw;
   left: 5vw;
-  width: 10vw;
-  height: 10vw;
+  width: 5vw;
+  height: 5vw;
   background: url(../../images/icons/icon_menu_hover.png) center no-repeat transparent;
   background-size: contain; }
   .menu:hover {
     background: url(../../images/icons/icon_menu.png) center no-repeat transparent;
     background-size: contain; }
+
+.nav-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.push-wrap {
+  -webkit-transition: all 300ms ease 0;
+  -moz-transition: all 300ms ease 0;
+  transition: all 300ms ease 0;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.show-nav .push-wrap {
+  -webkit-transform: translate(50vw, 0);
+  -moz-transform: translate(50vw, 0);
+  -ms-transform: translate(50vw, 0);
+  transform: translate(50vw, 0);
+  -webkit-transform: translate3d(50vw, 0, 0);
+  -moz-transform: translate3d(50vw, 0, 0);
+  -ms-transform: translate3d(50vw, 0, 0);
+  transform: translate3d(50vw, 0, 0); }
+
+nav {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0; }
