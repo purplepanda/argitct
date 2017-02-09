@@ -16,7 +16,7 @@ app.controller("projectsCtrl", function($scope, $state) {
       alt: "some alt text"
     }],
     link: "",
-    backgroundColor: "#FF35FF",
+    backgroundColor: "#EDE6E2",
     date: "August 2016"
   }, {
     title: "Project Title Two",
@@ -34,7 +34,7 @@ app.controller("projectsCtrl", function($scope, $state) {
       alt: "some alt text"
     }],
     link: "",
-    backgroundColor: "#FF88FF",
+    backgroundColor: "#D9D6D2",
     date: "May 2014"
   }, {
     title: "Project Title Three",
@@ -52,7 +52,7 @@ app.controller("projectsCtrl", function($scope, $state) {
       alt: "some alt text"
     }],
     link: "",
-    backgroundColor: "#FF55FF",
+    backgroundColor: "#ECEAE7",
     date: "December 2012"
   }, {
     title: "Project Title Four",
@@ -70,7 +70,7 @@ app.controller("projectsCtrl", function($scope, $state) {
       alt: "some alt text"
     }],
     link: "",
-    backgroundColor: "#FF33FF",
+    backgroundColor: "#DFDFDD",
     date: "May 2014"
   }];
 
