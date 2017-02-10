@@ -1,4 +1,4 @@
-var app = angular.module("argitct", ["ui.router"]);
+var app = angular.module("argitct", ["ui.router", "slickCarousel"]);
 
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
