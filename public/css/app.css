@@ -98,34 +98,6 @@ h1, h2, h3 {
     background: url(../../images/icons/icon_menu.png) center no-repeat transparent;
     background-size: contain; }
 
-.nav-wrap {
-  overflow: hidden;
-  width: 100%;
-  height: 100%; }
-
-.push-wrap {
-  -webkit-transition: all 300ms ease 0;
-  -moz-transition: all 300ms ease 0;
-  transition: all 300ms ease 0;
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.show-nav .push-wrap {
-  -webkit-transform: translate(50vw, 0);
-  -moz-transform: translate(50vw, 0);
-  -ms-transform: translate(50vw, 0);
-  transform: translate(50vw, 0);
-  -webkit-transform: translate3d(50vw, 0, 0);
-  -moz-transform: translate3d(50vw, 0, 0);
-  -ms-transform: translate3d(50vw, 0, 0);
-  transform: translate3d(50vw, 0, 0); }
-
 nav {
   width: 50vw;
   height: 100vh;
