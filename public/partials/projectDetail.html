@@ -1,0 +1,17 @@
+<div ng-style="{ 'background-color': '{{post.backgroundColor}}' }">
+  <div class="project-card">
+    <div class="project-left">
+      <h1>{{projectDetail.title}}</h1>
+      <h3>{{projectDetails.location}}, {{projectDetails.date}}</h3>
+      <p>{{projectDetails.description}}</p>
+      <h5><span class="special-one">DESIGNER:</span> {{projectDetails.designer}}</h5>
+
+      <slick infinite=true slides-to-show=1 slides-to-scroll=1 fade=true speed=1000>
+        <div ng-repeat="image in projectDetails.images">
+          <img src="{{ image.path }}" />
+        </div>
+      </slick>
+
+
+    </div>
+  </div>

@@ -1,7 +1,7 @@
 app.directive("projectsPost", function() {
   return {
-    restrict: "E",
-    templateUrl: "partials/post.html",
+    restrict: "EA",
+    templateUrl: "partials/projectDetail.html",
     repeat: true,
   };
 });

@@ -3,33 +3,45 @@ app.controller("subjectPageCtrl", function($scope, $state) {
 
   $scope.servicesPage = {
     title: "Services",
-    introText: "Service content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
-    additionInformation: ""
+    introText: "Service content will go here. This will be a one-page section and will not require additional routing. This may use modals to display additional information.",
+    moreInformation: "",
+    modalContent: ""
   };
 
-  $scope.projectsPage = [{
+  $scope.projectsPage = {
     title: "Projects",
     introText: "An engaging yet brief introduction to the work ... maybe include various specialties. Some content from biography might be better suited for this section. Mostly we want to capture the user’s attention and encourage them to click below.",
-    additionInformation: ""
-  }];
+    moreInformation: "",
+    modalContent: ""
+  };
 
-  $scope.teamPage = [{
+  $scope.teamPage = {
     title: "Team",
-    introText: "Team content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
-    additionInformation: ""
-  }];
+    introText: "Team content will go here. This will be a one-page section and will not require additional routing. This may use modals to display additional information.",
+    moreInformation: "",
+    modalContent: ""
+  };
 
-  $scope.biographyPage = [{
+  $scope.biographyPage = {
     title: "Biography",
     introText: "Anne R. Goulet has over 20 years of project management and construction administration experience in the architecture, planning, and design industry.",
-    additionInformation: ""
-  }];
+    moreInformation: "",
+    modalContent: ""
+  };
 
-  $scope.contactPage = [{
+  $scope.contactPage = {
     title: "Contact",
-    introText: "Content to encourage visitors to contact Argitct will go here, as well as actual contact information." < br > "This will be a one-page section and not require additional routing or modals.",
-    additionInformation: ""
-  }];
+    introText: "Content to encourage visitors to contact Argitct will go here, as well as actual contact information. This will be a one-page section and not require additional routing or modals.",
+    moreInformation: {
+      principal: "Anne R Goulet",
+      address1: "111 East 14th Street, Suite 365",
+      address2: "New York, NY 10003",
+      phone1: "(o) +1 212 472 8159",
+      email: "argitct@gmail.com"
+    },
+    modalContent: ""
+  };
+
 
 
 

@@ -2,12 +2,12 @@ var app = angular.module("argitct", ["ui.router", "slickCarousel"]);
 
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
-    .otherwise("/landing-outer");
+    .otherwise("/landing");
 
   $stateProvider
-    .state("landing-outer", {
-      url: "/landing-outer",
-      templateUrl: "partials/landing-outer.html",
+    .state("landing", {
+      url: "/landing",
+      templateUrl: "partials/landing.html",
       controller: "landingCtrl"
     })
     .state("nav", {
@@ -15,14 +15,19 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       templateUrl: "partials/nav.html",
       controller: "navCtrl"
     })
-    .state("landing-inner", {
-      url: "/landing-inner",
-      templateUrl: "partials/landing-inner.html",
-      controller: "landingCtrl"
+    .state("home", {
+      url: "/home",
+      templateUrl: "partials/home.html",
+      controller: "homeCtrl"
     })
     .state("projects", {
       url: "/projects",
       templateUrl: "partials/projects.html",
+      controller: "subjectPageCtrl"
+    })
+    .state("projectDetails", {
+      url: "/projects/:id",
+      templateUrl: "partials/projectDetail.html",
       controller: "projectsCtrl"
     })
     .state("process", {
