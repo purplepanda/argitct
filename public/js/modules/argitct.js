@@ -26,8 +26,8 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       controller: "subjectPageCtrl"
     })
     .state("projectDetails", {
-      url: "/projects/:id",
-      templateUrl: "partials/projectDetail.html",
+      url: "/projectDetails",
+      templateUrl: "partials/projectDetails.html",
       controller: "projectsCtrl"
     })
     .state("process", {

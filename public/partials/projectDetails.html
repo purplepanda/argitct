@@ -1,1 +1,8 @@
-<projects-post ng-repeat="projectDetail in projectDetails"></projects-post>
+<div>
+  <a ui-sref="services" class="forward"></a>
+  <a ui-sref="contact" class="back"></a>
+
+  <project-detail ng-repeat="detail in details"></project-detail>
+
+  <a ui-sref="#" class="plus"></a>
+</div>

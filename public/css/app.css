@@ -161,6 +161,5 @@ nav {
 
 .project-card {
   width: 100%;
-  height: 100vh; }
-  .project-card .project-left {
-    width: 50%; }
+  height: 100vh;
+}
