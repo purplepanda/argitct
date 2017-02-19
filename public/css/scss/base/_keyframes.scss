@@ -1,0 +1,14 @@
+@keyframes icon-hover {
+  100% {
+    @include scale(1.1);
+  }
+}
+
+@keyframes down {
+  50% {
+    @include scale(1.1);
+  }
+  100% {
+    @include scale(1);
+  }
+}
