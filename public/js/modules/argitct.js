@@ -20,25 +20,35 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       templateUrl: "partials/landing-inner.html",
       controller: "landingCtrl"
     })
-    .state("biography", {
-      url: "/biography",
-      templateUrl: "partials/biography.html",
-      controller: "bioCtrl"
-    })
     .state("projects", {
       url: "/projects",
       templateUrl: "partials/projects.html",
       controller: "projectsCtrl"
     })
     .state("process", {
-      url: "/process",
+      url: "/project-recovery",
       templateUrl: "partials/process.html",
       controller: "processCtrl"
+    })
+    .state("services", {
+      url: "/services",
+      templateUrl: "partials/services.html",
+      controller: "subjectPageCtrl"
+    })
+    .state("team", {
+      url: "/team",
+      templateUrl: "partials/team.html",
+      controller: "subjectPageCtrl"
+    })
+    .state("biography", {
+      url: "/biography",
+      templateUrl: "partials/biography.html",
+      controller: "subjectPageCtrl"
     })
     .state("contact", {
       url: "/contact",
       templateUrl: "partials/contact.html",
-      controller: "contactCtrl"
+      controller: "subjectPageCtrl"
     });
 
 }]);

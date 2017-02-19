@@ -1,5 +1,5 @@
 app.controller("projectsCtrl", function($scope, $state) {
-  $scope.title = "Projects"
+  $scope.title = "Projects";
 
   $scope.posts = [{
     title: "Project Title One",
