@@ -1,43 +1,73 @@
 $iconSize: 5vw;
 
-.minus{
+
+.menu{
   position: absolute;
-  top: 5vw;
+  top: 3vh;
+  left: 3vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
+  background-size: contain;
+  opacity: 0.25;
+  &:hover{
+    opacity: 0.75;
+  }
+}
+
+.forward{
+  position: absolute;
+  top: 3vh;
   right: 5vw;
   width: $iconSize;
   height: $iconSize;
-  background: url(../../images/icons/icon_minus_hover.png) center no-repeat transparent;
+  background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
   background-size: contain;
+  opacity: 0.25;
   &:hover{
-    background: url(../../images/icons/icon_minus.png) center no-repeat transparent;
-    background-size: contain;
+    opacity: 0.75;
+  }
+}
+
+.back{
+  position: absolute;
+  top: 3vh;
+  right: 15vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/white_back.svg) center no-repeat transparent;
+  background-size: contain;
+  opacity: 0.25;
+  &:hover{
+    opacity: 0.75;
+  }
+}
+
+.down{
+  position: absolute;
+  bottom: 3vh;
+  right: 50vw;
+  width: $iconSize;
+  height: $iconSize;
+  background: url(../../images/icons/white_back.svg) center no-repeat transparent;
+  background-size: contain;
+  opacity: 0.25;
+  transform: rotate(270deg);
+  &:hover{
+    opacity: 0.75;
   }
 }
 
 .plus{
   position: absolute;
-  bottom: 5vw;
+  bottom: 3vh;
   right: 5vw;
   width: $iconSize;
   height: $iconSize;
-  background: url(../../images/icons/icon_plus_hover.png) center no-repeat transparent;
+  background: url(../../images/icons/white_plus.svg) center no-repeat transparent;
   background-size: contain;
+  opacity: 0.25;
   &:hover{
-    background: url(../../images/icons/icon_plus.png) center no-repeat transparent;
-    background-size: contain;
-  }
-}
-
-.menu{
-  position: absolute;
-  top: 5vw;
-  left: 5vw;
-  width: $iconSize;
-  height: $iconSize;
-  background: url(../../images/icons/icon_menu_hover.png) center no-repeat transparent;
-  background-size: contain;
-  &:hover{
-    background: url(../../images/icons/icon_menu.png) center no-repeat transparent;
-    background-size: contain;
+    opacity: 0.75;
   }
 }

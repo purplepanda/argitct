@@ -1,37 +1,36 @@
 app.controller("subjectPageCtrl", function($scope, $state) {
 
 
-  $scope.subjectPage = [{
-    subject: {
-      title: "Services",
-      introText: "Service content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
-      additionInformation: ""
-    }
-  }, {
-    subject: {
-      title: "Projects",
-      introText: "An engaging yet brief introduction to the work ... maybe include various specialties. Some content from biography might be better suited for this section. Mostly we want to capture the user’s attention and encourage them to click below.",
-      additionInformation: ""
-    }
-  }, {
-    subject: {
-      title: "Team",
-      introText: "Team content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
-      additionInformation: ""
-    }
-  }, {
-    subject: {
-      title: "Biography",
-      introText: "Anne R. Goulet has over 20 years of project management and construction administration experience in the architecture, planning, and design industry.",
-      additionInformation: ""
-    }
-  }, {
-    subject: {
-      title: "Contact",
-      introText: "Content to encourage visitors to contact Argitct will go here, as well as actual contact information." < br > "This will be a one-page section and not require additional routing or modals.",
-      additionInformation: ""
-    }
+  $scope.servicesPage = {
+    title: "Services",
+    introText: "Service content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
+    additionInformation: ""
+  };
+
+  $scope.projectsPage = [{
+    title: "Projects",
+    introText: "An engaging yet brief introduction to the work ... maybe include various specialties. Some content from biography might be better suited for this section. Mostly we want to capture the user’s attention and encourage them to click below.",
+    additionInformation: ""
   }];
+
+  $scope.teamPage = [{
+    title: "Team",
+    introText: "Team content will go here. This will be a one-page section and will not require additional routing. This pay may use modals to display additional information.",
+    additionInformation: ""
+  }];
+
+  $scope.biographyPage = [{
+    title: "Biography",
+    introText: "Anne R. Goulet has over 20 years of project management and construction administration experience in the architecture, planning, and design industry.",
+    additionInformation: ""
+  }];
+
+  $scope.contactPage = [{
+    title: "Contact",
+    introText: "Content to encourage visitors to contact Argitct will go here, as well as actual contact information." < br > "This will be a one-page section and not require additional routing or modals.",
+    additionInformation: ""
+  }];
+
 
 
   //----------arrays of biography information----------//
