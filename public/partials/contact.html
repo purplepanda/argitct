@@ -1,14 +1,20 @@
-<div id="contact" class="card">
-  <h2>{{contactPage.title}}</h2>
-  <h3>{{contactPage.introText}}</h3>
-  <ul>
-    <li>{{contactPage.moreInformation.principal}}</li>
-    <li>{{contactPage.moreInformation.address1}}</li>
-    <li>{{contactPage.moreInformation.address2}}</li>
-    <li>{{contactPage.moreInformation.phone1}}</li>
-    <li>{{contactPage.moreInformation.email}}</li>
-  </ul>
+<div id="contact" class="subject-page">
+    <h6>{{contactPage.title}}</h6>
 
-  <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-  <a href="#" class="plus"></a>
+    <div class="subject-content">
+        <p class="intro-text">{{contactPage.introText}}</p>
+        <ul>
+            <li>{{contactPage.moreInformation.principal}}</li>
+            <li>{{contactPage.moreInformation.address1}}</li>
+            <li>{{contactPage.moreInformation.address2}}</li>
+            <li>{{contactPage.moreInformation.phone1}}</li>
+            <li>{{contactPage.moreInformation.email}}</li>
+        </ul>
+
+        <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
+        <a href="#" class="plus"></a>
+    </div>
+
+    <a ui-sref="home"> <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>
+
 </div>

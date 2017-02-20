@@ -1,7 +1,16 @@
-$aubergine: #41152C;
-$berry: #50162C;
-$silver: #B9B5B5;
-$white: #FFFFFF;
+$aubergine: rgba(65, 20, 43, 1);
+$aubergine-medium: rgba(65, 20, 43, 0.95);
+// $aubergine: #41152C;
+// $berry: #50162C;
+$berry: rgba(75, 20, 43, 1);
+$berry-light: rgba(75, 20, 43, 0.75);
+// $silver: #B9B5B5;
+$silver: rgba(185, 181, 181, 1);
+$silver-light: rgba(185, 181, 181, 0.70);
+// $white: #FFFFFF;
+$white: rgba(255, 255, 255, 1);
+$white-light: rgba(255, 255, 255, 0.70);
+
 
 $magenta: #87234B;
 

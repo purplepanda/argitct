@@ -1,8 +1,13 @@
-<div id="team" class="card">
-  <h2>{{teamPage.title}}</h2>
-  <h3>{{teamPage.introText}}</h3>
-  <h4>{{teamPage.moreInformation}}</h4>
+<div id="team" class="subject-page">
+    <h6>{{teamPage.title}}</h6>
 
-  <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-  <a href="#" class="plus"></a>
+    <div class="subject-content">
+        <p class="intro-text">{{teamPage.introText}}</p>
+        <p class="more-text">{{teamPage.moreInformation}}</p>
+        <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
+        <a href="#" class="plus"></a>
+    </div>
+
+    <a ui-sref="home"> <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>
+
 </div>

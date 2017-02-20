@@ -1,0 +1,62 @@
+.subject-page{
+  width: 100%;
+  min-height: 530px;
+  height: 100vh;
+  background-color: $berry-light;
+
+  h6{
+    font-size: 1.95vw; //25px
+    text-transform: uppercase;
+    position: absolute;
+    top: 4.9vw;
+    right: 3.13vw;
+    color: $aubergine;
+  }
+
+  .subject-content{
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+    width: 55%;
+    margin: auto;
+    text-align: justify;
+    .intro-text{
+      font-size: 3.44vw; //44px
+      color: $white;
+    }
+    .more-text{
+      font-size: 1.56vw; //20px
+      color: $white;
+      padding-top: 1vw;
+    }
+    .plus{
+      top: 50%;
+      @include translateY(-50%);
+      right: -8vw;
+    }
+  }
+
+  .logo{
+    position: absolute;
+    bottom: 3.13vw;
+    left: 3.13vw;
+    width: 6vw;
+  }
+}
+
+
+
+
+
+
+// @media(max-width: 800px) {
+//
+//
+//   h6{
+//     font-size: 1.75vw; //14px
+//   }
+//
+//   p .intro-text{
+//     font-size: 3.25vw; //26px
+//   }
+// }

@@ -1,8 +1,14 @@
-<div id="services" class="card">
-  <h2>{{servicesPage.title}}</h2>
-  <h3>{{servicesPage.introText}}</h3>
-  <h4>{{servicesPage.moreInformation}}</h4>
+<div id="services" class="subject-page">
+  <h6>{{servicesPage.title}}</h6>
+
+  <div class="subject-content">
+   <p class="intro-text">{{servicesPage.introText}}</p>
+   <p class="more-text">{{servicesPage.moreInformation}}</p>
+   <a href="#" class="plus"></a>
+  </div>
+
+  <a ui-sref="home">  <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>
 
   <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-  <a href="#" class="plus"></a>
+
 </div>

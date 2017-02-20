@@ -69,31 +69,31 @@ table {
   box-sizing: border-box; }
 
 body {
-  background-color: #41152C;
-  width: 100%;
-  height: 100vh;
-  font-family: "Lato", Helvetica, sans-serif;
-  font-weight: 300; }
-
-h1, h2, h3 {
-  font-family: "Josefin Sans", sans-serif;
-  color: #FFFFFF;
-  font-weight: 300; }
-
-h2 {
-  font-size: 5vw; }
-
-.card {
-  background-color: #50162C;
-  opacity: 0.75;
   width: 100%;
   height: 100vh; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-weight: 300; }
+
+h1 {
+  font-size: 3.44vw; }
+
+h2 {
+  font-size: 1.95vw; }
+
+p {
+  font-family: "Lato", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.04vw; }
 
 /* Web Fonts -------------------- */
 .menu {
   position: absolute;
-  top: 3vh;
-  left: 3vw;
+  top: 3.13vw;
+  left: 3.13vw;
   width: 5vw;
   height: 5vw;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
@@ -105,8 +105,8 @@ h2 {
 
 .forward {
   position: absolute;
-  top: 3vh;
-  right: 5vw;
+  top: 3.13vw;
+  right: 3.13vw;
   width: 5vw;
   height: 5vw;
   background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
@@ -117,7 +117,7 @@ h2 {
 
 .back {
   position: absolute;
-  top: 3vh;
+  top: 3.13vw;
   right: 15vw;
   width: 5vw;
   height: 5vw;
@@ -130,7 +130,7 @@ h2 {
 .down {
   animation: down 5s ease-in-out infinite;
   position: absolute;
-  bottom: 3vh;
+  bottom: 3.13vw;
   right: 50vw;
   width: 5vw;
   height: 5vw;
@@ -142,8 +142,8 @@ h2 {
 
 .plus {
   position: absolute;
-  bottom: 3vh;
-  right: 5vw;
+  bottom: 3.13vw;
+  right: 3.13vw;
   width: 5vw;
   height: 5vw;
   background: url(../../images/icons/white_plus.svg) center no-repeat transparent;
@@ -159,7 +159,54 @@ nav {
   top: 0;
   right: 0; }
 
-.project-card {
+.project {
   width: 100%;
   height: 100vh;
-}
+  background-color: #b9b5b5; }
+
+#landing {
+  width: 100%;
+  height: 100vh;
+  background-color: #41142b; }
+
+.subject-page {
+  width: 100%;
+  min-height: 530px;
+  height: 100vh;
+  background-color: rgba(75, 20, 43, 0.75); }
+  .subject-page h6 {
+    font-size: 1.95vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4.9vw;
+    right: 3.13vw;
+    color: #41142b; }
+  .subject-page .subject-content {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 55%;
+    margin: auto;
+    text-align: justify; }
+    .subject-page .subject-content .intro-text {
+      font-size: 3.44vw;
+      color: white; }
+    .subject-page .subject-content .more-text {
+      font-size: 1.56vw;
+      color: white;
+      padding-top: 1vw; }
+    .subject-page .subject-content .plus {
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      right: -8vw; }
+  .subject-page .logo {
+    position: absolute;
+    bottom: 3.13vw;
+    left: 3.13vw;
+    width: 6vw; }
