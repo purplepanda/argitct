@@ -2,4 +2,19 @@
   width: 100%;
   height: 100vh;
   background-color: $aubergine;
+
+  .large-logo{
+    position: relative;
+    top: 50%;
+    @include translateY(-40%);
+    width: 65vw;
+    margin: auto;
+  }
+  .nav{
+    .plus{
+      bottom: 2vw;
+      right: 50%;
+      // animation: glow 3s ease-in-out infinite;
+    }
+  }
 }

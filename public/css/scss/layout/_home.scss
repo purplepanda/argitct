@@ -1,0 +1,24 @@
+.home{
+  width: 100%;
+  min-height: 530px;
+  height: 100vh;
+  background-color: $white;
+
+  h6{
+    font-size: 1.95vw; //25px
+    text-transform: uppercase;
+    position: absolute;
+    top: 4.9vw;
+    right: 3.13vw;
+    color: $aubergine;
+  }
+
+
+  .large-logo{
+    position: relative;
+    top: 50%;
+    @include translateY(-40%);
+    width: 65vw;
+    margin: auto;
+  }
+}

@@ -41,10 +41,10 @@
 }
 
 @mixin translateY($val) {
-  -webkit-transform: translateY($val);
-  -moz-transform: translateY($val);
-  -ms-transform: translateY($val);
-  transform: translateY($val);
+  -webkit-transform: perspective(1px) translateY($val);
+  -moz-transform: perspective(1px) translateY($val);
+  -ms-transform: perspective(1px) translateY($val);
+  transform: perspective(1px) translateY($val);
 }
 
 @mixin transition($val) {
