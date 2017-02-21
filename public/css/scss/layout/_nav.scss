@@ -36,10 +36,33 @@
 // }
 
 // Positions the nav fixed below the push wrapper //
-nav {
+
+
+
+nav{
+  font-family: $font-fancy;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+.nav-hamburger {
   width: 50vw;
   height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
+  background-color: $aubergine-medium;
+  color: $white;
+  z-index: 1;
+  li:nth-of-type(1){
+    padding-top: 25vw;
+  }
+}
+
+.nav-home{
+  li{
+    display: inline-block;
+    color: $aubergine-light;
+  }
 }

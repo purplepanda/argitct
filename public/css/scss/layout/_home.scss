@@ -1,7 +1,7 @@
 #home{
   width: 100%;
-  min-height: $min-height;
   height: 100vh;
+  min-height: $min-height;
   background-color: $white;
 
   .menu{
@@ -15,15 +15,16 @@
     position: absolute;
     top: 4.9vw;
     right: 3.13vw;
-    color: $aubergine;
+    color: $aubergine-light;
   }
-  
+
   .large-logo {
       position: relative;
       top: 50%;
       @include translateY(-40%);
       width: 65vw;
       margin: auto;
+      opacity: 0.75; 
   }
 }
 

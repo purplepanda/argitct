@@ -1,6 +1,5 @@
 app.controller("homeCtrl", function($scope, $state) {
 
-
   $scope.homePage = {
     title: "Home",
     introText: "Argitct mission statement will go here. This may use modals to display additional information.",

@@ -109,7 +109,8 @@ p {
   height: 5vw;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
   background-size: contain;
-  opacity: 0.25; }
+  opacity: 0.25;
+  z-index: 10; }
   .menu:hover {
     opacity: 0.75;
     animation: icon-hover 0.5s ease-in-out forwards; }
@@ -180,18 +181,35 @@ p {
     width: 15vw;
     height: 15vw; } }
 
-nav {
-  width: 50vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0; }
-
-.project {
+#home {
   width: 100%;
-  min-height: 530px;
   height: 100vh;
-  background-color: #b9b5b5; }
+  min-height: 530px;
+  background-color: white; }
+  #home .menu {
+    background: url(../../images/icons/aubergine_menu.svg) center no-repeat transparent;
+    background-size: contain; }
+  #home h6 {
+    font-size: 1.95vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 4.9vw;
+    right: 3.13vw;
+    color: rgba(65, 20, 43, 0.75); }
+  #home .large-logo {
+    position: relative;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-40%);
+    -moz-transform: perspective(1px) translateY(-40%);
+    -ms-transform: perspective(1px) translateY(-40%);
+    transform: perspective(1px) translateY(-40%);
+    width: 65vw;
+    margin: auto;
+    opacity: 0.75; }
+
+#home .menu {
+  background: url(../../images/icons/aubergine_menu.svg) center no-repeat transparent;
+  background-size: contain; }
 
 #landing {
   width: 100%;
@@ -229,6 +247,33 @@ nav {
   @media (max-width: 600px) {
     #landing .plus {
       bottom: 20vw; } }
+
+nav {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+.nav-hamburger {
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(65, 20, 43, 0.95);
+  color: white;
+  z-index: 1; }
+  .nav-hamburger li:nth-of-type(1) {
+    padding-top: 25vw; }
+
+.nav-home li {
+  display: inline-block;
+  color: rgba(65, 20, 43, 0.75); }
+
+.project {
+  width: 100%;
+  min-height: 530px;
+  height: 100vh;
+  background-color: #b9b5b5; }
 
 .subject-page {
   width: 100%;

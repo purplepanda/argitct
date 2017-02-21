@@ -1,16 +1,32 @@
 <div id="home">
-<div ng-include=" 'partials/nav.html' "></div>
-  <h6>{{homePage.title}}</h6>
-  <p class="intro-text">{{homePage.introText}}</p>
-  <p class="more-text">{{homePage.moreInformation}}</p>
+    <div ng-include=" 'partials/nav.html' "></div>
+    <h6>{{homePage.title}}</h6>
+    <p class="intro-text">{{homePage.introText}}</p>
+    <p class="more-text">{{homePage.moreInformation}}</p>
 
 
 
-  <div class="large-logo">
-      <img src="images/svg/logo_large_aubergine.svg" alt="Argitct logo">
-  </div>
+    <div class="large-logo">
+        <img src="images/svg/logo_large_aubergine.svg" alt="Argitct logo">
+    </div>
 
 
-  <!-- <a ui-sref="process" class="minus"></a>
+    <footer>
+        <nav class="nav-home">
+            <ul>
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="services">Services</a></li>
+                <li><a ui-sref="process">Project Recovery</a></li>
+                <li><a ui-sref="projects">Projects</a></li>
+                <li><a ui-sref="team">Team</a></li>
+                <li><a ui-sref="biography">Biography</a></li>
+                <li><a ui-sref="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+
+    <!-- <a ui-sref="process" class="minus"></a>
   <a ui-sref="process" class="plus"></a> -->
 </div>

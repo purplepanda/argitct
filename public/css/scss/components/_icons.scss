@@ -11,6 +11,7 @@ $iconSizeMobile: 15vw;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
+  z-index: 10; 
   &:hover{
     opacity: 0.75;
     animation: icon-hover 0.5s ease-in-out forwards;
