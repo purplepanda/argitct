@@ -1,6 +1,6 @@
 .subject-page{
   width: 100%;
-  min-height: 530px;
+  min-height: $min-height;
   height: 100vh;
   background-color: $berry-light;
 
@@ -49,7 +49,7 @@
 
 
 
-// @media(max-width: 800px) {
+// @media(max-width: 900px) {
 //
 //
 //   h6{

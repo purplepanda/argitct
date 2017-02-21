@@ -1,5 +1,6 @@
 $iconSize: 5vw;
-
+$iconSizeTablet: 10vw;
+$iconSizeMobile: 15vw;
 
 .menu{
   position: absolute;
@@ -62,7 +63,6 @@ $iconSize: 5vw;
 .plus{
   position: absolute;
   bottom: 3.13vw;
-  right: 3.13vw;
   width: $iconSize;
   height: $iconSize;
   background: url(../../images/icons/white_plus.svg) center no-repeat transparent;
@@ -70,5 +70,27 @@ $iconSize: 5vw;
   opacity: 0.25;
   &:hover{
     opacity: 0.75;
+  }
+}
+
+@media(max-width: 900px) {
+  .menu,
+  .forward,
+  .back,
+  .down,
+  .plus{
+    width: $iconSizeTablet;
+    height: $iconSizeTablet;
+  }
+}
+
+@media(max-width: 600px) {
+  .menu,
+  .forward,
+  .back,
+  .down,
+  .plus{
+    width: $iconSizeMobile;
+    height: $iconSizeMobile;
   }
 }
