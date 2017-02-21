@@ -222,10 +222,13 @@ nav {
     #landing .large-logo {
       width: 75vw; }
     #landing .plus {
-      bottom: 25vw; }
+      bottom: 10vw; }
     #landing .new-york {
       font-size: 3.75vw;
       margin-right: 1.75vw; } }
+  @media (max-width: 600px) {
+    #landing .plus {
+      bottom: 20vw; } }
 
 .subject-page {
   width: 100%;

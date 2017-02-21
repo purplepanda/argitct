@@ -1,8 +1,13 @@
-.home{
+#home{
   width: 100%;
   min-height: $min-height;
   height: 100vh;
   background-color: $white;
+
+  .menu{
+    background: url(../../images/icons/aubergine_menu.svg) center no-repeat transparent;
+    background-size: contain;
+  }
 
   h6{
     font-size: 1.95vw; //25px
@@ -12,13 +17,34 @@
     right: 3.13vw;
     color: $aubergine;
   }
-
-
-  .large-logo{
-    position: relative;
-    top: 50%;
-    @include translateY(-40%);
-    width: 65vw;
-    margin: auto;
+  
+  .large-logo {
+      position: relative;
+      top: 50%;
+      @include translateY(-40%);
+      width: 65vw;
+      margin: auto;
   }
 }
+
+#home .menu{
+  background: url(../../images/icons/aubergine_menu.svg) center no-repeat transparent;
+  background-size: contain;
+}
+
+
+
+// .menu{
+//   position: absolute;
+//   top: 3.13vw;
+//   left: 3.13vw;
+//   width: $iconSize;
+//   height: $iconSize;
+//   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
+//   background-size: contain;
+//   opacity: 0.25;
+//   &:hover{
+//     opacity: 0.75;
+//     animation: icon-hover 0.5s ease-in-out forwards;
+//   }
+// }

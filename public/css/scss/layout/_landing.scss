@@ -27,19 +27,23 @@
         margin-right: 1.5vw;
         margin-top: -2.5vw;
     }
-
     @media(max-width: 900px) {
         .large-logo {
             width: 75vw;
         }
 
         .plus {
-            bottom: 25vw;
+            bottom: 10vw;
         }
 
         .new-york {
             font-size: 3.75vw;
             margin-right: 1.75vw;
+        }
+    }
+    @media(max-width: 600px) {
+        .plus {
+            bottom: 20vw;
         }
     }
 }
