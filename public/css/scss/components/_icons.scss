@@ -1,6 +1,7 @@
-$iconSize: 5vw;
-$iconSizeTablet: 10vw;
-$iconSizeMobile: 15vw;
+$iconSize: 6vw;
+$iconSizeDesktop: 4.5vw;
+$iconSizeTablet: 9vw;
+$iconSizeMobile: 12vw;
 
 .menu{
   position: absolute;
@@ -11,7 +12,7 @@ $iconSizeMobile: 15vw;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
-  z-index: 10; 
+  z-index: 10;
   &:hover{
     opacity: 0.75;
     animation: icon-hover 0.5s ease-in-out forwards;
@@ -74,7 +75,18 @@ $iconSizeMobile: 15vw;
   }
 }
 
-@media(max-width: 900px) {
+@media(min-width: 1100px) {
+  .menu,
+  .forward,
+  .back,
+  .down,
+  .plus{
+    width: $iconSizeDesktop;
+    height: $iconSizeDesktop;
+  }
+}
+
+@media(max-width: 800px) {
   .menu,
   .forward,
   .back,
@@ -83,6 +95,13 @@ $iconSizeMobile: 15vw;
     width: $iconSizeTablet;
     height: $iconSizeTablet;
   }
+
+  .menu{
+    top: 6.25vw;
+    left: 6.25vw;
+  }
+
+
 }
 
 @media(max-width: 600px) {

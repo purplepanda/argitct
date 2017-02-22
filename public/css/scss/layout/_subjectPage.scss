@@ -4,15 +4,6 @@
   height: 100vh;
   background-color: $berry-light;
 
-  h6{
-    font-size: 1.95vw; //25px
-    text-transform: uppercase;
-    position: absolute;
-    top: 4.9vw;
-    right: 3.13vw;
-    color: $aubergine;
-  }
-
   .subject-content{
     position: relative;
     top: 50%;
@@ -49,7 +40,7 @@
 
 
 
-// @media(max-width: 900px) {
+// @media(max-width: 800px) {
 //
 //
 //   h6{

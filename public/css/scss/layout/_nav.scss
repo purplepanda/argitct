@@ -34,35 +34,57 @@
 //   -ms-transform: translate3d(50vw, 0, 0);
 //   transform: translate3d(50vw, 0, 0);
 // }
-
 // Positions the nav fixed below the push wrapper //
-
-
-
-nav{
-  font-family: $font-fancy;
-  text-transform: uppercase;
-  text-decoration: none;
+nav {
+    font-family: $font-fancy;
+    text-transform: uppercase;
+    text-decoration: none;
 }
-
 
 .nav-hamburger {
-  width: 50vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: $aubergine-medium;
-  color: $white;
-  z-index: 1;
-  li:nth-of-type(1){
-    padding-top: 25vw;
-  }
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $aubergine-medium;
+    z-index: 1;
+
+    li:nth-of-type(1) {
+        padding-top: 25vw;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+        font-size: 2vw;
+        font-weight: 300;
+        padding-left: 5vw;
+
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            color: $magenta;
+        }
+    }
 }
 
-.nav-home{
-  li{
-    display: inline-block;
-    color: $aubergine-light;
-  }
+.nav-home {
+    li {
+        display: inline-block;
+        color: $aubergine-light;
+    }
+}
+
+@media(max-width: 800px) {
+    .nav-hamburger {
+        width: 100vw;
+        a{
+          font-size: 8vw;
+          padding-left: 12.5vw;
+          line-height: 1.75;
+        }
+    }
 }

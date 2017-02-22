@@ -22,6 +22,15 @@ h2{
   font-size: 1.95vw; //25px
 }
 
+h6{
+  font-size: 1.95vw; //25px
+  text-transform: uppercase;
+  position: absolute;
+  top: 4.9vw;
+  right: 3.13vw;
+  color: $aubergine;
+}
+
 p{
   font-family: $font-main;
   font-weight: 300;
@@ -40,11 +49,6 @@ p{
 // h5{
 //
 // }
-//
-// h6{
-//   font-size: 1.95vw; //25px
-//   text-transform: uppercase;
-// }
 
 // p .intro-text{
 //   font-size: 3.44vw; //44px
@@ -57,12 +61,14 @@ p{
 // }
 
 
-@media(max-width: 900px) {
+@media(max-width: 800px) {
 
-  //
-  // h6{
-  //   font-size: 1.75vw; //14px
-  // }
+
+  h6{
+    font-size: 4.5vw;
+    top: 10.5vw;
+    right: 9vw;
+  }
 
   // p .intro-text{
   //   font-size: 3.25vw; //26px
