@@ -99,7 +99,7 @@ h6 {
   font-size: 1.95vw;
   text-transform: uppercase;
   position: absolute;
-  top: 4.9vw;
+  top: 5.25vw;
   right: 3.13vw;
   color: #41142b; }
 
@@ -109,11 +109,31 @@ p {
   line-height: normal;
   letter-spacing: 0.04vw; }
 
+.intro-text {
+  font-size: 3.44vw; }
+
+.more-text {
+  font-size: 1.56vw; }
+
 @media (max-width: 800px) {
   h6 {
+    font-size: 3.5vw;
+    top: 9.5vw;
+    right: 4vw; }
+  .intro-text {
+    font-size: 4.5vw; }
+  .more-text {
+    font-size: 2.5vw; } }
+
+@media (max-width: 600px) {
+  h6 {
     font-size: 4.5vw;
-    top: 10.5vw;
-    right: 9vw; } }
+    top: 12.75vw;
+    right: 8vw; }
+  .intro-text {
+    font-size: 6vw; }
+  .more-text {
+    font-size: 3.33vw; } }
 
 /* Web Fonts -------------------- */
 .menu {
@@ -158,7 +178,9 @@ p {
   animation: down 5s ease-in-out infinite;
   position: absolute;
   bottom: 3.13vw;
-  right: 50vw;
+  right: 0;
+  left: 0;
+  margin: auto;
   width: 6vw;
   height: 6vw;
   background: url(../../images/icons/white_down.svg) center no-repeat transparent;
@@ -197,7 +219,7 @@ p {
     height: 9vw; }
   .menu {
     top: 6.25vw;
-    left: 6.25vw; } }
+    left: 5.25vw; } }
 
 @media (max-width: 600px) {
   .menu,
@@ -206,7 +228,9 @@ p {
   .down,
   .plus {
     width: 12vw;
-    height: 12vw; } }
+    height: 12vw; }
+  .menu {
+    top: 8.25vw; } }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -347,7 +371,7 @@ p {
     background: url("../../images/icons/aubergine_menu.svg") center no-repeat transparent;
     background-size: contain;
     opacity: 0.70; }
-    #home .menu:hover {
+    #home .menu:hover, #home .menu:active {
       opacity: 0.90; }
   #home h6 {
     color: rgba(65, 20, 43, 0.75); }
@@ -380,7 +404,7 @@ p {
       color: rgba(65, 20, 43, 0.75);
       font-size: 1.25vw;
       text-decoration: none; }
-      #home .nav-home a:hover {
+      #home .nav-home a:hover, #home .nav-home a:active {
         color: #87234B; }
       #home .nav-home a:after {
         content: "|";
@@ -395,12 +419,18 @@ p {
     top: 20%;
     width: 75%; }
     #home .subject-content .intro-text {
-      font-size: 6vw; }
+      font-size: 5vw; }
   #home .large-logo {
-    top: 45%;
+    top: 40%;
     width: 75vw; }
   #home .nav-home {
     display: none; } }
+
+@media (max-width: 600px) {
+  #home .subject-content .intro-text {
+    font-size: 6.5vw; }
+  #home .large-logo {
+    top: 40%; } }
 
 #landing {
   width: 100%;
@@ -453,31 +483,44 @@ nav {
   top: 0;
   left: 0;
   background-color: rgba(65, 20, 43, 0.95);
-  z-index: 1; }
-  .nav-hamburger li:nth-of-type(1) {
-    padding-top: 25vw; }
+  z-index: 1;
+  padding-top: 10vw; }
   .nav-hamburger a {
     color: white;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3.44vw;
+    line-height: 6vw;
     font-weight: 300;
-    padding-left: 5vw; }
+    padding-left: 6vw; }
     .nav-hamburger a:visited {
       color: white; }
-    .nav-hamburger a:hover {
+    .nav-hamburger a:hover, .nav-hamburger a:active {
       color: #87234B; }
 
 .nav-home li {
   display: inline-block;
   color: rgba(65, 20, 43, 0.75); }
+  .nav-home li a:visited {
+    color: rgba(65, 20, 43, 0.75); }
+  .nav-home li a:hover, .nav-home li a:active {
+    color: #87234B; }
 
 @media (max-width: 800px) {
   .nav-hamburger {
-    width: 100vw; }
+    width: 100vw;
+    padding-top: 20vw; }
     .nav-hamburger a {
-      font-size: 8vw;
-      padding-left: 12.5vw;
-      line-height: 1.75; } }
+      font-size: 5vw;
+      line-height: 8.5vw;
+      padding-left: 11vw; } }
+
+@media (max-width: 600px) {
+  .nav-hamburger {
+    padding-top: 25vw; }
+    .nav-hamburger a {
+      font-size: 6.5vw;
+      line-height: 10vw;
+      padding-left: 13.5vw; } }
 
 .project {
   width: 100%;
@@ -501,10 +544,8 @@ nav {
     margin: auto;
     text-align: justify; }
     .subject-page .subject-content .intro-text {
-      font-size: 3.44vw;
       color: white; }
     .subject-page .subject-content .more-text {
-      font-size: 1.56vw;
       color: white;
       padding-top: 1vw; }
     .subject-page .subject-content .plus {
@@ -513,9 +554,23 @@ nav {
       -moz-transform: perspective(1px) translateY(-50%);
       -ms-transform: perspective(1px) translateY(-50%);
       transform: perspective(1px) translateY(-50%);
-      right: -8vw; }
+      right: -11vw; }
   .subject-page .logo {
     position: absolute;
     bottom: 3.13vw;
     left: 3.13vw;
-    width: 6vw; }
+    width: 8vw; }
+
+@media (max-width: 800px) {
+  .subject-page .subject-content .plus {
+    right: -15.75vw; }
+  .subject-page .logo {
+    bottom: 5.25vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 12vw; } }
+
+@media (max-width: 600px) {
+  .subject-page .logo {
+    width: 15vw; } }

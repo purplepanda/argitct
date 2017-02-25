@@ -51,7 +51,9 @@ $iconSizeMobile: 12vw;
   animation: down 5s ease-in-out infinite;
   position: absolute;
   bottom: 3.13vw;
-  right: 50vw;
+  right: 0;
+  left: 0;
+  margin: auto; 
   width: $iconSize;
   height: $iconSize;
   background: url(../../images/icons/white_down.svg) center no-repeat transparent;
@@ -98,7 +100,7 @@ $iconSizeMobile: 12vw;
 
   .menu{
     top: 6.25vw;
-    left: 6.25vw;
+    left: 5.25vw;
   }
 
 
@@ -112,5 +114,9 @@ $iconSizeMobile: 12vw;
   .plus{
     width: $iconSizeMobile;
     height: $iconSizeMobile;
+  }
+
+  .menu{
+    top: 8.25vw;
   }
 }

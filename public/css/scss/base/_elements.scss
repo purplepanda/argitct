@@ -26,7 +26,7 @@ h6{
   font-size: 1.95vw; //25px
   text-transform: uppercase;
   position: absolute;
-  top: 4.9vw;
+  top: 5.25vw;
   right: 3.13vw;
   color: $aubergine;
 }
@@ -50,27 +50,44 @@ p{
 //
 // }
 
-// p .intro-text{
-//   font-size: 3.44vw; //44px
-//   font-family: $font-main;
-// }
-//
-// p .more-text{
-//   font-size: 1.56vw; //20px
-//   font-family: $font-main;
-// }
+.intro-text{
+  font-size: 3.44vw; //44px
+}
+
+.more-text{
+  font-size: 1.56vw; //20px
+}
 
 
 @media(max-width: 800px) {
-
-
   h6{
-    font-size: 4.5vw;
-    top: 10.5vw;
-    right: 9vw;
+    font-size: 3.5vw;
+    top: 9.5vw;
+    right: 4vw;
   }
 
-  // p .intro-text{
-  //   font-size: 3.25vw; //26px
-  // }
+  .intro-text{
+    font-size: 4.5vw;
+  }
+
+  .more-text{
+    font-size: 2.5vw;
+  }
+}
+
+
+@media(max-width: 600px) {
+  h6{
+    font-size: 4.5vw;
+    top: 12.75vw;
+    right: 8vw;
+  }
+
+  .intro-text{
+    font-size: 6vw;
+  }
+
+  .more-text{
+    font-size: 3.33vw;  
+  }
 }
