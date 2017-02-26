@@ -1,86 +1,44 @@
-app.controller("projectsCtrl", function($scope, $state) {
+app.controller("projectsCtrl", function($scope, $state, projectData) {
+  currentProjectIndex = 0
   $scope.title = "Projects";
+  $scope.projects = projectData;
+  $scope.currentProject = null;
 
-  $scope.details = [{
-    title: "Project Title One",
-    location: "Paris, France",
-    description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    longDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    designer: "Lorem Ipsum Ipsum",
-    images: [{
-      path: "images/projects/img_one.jpg",
-      alt: "some alt text"
-    }, {
-      path: "images/projects/img_two.jpg",
-      alt: "some alt text"
-    }, {
-      path: "images/projects/img_three.jpg",
-      alt: "some alt text"
-    }, {
-      path: "images/projects/img_eight.jpg",
-      alt: "some alt text"
-    }]
-  }];
+  $scope.nxtProj = function () {
+    if (isLastProject()) {
+      currentProjectIndex = 0  
+    }
+    else {
+      currentProjectIndex += 1
+    }
+    updateCurrentProject()
+  }
 
+  $scope.prvProj = function () {
+    if (isFirstProject()) {
+      currentProjectIndex = ($scope.projects.length - 1)
+    }
+    else {
+      currentProjectIndex -= 1
+    }
+    updateCurrentProject()
+  }
 
-  // $scope.details = [{
-  //   title: "Project Title One",
-  //   location: "Paris, France",
-  //   description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   longDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   designer: "Lorem Ipsum Ipsum",
-  //   images: [{
-  //     path: "images/projects/img_one.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_two.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_three.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_eight.jpg",
-  //     alt: "some alt text"
-  //   }]
-  // }, {
-  //   title: "Project Title Two",
-  //   location: "New York, NY, USA",
-  //   description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   longDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   designer: "Lorem Ipsum Ipsum",
-  //   images: [{
-  //     path: "images/projects/img_three.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_seven.jpg",
-  //     alt: "some alt text"
-  //   }]
-  // }, {
-  //   title: "Project Title Three",
-  //   location: "Beijing, China",
-  //   description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   longDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   designer: "Lorem Ipsum Ipsum",
-  //   images: [{
-  //     path: "images/projects/img_four.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_six.jpg",
-  //     alt: "some alt text"
-  //   }]
-  // }, {
-  //   title: "Project Title Four",
-  //   location: "New York, NY, USA",
-  //   description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   longDescription: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-  //   designer: "Lorem Ipsum Ipsum",
-  //   images: [{
-  //     path: "images/projects/img_five.jpg",
-  //     alt: "some alt text"
-  //   }, {
-  //     path: "images/projects/img_six.jpg",
-  //     alt: "some alt text"
-  //   }]
-  // }];
+  init = function () {
+    updateCurrentProject()
+  }
 
+  isFirstProject = function () {
+    return currentProjectIndex == 0;
+  }
+
+  isLastProject = function () {
+    return (currentProjectIndex + 1) == $scope.projects.length;
+  }
+
+  updateCurrentProject = function (argument) {
+    $scope.currentProject = $scope.projects[currentProjectIndex]
+  }
+
+  init();
 });
