@@ -36,6 +36,14 @@ p{
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.04vw;
+  font-size: 1.1vw;
+  margin-bottom: 0.5vw;
+}
+
+.special{
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 300;
 }
 
 // h3{
@@ -88,6 +96,6 @@ p{
   }
 
   .more-text{
-    font-size: 3.33vw;  
+    font-size: 3.33vw;
   }
 }

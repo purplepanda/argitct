@@ -1,7 +1,57 @@
 .project{
   width: 100%;
-  min-height: $min-height; 
+  min-height: $min-height;
   height: 100vh;
   background-color: $silver;
+  padding-left: 9.5vw;
+
+  .slick-slide img{
+    height: 100vh;
+  }
+
+  .project-top{
+    background-color: $white-light;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    padding: 2vw;
+
+    h1, h2{
+      text-transform: uppercase;
+      color: $aubergine;
+      font-weight: 400;
+    }
+
+
+  }
+
+  .project-bottom{
+    background-color: $white-light;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    padding: 1vw 2vw;
+
+    p{
+      color: $aubergine;
+      font-weight: 400;
+      font-style: italic;
+      max-width: 63vw;
+      line-height: 1.5vw;
+    }
+  }
+
+}
+
+@media(max-width: 800px) {
+  .project{
+    padding-left: 0;
+
+
+  }
+}
+
+
+@media(max-width: 600px) {
 
 }
