@@ -1,9 +1,9 @@
 <div ng-include=" 'partials/nav.html' "></div>
 <div>
-  <a ui-sref="services" class="forward"></a>
-  <a ui-sref="contact" class="back"></a>
+  <div ng-click="nxtProj()" class="forward"></div>
+  <div ng-click="prvProj()" class="back"></div>
 
-  <project-detail ng-repeat="detail in details"></project-detail>
+  <project-detail project="currentProject"></project-detail>
 
   <a ui-sref="#" class="plus"></a>
 </div>
