@@ -99,8 +99,8 @@ h6 {
   font-size: 1.95vw;
   text-transform: uppercase;
   position: absolute;
-  top: 5.25vw;
-  right: 3.13vw;
+  top: 3.25vw;
+  right: 3.25vw;
   color: #41142b; }
 
 p {
@@ -108,7 +108,7 @@ p {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.04vw;
-  font-size: 1.1vw;
+  font-size: 1.25vw;
   margin-bottom: 0.5vw; }
 
 .special {
@@ -125,44 +125,47 @@ p {
 @media (max-width: 800px) {
   h6 {
     font-size: 3.5vw;
-    top: 9.5vw;
+    top: 8.25vw;
     right: 4vw; }
   .intro-text {
-    font-size: 4.5vw; }
+    font-size: 4vw; }
   .more-text {
-    font-size: 2.5vw; } }
+    font-size: 2.25vw; } }
 
 @media (max-width: 600px) {
   h6 {
-    font-size: 4.5vw;
-    top: 12.75vw;
-    right: 8vw; }
+    font-size: 4vw;
+    top: 11.5vw;
+    right: 6vw; }
   .intro-text {
-    font-size: 6vw; }
+    font-size: 4.75vw; }
   .more-text {
-    font-size: 3.33vw; } }
+    font-size: 3vw; } }
 
 /* Web Fonts -------------------- */
 .menu {
   position: absolute;
-  top: 2.5vw;
-  left: 2.5vw;
-  width: 6vw;
-  height: 6vw;
+  top: 2vw;
+  left: 2vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
   z-index: 10; }
   .menu:hover {
-    opacity: 0.75;
-    animation: icon-hover 0.5s ease-in-out forwards; }
+    opacity: 0.75; }
 
 .forward {
   position: absolute;
-  top: 2.5vw;
-  right: 2.5vw;
-  width: 6vw;
-  height: 6vw;
+  top: 2vw;
+  right: 2vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/silver_forward.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.75;
@@ -172,10 +175,12 @@ p {
 
 .back {
   position: absolute;
-  top: 2.5vw;
-  right: 9.5vw;
-  width: 6vw;
-  height: 6vw;
+  top: 2vw;
+  right: 9.25vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/silver_back.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.75;
@@ -190,8 +195,10 @@ p {
   right: 0;
   left: 0;
   margin: auto;
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/white_down.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25; }
@@ -201,8 +208,10 @@ p {
 .plus {
   position: absolute;
   bottom: 3.13vw;
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/white_plus.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25; }
@@ -217,23 +226,15 @@ p {
   -moz-transform: perspective(1px) translateY(-50%);
   -ms-transform: perspective(1px) translateY(-50%);
   transform: perspective(1px) translateY(-50%);
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
+  min-width: 40px;
+  min-height: 40px;
   background: url(../../images/icons/silver_plus.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.75; }
   .project-plus:hover {
     opacity: 1; }
-
-@media (min-width: 1100px) {
-  .menu,
-  .forward,
-  .back,
-  .down,
-  .plus,
-  .project-plus {
-    width: 4.5vw;
-    height: 4.5vw; } }
 
 @media (max-width: 800px) {
   .menu,
@@ -242,8 +243,10 @@ p {
   .down,
   .plus,
   .project-plus {
-    width: 9vw;
-    height: 9vw; }
+    width: 6vw;
+    height: 6vw; }
+  .down {
+    bottom: 20vw; }
   .menu {
     top: 6.25vw;
     left: 5.25vw; } }
@@ -254,8 +257,8 @@ p {
   .back,
   .down,
   .plus {
-    width: 12vw;
-    height: 12vw; }
+    width: 7vw;
+    height: 7vw; }
   .menu {
     top: 8.25vw; } }
 
@@ -276,8 +279,8 @@ p {
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
-  width: 20px;
+  height: 2.5vw;
+  width: 2.5vw;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
@@ -291,16 +294,6 @@ p {
   border: none;
   outline: none;
   z-index: 1; }
-  .slick-prev:hover, .slick-prev:focus,
-  .slick-next:hover,
-  .slick-next:focus {
-    outline: none;
-    background: transparent;
-    color: transparent; }
-    .slick-prev:hover:before, .slick-prev:focus:before,
-    .slick-next:hover:before,
-    .slick-next:focus:before {
-      opacity: 1; }
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
     opacity: 0.25; }
@@ -315,24 +308,24 @@ p {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: 25px; }
+  background: url(../../images/icons/white_prev.svg) center no-repeat transparent;
+  left: 25px;
+  opacity: 0.75; }
   [dir="rtl"] .slick-prev {
     left: auto;
-    right: 25px; }
-  .slick-prev:before {
-    content: "←"; }
-    [dir="rtl"] .slick-prev:before {
-      content: "→"; }
+    right: 1.95vw; }
+  .slick-prev:hover, .slick-prev:active {
+    opacity: 1; }
 
 .slick-next {
-  right: 25px; }
+  background: url(../../images/icons/white_next.svg) center no-repeat transparent;
+  right: 25px;
+  opacity: 0.75; }
   [dir="rtl"] .slick-next {
-    left: 25px;
+    left: 1.95vw;
     right: auto; }
-  .slick-next:before {
-    content: "→"; }
-    [dir="rtl"] .slick-next:before {
-      content: "←"; }
+  .slick-next:hover, .slick-next:active {
+    opacity: 1; }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -555,15 +548,16 @@ nav {
   min-height: 530px;
   height: 100vh;
   background-color: #b9b5b5;
-  padding-left: 9.5vw; }
+  padding-left: 9.25vw; }
   .project .slick-slide img {
-    height: 100vh; }
+    height: 100vh;
+    width: auto; }
   .project .project-top {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     top: 0;
     width: 100vw;
-    padding: 2vw; }
+    padding: 1.5vw 2vw; }
     .project .project-top h1, .project .project-top h2 {
       text-transform: uppercase;
       color: #41142b;
@@ -579,7 +573,7 @@ nav {
       font-weight: 400;
       font-style: italic;
       max-width: 63vw;
-      line-height: 1.5vw; }
+      line-height: 1.75vw; }
 
 @media (max-width: 800px) {
   .project {
@@ -614,8 +608,8 @@ nav {
       right: -11vw; }
   .subject-page .logo {
     position: absolute;
-    bottom: 3.13vw;
-    left: 3.13vw;
+    bottom: 2.5vw;
+    left: 2vw;
     width: 8vw; }
 
 @media (max-width: 800px) {

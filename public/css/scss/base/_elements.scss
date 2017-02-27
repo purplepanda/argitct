@@ -26,8 +26,8 @@ h6{
   font-size: 1.95vw; //25px
   text-transform: uppercase;
   position: absolute;
-  top: 5.25vw;
-  right: 3.13vw;
+  top: 3.25vw;
+  right: 3.25vw;
   color: $aubergine;
 }
 
@@ -36,7 +36,7 @@ p{
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.04vw;
-  font-size: 1.1vw;
+  font-size: 1.25vw;
   margin-bottom: 0.5vw;
 }
 
@@ -70,32 +70,32 @@ p{
 @media(max-width: 800px) {
   h6{
     font-size: 3.5vw;
-    top: 9.5vw;
+    top: 8.25vw;
     right: 4vw;
   }
 
   .intro-text{
-    font-size: 4.5vw;
+    font-size: 4vw;
   }
 
   .more-text{
-    font-size: 2.5vw;
+    font-size: 2.25vw;
   }
 }
 
 
 @media(max-width: 600px) {
   h6{
-    font-size: 4.5vw;
-    top: 12.75vw;
-    right: 8vw;
+    font-size: 4vw;
+    top: 11.5vw;
+    right: 6vw;
   }
 
   .intro-text{
-    font-size: 6vw;
+    font-size: 4.75vw;
   }
 
   .more-text{
-    font-size: 3.33vw;
+    font-size: 3vw;
   }
 }
