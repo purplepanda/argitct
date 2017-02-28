@@ -140,6 +140,10 @@ p {
     font-size: 1.56vw; } }
 
 @media (max-width: 800px) {
+  h1 {
+    font-size: 5.5vw; }
+  h2 {
+    font-size: 2.5vw; }
   h6 {
     font-size: 3.5vw;
     top: 8.25vw;
@@ -150,6 +154,10 @@ p {
     font-size: 2.25vw; } }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 7.33vw; }
+  h2 {
+    font-size: 3.33vw; }
   h6 {
     font-size: 4vw;
     top: 11vw;
@@ -284,7 +292,13 @@ p {
     bottom: 20vw; }
   .menu {
     top: 6.25vw;
-    left: 5.25vw; } }
+    left: 5.25vw; }
+  .forward {
+    background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
+    background-size: contain; }
+  .back {
+    background: url(../../images/icons/white_back.svg) center no-repeat transparent;
+    background-size: contain; } }
 
 @media (max-width: 600px) {
   .menu,
@@ -544,8 +558,8 @@ nav {
   .nav-hamburger a {
     color: white;
     text-decoration: none;
-    font-size: 3.44vw;
-    line-height: 6vw;
+    font-size: 2.75vw;
+    line-height: 4.5vw;
     font-weight: 300;
     padding-left: 6vw; }
     .nav-hamburger a:visited {
@@ -560,6 +574,12 @@ nav {
     color: rgba(65, 20, 43, 0.75); }
   .nav-home li a:hover, .nav-home li a:active {
     color: #87234B; }
+
+@media (max-width: 1100px) {
+  .nav-hamburger a {
+    font-size: 3.44vw;
+    line-height: 6vw;
+    padding-left: 6vw; } }
 
 @media (max-width: 800px) {
   .nav-hamburger {
@@ -638,7 +658,28 @@ nav {
 
 @media (max-width: 800px) {
   .project {
-    padding-left: 0; } }
+    left: 0;
+    width: 100vw;
+    top: 10vh;
+    height: 80vh; }
+    .project .slick-slide img {
+      height: auto;
+      max-height: 80vh;
+      width: 100vw;
+      top: 50%;
+      margin: auto; }
+    .project .project-top {
+      top: 0;
+      width: 100vw; }
+    .project .project-bottom {
+      bottom: 0;
+      width: 100vw; }
+      .project .project-bottom p {
+        font-size: 2vw; } }
+
+@media (max-width: 600px) {
+  .project .project-bottom p {
+    font-size: 2.67vw; } }
 
 .subject-page {
   width: 100%;

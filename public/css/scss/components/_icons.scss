@@ -152,6 +152,26 @@ $iconSizeMobile: 7vw;
     left: 5.25vw;
   }
 
+  .forward{
+    background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
+    background-size: contain;
+    // opacity: 0.75;
+    // z-index: 5;
+    // &:hover{
+    //   opacity: 1;
+    // }
+  }
+
+  .back{
+    background: url(../../images/icons/white_back.svg) center no-repeat transparent;
+    background-size: contain;
+    // opacity: 0.75;
+    // z-index: 5;
+    // &:hover{
+    //   opacity: 1;
+    // }
+  }
+
 
 }
 
