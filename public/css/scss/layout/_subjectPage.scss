@@ -31,13 +31,35 @@
     position: absolute;
     bottom: 2.5vw;
     left: 2vw;
-    width: 8vw;
+    width: 6vw;
   }
 }
 
 
 
+@media(max-width: 1100px) {
+  .subject-page{
 
+    .subject-content{
+
+      .intro-text{
+
+      }
+      .more-text{
+
+      }
+      .plus{
+
+      }
+    }
+
+    .logo{
+      bottom: 2.5vw;
+      left: 2vw;
+      width: 8vw;
+    }
+  }
+}
 
 
 @media(max-width: 800px) {

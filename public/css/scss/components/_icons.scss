@@ -1,11 +1,11 @@
-$iconSize: 4vw;
-$iconSizeDesktop: 4.5vw;
+$iconSize: 3vw;
+$iconSizeDesktop: 4vw;
 $iconSizeTablet: 6vw;
 $iconSizeMobile: 7vw;
 
 .menu{
   position: absolute;
-  top: 2vw;
+  top: 1.75vw;
   left: 2vw;
   width: $iconSize;
   height: $iconSize;
@@ -23,8 +23,8 @@ $iconSizeMobile: 7vw;
 
 .forward{
   position: absolute;
-  top: 2vw;
-  right: 2vw;
+  top: 1.75vw;
+  right: 2.5vw;
   width: $iconSize;
   height: $iconSize;
   min-width: 40px;
@@ -40,8 +40,8 @@ $iconSizeMobile: 7vw;
 
 .back{
   position: absolute;
-  top: 2vw;
-  right: 9.25vw;
+  top: 1.75vw;
+  right: 8.25vw;
   width: $iconSize;
   height: $iconSize;
   min-width: 40px;
@@ -92,7 +92,7 @@ $iconSizeMobile: 7vw;
 .project-plus{
   position: absolute;
   top: 50%;
-  right: 30vw;
+  right: 20vw;
   @include translateY(-50%);
   width: $iconSize;
   height: $iconSize;
@@ -106,17 +106,31 @@ $iconSizeMobile: 7vw;
   }
 }
 
-// @media(min-width: 1100px) {
-//   .menu,
-//   .forward,
-//   .back,
-//   .down,
-//   .plus,
-//   .project-plus{
-//     width: $iconSizeDesktop;
-//     height: $iconSizeDesktop;
-//   }
-// }
+@media(max-width: 1100px) {
+  .menu,
+  .forward,
+  .back,
+  .down,
+  .plus,
+  .project-plus{
+    width: $iconSizeDesktop;
+    height: $iconSizeDesktop;
+  }
+
+  .menu,
+  .forward,
+  .back{
+    top: 1.5vw;
+  }
+
+  .forward{
+    right: 2.5vw;
+  }
+
+  .back{
+    right: 10.25vw;
+  }
+}
 
 @media(max-width: 800px) {
   .menu,
@@ -130,7 +144,7 @@ $iconSizeMobile: 7vw;
   }
 
   .down{
-    bottom: 20vw; 
+    bottom: 20vw;
   }
 
   .menu{

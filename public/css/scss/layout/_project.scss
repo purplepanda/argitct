@@ -1,9 +1,27 @@
-.project{
+$width: 92vw;
+$width-desktop: 91vw;
+$width-mobile: 100vw;
+
+$left: 8vw;
+$left-desktop: 9vw;
+$left-mobile: 0;
+
+
+.project-background{
+  background-color: $silver;
   width: 100%;
   min-height: $min-height;
   height: 100vh;
+  position: relative;
+}
+
+.project{
+  position: absolute;
+  left: $left;
+  top: 0;
+  width: $width;
+  height: 100%;
   background-color: $silver;
-  padding-left: 9.25vw;
 
   .slick-slide img{
     height: 100vh;
@@ -14,23 +32,21 @@
     background-color: $white-light;
     position: absolute;
     top: 0;
-    width: 100vw;
-    padding: 1.5vw 2vw;
+    width: $width;
+    padding: 1.5vw 2vw 1vw 2vw;
 
     h1, h2{
       text-transform: uppercase;
       color: $aubergine;
       font-weight: 400;
     }
-
-
   }
 
   .project-bottom{
     background-color: $white-light;
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: $width;
     padding: 1vw 2vw;
 
     p{
@@ -38,11 +54,43 @@
       font-weight: 400;
       font-style: italic;
       max-width: 63vw;
-      line-height: 1.75vw;
+      line-height: 1.4;
+      font-size: 1vw;
     }
   }
 
 }
+
+
+@media(max-width: 1100px) {
+  .project{
+    width: $width-desktop;
+    left: $left-desktop;
+
+    .project-top{
+      width: $width-desktop;
+      padding: 1.5vw 2vw 1vw 2vw;
+
+      h1, h2{
+        text-transform: uppercase;
+        color: $aubergine;
+        font-weight: 400;
+      }
+    }
+
+    .project-bottom{
+      width: $width-desktop;
+      padding: 1vw 2vw;
+
+      p{
+        font-size: 1.45vw;
+      }
+    }
+
+
+  }
+}
+
 
 @media(max-width: 800px) {
   .project{
