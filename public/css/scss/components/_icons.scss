@@ -148,13 +148,23 @@ $iconSizeMobile: 7vw;
   }
 
   .menu{
-    top: 6.25vw;
+    // top: 5.5vw;
     left: 5.25vw;
+  }
+
+  .forward,
+  .back,
+  .menu{
+    position: absolute;
+    top: 6.5%;
+    @include translateY(-50%);
   }
 
   .forward{
     background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
     background-size: contain;
+    // top: 5.5vw;
+    right: 5.25vw;
     // opacity: 0.75;
     // z-index: 5;
     // &:hover{
@@ -165,6 +175,8 @@ $iconSizeMobile: 7vw;
   .back{
     background: url(../../images/icons/white_back.svg) center no-repeat transparent;
     background-size: contain;
+    // top: 5.5vw;
+    right: 14vw;
     // opacity: 0.75;
     // z-index: 5;
     // &:hover{
@@ -172,7 +184,9 @@ $iconSizeMobile: 7vw;
     // }
   }
 
-
+  .project-plus{
+    right: 6vw;
+  }
 }
 
 @media(max-width: 600px) {
@@ -185,7 +199,19 @@ $iconSizeMobile: 7vw;
     height: $iconSizeMobile;
   }
 
+  .forward,
+  .back,
   .menu{
-    top: 8.25vw;
+    position: absolute;
+    top: 6.5%;
+    @include translateY(-50%);
+  }
+
+  .forward{
+    right: 5.5vw;
+  }
+
+  .back{
+    right: 23.5vw;
   }
 }

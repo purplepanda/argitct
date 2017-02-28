@@ -291,14 +291,26 @@ p {
   .down {
     bottom: 20vw; }
   .menu {
-    top: 6.25vw;
     left: 5.25vw; }
+  .forward,
+  .back,
+  .menu {
+    position: absolute;
+    top: 6.5%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -moz-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%); }
   .forward {
     background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
-    background-size: contain; }
+    background-size: contain;
+    right: 5.25vw; }
   .back {
     background: url(../../images/icons/white_back.svg) center no-repeat transparent;
-    background-size: contain; } }
+    background-size: contain;
+    right: 14vw; }
+  .project-plus {
+    right: 6vw; } }
 
 @media (max-width: 600px) {
   .menu,
@@ -308,8 +320,19 @@ p {
   .plus {
     width: 7vw;
     height: 7vw; }
+  .forward,
+  .back,
   .menu {
-    top: 8.25vw; } }
+    position: absolute;
+    top: 6.5%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -moz-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%); }
+  .forward {
+    right: 5.5vw; }
+  .back {
+    right: 23.5vw; } }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -375,6 +398,18 @@ p {
     right: auto; }
   .slick-next:hover, .slick-next:active {
     opacity: 1; }
+
+@media (max-width: 800px) {
+  .slick-prev,
+  .slick-next {
+    height: 4vw;
+    width: 4vw; } }
+
+@media (max-width: 600px) {
+  .slick-prev,
+  .slick-next {
+    height: 7.5vw;
+    width: 7.5vw; } }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -604,12 +639,17 @@ nav {
   min-height: 530px;
   height: 100vh;
   position: relative; }
+  .project-background .logo {
+    position: absolute;
+    bottom: 2.5vw;
+    left: 1vw;
+    width: 5.25vw; }
 
 .project {
   position: absolute;
-  left: 8vw;
+  left: 7vw;
   top: 0;
-  width: 92vw;
+  width: 93vw;
   height: 100%;
   background-color: #b9b5b5; }
   .project .slick-slide img {
@@ -619,7 +659,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     top: 0;
-    width: 92vw;
+    width: 93vw;
     padding: 1.5vw 2vw 1vw 2vw; }
     .project .project-top h1, .project .project-top h2 {
       text-transform: uppercase;
@@ -629,7 +669,7 @@ nav {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     bottom: 0;
-    width: 92vw;
+    width: 93vw;
     padding: 1vw 2vw; }
     .project .project-bottom p {
       color: #41142b;
@@ -640,6 +680,10 @@ nav {
       font-size: 1vw; }
 
 @media (max-width: 1100px) {
+  .project-background .logo {
+    bottom: 2.5vw;
+    left: 1vw;
+    width: 7vw; }
   .project {
     width: 91vw;
     left: 9vw; }
@@ -657,27 +701,43 @@ nav {
         font-size: 1.45vw; } }
 
 @media (max-width: 800px) {
+  .project-background .logo {
+    bottom: 2.25vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 12vw; }
   .project {
     left: 0;
     width: 100vw;
-    top: 10vh;
-    height: 80vh; }
+    background-color: white;
+    height: 78vh;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-48%);
+    -moz-transform: perspective(1px) translateY(-48%);
+    -ms-transform: perspective(1px) translateY(-48%);
+    transform: perspective(1px) translateY(-48%);
+    overflow: hidden; }
     .project .slick-slide img {
-      height: auto;
-      max-height: 80vh;
-      width: 100vw;
-      top: 50%;
-      margin: auto; }
+      width: 100%;
+      height: auto; }
     .project .project-top {
       top: 0;
-      width: 100vw; }
+      width: 100vw;
+      padding: 2.5vw 5vw 1vw 5vw; }
     .project .project-bottom {
       bottom: 0;
-      width: 100vw; }
+      width: 100vw;
+      padding: 2vw 5vw; }
       .project .project-bottom p {
-        font-size: 2vw; } }
+        font-size: 2vw;
+        max-width: 75vw; } }
 
 @media (max-width: 600px) {
+  .project-background .logo {
+    bottom: 5.25vw;
+    width: 15vw; }
   .project .project-bottom p {
     font-size: 2.67vw; } }
 
