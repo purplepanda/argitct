@@ -1,22 +1,30 @@
 app.controller("projectsCtrl", function($scope, $state, projectData) {
   projectIds = _.map(projectData, 'id').sort()
-  
-  currentProjectId = function () {
-     return parseInt($state.params.projectId)
+
+  debugger
+
+  currentProjectId = function() {
+    return parseInt($state.params.projectId)
   }
 
   $scope.title = "Projects";
 
-  $scope.goToFirstProj = function () {
-    $state.go("projects.project", { projectId: firstProjectId() });
+  $scope.goToFirstProj = function() {
+    $state.go("projects.project", {
+      projectId: firstProjectId()
+    });
   }
 
-  $scope.goToNextProj = function () {
-    $state.go("projects.project", { projectId: nextProjId() });
+  $scope.goToNextProj = function() {
+    $state.go("projects.project", {
+      projectId: nextProjId()
+    });
   }
 
-  $scope.goToPreviousProj = function () {
-    $state.go("projects.project", { projectId: previousProjId() });
+  $scope.goToPreviousProj = function() {
+    $state.go("projects.project", {
+      projectId: previousProjId()
+    });
   }
 
   nextProjId = function() {
@@ -35,19 +43,19 @@ app.controller("projectsCtrl", function($scope, $state, projectData) {
     return (projectIds.indexOf(currentProjectId()) + 1) == projectIds.length;
   }
 
-  firstProjectId = function () {
+  firstProjectId = function() {
     return projectIds[0]
   }
 
-  lastProjectId = function () {
+  lastProjectId = function() {
     return projectIds[projectIds.length - 1]
   }
 
-  nextProjectId = function () {
+  nextProjectId = function() {
     return projectIds[projectIds.indexOf(currentProjectId()) + 1]
   }
 
-  previousProjectId = function () {
+  previousProjectId = function() {
     return projectIds[projectIds.indexOf(currentProjectId()) - 1]
   }
 
