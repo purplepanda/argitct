@@ -3,40 +3,43 @@ app.controller("projectsCtrl", function($scope, $state, projectData) {
   $scope.title = "Projects";
   $scope.projects = projectData;
   $scope.currentProject = null;
+  $scope.modalShown = false;
 
-  $scope.nxtProj = function () {
+  $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+  };
+
+  $scope.nxtProj = function() {
     if (isLastProject()) {
-      currentProjectIndex = 0  
-    }
-    else {
+      currentProjectIndex = 0
+    } else {
       currentProjectIndex += 1
     }
     updateCurrentProject()
   }
 
-  $scope.prvProj = function () {
+  $scope.prvProj = function() {
     if (isFirstProject()) {
       currentProjectIndex = ($scope.projects.length - 1)
-    }
-    else {
+    } else {
       currentProjectIndex -= 1
     }
     updateCurrentProject()
   }
 
-  init = function () {
+  init = function() {
     updateCurrentProject()
   }
 
-  isFirstProject = function () {
+  isFirstProject = function() {
     return currentProjectIndex == 0;
   }
 
-  isLastProject = function () {
+  isLastProject = function() {
     return (currentProjectIndex + 1) == $scope.projects.length;
   }
 
-  updateCurrentProject = function (argument) {
+  updateCurrentProject = function(argument) {
     $scope.currentProject = $scope.projects[currentProjectIndex]
   }
 
