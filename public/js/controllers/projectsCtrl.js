@@ -1,47 +1,54 @@
 app.controller("projectsCtrl", function($scope, $state, projectData) {
-  currentProjectIndex = 0
+  projectIds = _.map(projectData, 'id').sort()
+  
+  currentProjectId = function () {
+     return parseInt($state.params.projectId)
+  }
+
   $scope.title = "Projects";
-  $scope.projects = projectData;
-  $scope.currentProject = null;
-  $scope.modalShown = false;
 
-  $scope.toggleModal = function() {
-    $scope.modalShown = !$scope.modalShown;
-  };
-
-  $scope.nxtProj = function() {
-    if (isLastProject()) {
-      currentProjectIndex = 0
-    } else {
-      currentProjectIndex += 1
-    }
-    updateCurrentProject()
+  $scope.goToFirstProj = function () {
+    $state.go("projects.project", { projectId: firstProjectId() });
   }
 
-  $scope.prvProj = function() {
-    if (isFirstProject()) {
-      currentProjectIndex = ($scope.projects.length - 1)
-    } else {
-      currentProjectIndex -= 1
-    }
-    updateCurrentProject()
+  $scope.goToNextProj = function () {
+    $state.go("projects.project", { projectId: nextProjId() });
   }
 
-  init = function() {
-    updateCurrentProject()
+  $scope.goToPreviousProj = function () {
+    $state.go("projects.project", { projectId: previousProjId() });
+  }
+
+  nextProjId = function() {
+    return isLastProject() ? firstProjectId() : nextProjectId()
+  }
+
+  previousProjId = function() {
+    return isFirstProject() ? lastProjectId() : previousProjectId()
   }
 
   isFirstProject = function() {
-    return currentProjectIndex == 0;
+    return projectIds.indexOf(currentProjectId()) == 0;
   }
 
   isLastProject = function() {
-    return (currentProjectIndex + 1) == $scope.projects.length;
+    return (projectIds.indexOf(currentProjectId()) + 1) == projectIds.length;
   }
 
-  updateCurrentProject = function(argument) {
-    $scope.currentProject = $scope.projects[currentProjectIndex]
+  firstProjectId = function () {
+    return projectIds[0]
   }
 
-  init();
+  lastProjectId = function () {
+    return projectIds[projectIds.length - 1]
+  }
+
+  nextProjectId = function () {
+    return projectIds[projectIds.indexOf(currentProjectId()) + 1]
+  }
+
+  previousProjectId = function () {
+    return projectIds[projectIds.indexOf(currentProjectId()) - 1]
+  }
+
 });

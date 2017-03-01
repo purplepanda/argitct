@@ -2,7 +2,7 @@
 
     <slick infinite=true slides-to-show=1 slides-to-scroll=1 speed=1000 >
         <div ng-repeat="image in project.images">
-            <img src="{{ image.path }}" />
+            <img ng-src="{{ image.path }}" />
         </div>
     </slick>
 
