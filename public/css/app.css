@@ -101,7 +101,7 @@ h6 {
   position: absolute;
   top: 2.7vw;
   right: 3.25vw;
-  color: #41142b; }
+  color: #4a3041; }
 
 p {
   font-family: "Lato", Helvetica, sans-serif;
@@ -479,7 +479,7 @@ p {
     #home .menu:hover, #home .menu:active {
       opacity: 0.90; }
   #home h6 {
-    color: rgba(65, 20, 43, 0.75); }
+    color: rgba(74, 48, 65, 0.75); }
   #home .subject-content {
     position: relative;
     top: 13%;
@@ -488,7 +488,7 @@ p {
     text-align: justify; }
     #home .subject-content .intro-text {
       font-size: 2vw;
-      color: rgba(65, 20, 43, 0.75); }
+      color: rgba(74, 48, 65, 0.75); }
   #home .large-logo {
     position: relative;
     top: 35%;
@@ -506,18 +506,18 @@ p {
   #home .nav-home {
     text-align: center; }
     #home .nav-home a {
-      color: rgba(65, 20, 43, 0.75);
+      color: rgba(74, 48, 65, 0.75);
       font-size: 1.25vw;
       text-decoration: none; }
       #home .nav-home a:hover, #home .nav-home a:active {
-        color: #87234B; }
+        color: #8B634B; }
       #home .nav-home a:after {
         content: "|";
         padding: 0 0.5vw 0 1vw; }
         #home .nav-home a:after:last-of-type {
           display: none; }
       #home .nav-home a:visited {
-        color: rgba(65, 20, 43, 0.75); }
+        color: rgba(74, 48, 65, 0.75); }
 
 @media (max-width: 800px) {
   #home .subject-content {
@@ -541,7 +541,7 @@ p {
   width: 100%;
   height: 100vh;
   min-height: 530px;
-  background-color: #41142b; }
+  background-color: #4a3041; }
   #landing .large-logo {
     position: relative;
     top: 50%;
@@ -583,7 +583,7 @@ p {
   right: 15vw;
   height: 70vw;
   width: 50vw;
-  background-color: rgba(65, 20, 43, 0.95); }
+  background-color: rgba(74, 48, 65, 0.95); }
 
 .ng-modal-dialog {
   position: absolute;
@@ -620,7 +620,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(65, 20, 43, 0.95);
+  background-color: rgba(74, 48, 65, 0.95);
   z-index: 9;
   padding-top: 10vw; }
   .nav-hamburger a {
@@ -633,15 +633,15 @@ nav {
     .nav-hamburger a:visited {
       color: white; }
     .nav-hamburger a:hover, .nav-hamburger a:active {
-      color: #87234B; }
+      color: #8B634B; }
 
 .nav-home li {
   display: inline-block;
-  color: rgba(65, 20, 43, 0.75); }
+  color: rgba(74, 48, 65, 0.75); }
   .nav-home li a:visited {
-    color: rgba(65, 20, 43, 0.75); }
+    color: rgba(74, 48, 65, 0.75); }
   .nav-home li a:hover, .nav-home li a:active {
-    color: #87234B; }
+    color: #8B634B; }
 
 @media (max-width: 1100px) {
   .nav-hamburger a {
@@ -667,7 +667,7 @@ nav {
       padding-left: 13.5vw; } }
 
 .project-background {
-  background-color: #b9b5b5;
+  background-color: #b1b3b3;
   width: 100%;
   min-height: 530px;
   height: 100vh;
@@ -684,7 +684,7 @@ nav {
   top: 0;
   width: 93vw;
   height: 100%;
-  background-color: #b9b5b5; }
+  background-color: #b1b3b3; }
   .project .slick-slide img {
     height: 100vh;
     width: auto; }
@@ -696,7 +696,7 @@ nav {
     padding: 1.5vw 2vw 1vw 2vw; }
     .project .project-top h1, .project .project-top h2 {
       text-transform: uppercase;
-      color: #41142b;
+      color: #4a3041;
       font-weight: 400; }
   .project .project-bottom {
     background-color: rgba(255, 255, 255, 0.8);
@@ -705,7 +705,7 @@ nav {
     width: 93vw;
     padding: 1vw 2vw; }
     .project .project-bottom p {
-      color: #41142b;
+      color: #4a3041;
       font-weight: 400;
       font-style: italic;
       max-width: 63vw;
@@ -725,7 +725,7 @@ nav {
       padding: 1.5vw 2vw 1vw 2vw; }
       .project .project-top h1, .project .project-top h2 {
         text-transform: uppercase;
-        color: #41142b;
+        color: #4a3041;
         font-weight: 400; }
     .project .project-bottom {
       width: 91vw;
@@ -778,7 +778,7 @@ nav {
   width: 100%;
   min-height: 530px;
   height: 100vh;
-  background-color: rgba(75, 20, 43, 0.75); }
+  background-color: rgba(65, 39, 59, 0.95); }
   .subject-page .subject-content {
     position: relative;
     top: 50%;
