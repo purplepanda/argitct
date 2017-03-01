@@ -20,15 +20,20 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       templateUrl: "partials/home.html",
       controller: "homeCtrl"
     })
-    .state("projects", {
+    .state("projectsOverview", {
       url: "/projects",
-      templateUrl: "partials/projects.html",
+      templateUrl: "partials/projectsOverview.html",
       controller: "subjectPageCtrl"
     })
-    .state("projectDetails", {
-      url: "/projectDetails",
-      templateUrl: "partials/projectDetails.html",
+    .state("projects", {
+      url: "/projects",
+      templateUrl: "partials/projectsWrapper.html",
       controller: "projectsCtrl"
+    })
+    .state("projects.project", {
+      url: "/{projectId}",
+      templateUrl: "partials/project.html",
+      controller: "projectCtrl"
     })
     .state("process", {
       url: "/project-recovery",
