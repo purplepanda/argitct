@@ -1,8 +1,6 @@
 app.controller("projectsCtrl", function($scope, $state, projectData) {
   projectIds = _.map(projectData, 'id').sort()
 
-  debugger
-
   currentProjectId = function() {
     return parseInt($state.params.projectId)
   }
