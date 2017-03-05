@@ -95,6 +95,13 @@ h1 {
 h2 {
   font-size: 1.56vw; }
 
+h5 {
+  font-size: 1.25vw;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.25vw;
+  opacity: 0.25; }
+
 h6 {
   font-size: 1.56vw;
   text-transform: uppercase;
@@ -144,6 +151,8 @@ p {
     font-size: 5.5vw; }
   h2 {
     font-size: 2.5vw; }
+  h5 {
+    font-size: 1.75vw; }
   h6 {
     font-size: 3.5vw;
     top: 8.25vw;
@@ -158,6 +167,8 @@ p {
     font-size: 7.33vw; }
   h2 {
     font-size: 3.33vw; }
+  h5 {
+    font-size: 2.25vw; }
   h6 {
     font-size: 4vw;
     top: 11vw;
@@ -241,7 +252,7 @@ p {
   background-size: contain;
   opacity: 0.25; }
   .plus:hover {
-    opacity: 0.75; }
+    opacity: 0.5; }
 
 .project-plus {
   position: absolute;
@@ -470,7 +481,7 @@ p {
 #home {
   width: 100%;
   height: 100vh;
-  min-height: 530px;
+  min-height: 600px;
   background-color: white; }
   #home .menu {
     background: url("../../images/icons/aubergine_menu.svg") center no-repeat transparent;
@@ -540,41 +551,56 @@ p {
 #landing {
   width: 100%;
   height: 100vh;
-  min-height: 530px;
+  min-height: 600px;
   background-color: #4a3041; }
   #landing .large-logo {
     position: relative;
     top: 50%;
-    -webkit-transform: perspective(1px) translateY(-40%);
-    -moz-transform: perspective(1px) translateY(-40%);
-    -ms-transform: perspective(1px) translateY(-40%);
-    transform: perspective(1px) translateY(-40%);
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -moz-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
     width: 65vw;
     margin: auto; }
-  #landing .plus {
-    width: 100%;
-    text-align: center;
-    bottom: 5%; }
-  #landing .new-york {
-    text-transform: uppercase;
-    float: right;
-    font-size: 3vw;
-    letter-spacing: 0.5vw;
-    margin-right: 1.5vw;
-    margin-top: -2.5vw; }
+    #landing .large-logo .new-york {
+      text-transform: uppercase;
+      float: right;
+      font-size: 3vw;
+      letter-spacing: 0.5vw;
+      margin-right: 1.5vw;
+      margin-top: -2.5vw; }
+    #landing .large-logo .plus {
+      bottom: auto;
+      right: -16%;
+      top: 46%;
+      -webkit-transform: perspective(1px) translateY(-50%);
+      -moz-transform: perspective(1px) translateY(-50%);
+      -ms-transform: perspective(1px) translateY(-50%);
+      transform: perspective(1px) translateY(-50%); }
+  #landing .bottom {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0; }
 
 @media (max-width: 800px) {
   #landing .large-logo {
-    width: 75vw; }
-  #landing .plus {
-    bottom: 10%; }
-  #landing .new-york {
-    font-size: 3.75vw;
-    margin-right: 1.75vw; } }
+    width: 75vw;
+    top: 45%; }
+    #landing .large-logo .new-york {
+      font-size: 3.75vw;
+      margin-right: 1.75vw; }
+    #landing .large-logo .plus {
+      top: 150%;
+      right: 0;
+      left: 0;
+      margin: auto; }
+  #landing .bottom {
+    bottom: 5%; } }
 
 @media (max-width: 600px) {
-  #landing .plus {
-    bottom: 20vw; } }
+  #landing .large-logo .plus {
+    top: 175%; } }
 
 .ng-modal-overlay {
   position: absolute;
@@ -669,7 +695,7 @@ nav {
 .project-background {
   background-color: #b1b3b3;
   width: 100%;
-  min-height: 530px;
+  min-height: 600px;
   height: 100vh;
   position: relative; }
   .project-background .logo {
@@ -776,7 +802,7 @@ nav {
 
 .subject-page {
   width: 100%;
-  min-height: 530px;
+  min-height: 600px;
   height: 100vh;
   background-color: rgba(68, 45, 59, 0.8); }
   .subject-page .subject-content {

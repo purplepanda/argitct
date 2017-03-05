@@ -7,47 +7,63 @@
     .large-logo {
         position: relative;
         top: 50%;
-        @include translateY(-40%);
+        @include translateY(-50%);
         width: 65vw;
         margin: auto;
+
+        .new-york {
+            text-transform: uppercase;
+            float: right;
+            font-size: 3vw;
+            letter-spacing: 0.5vw;
+            margin-right: 1.5vw;
+            margin-top: -2.5vw;
+        }
+
+        .plus {
+            bottom: auto;
+            right: -16%;
+            top: 46%;
+            @include translateY(-50%);
+        }
     }
 
-    .plus {
-        width: 100%;
-        text-align: center;
-        bottom: 5%;
-        // animation: glow 3s ease-in-out infinite;
-    }
-
-    .new-york {
-        text-transform: uppercase;
-        float: right;
-        font-size: 3vw;
-        letter-spacing: 0.5vw;
-        margin-right: 1.5vw;
-        margin-top: -2.5vw;
+    .bottom {
+        position: absolute;
+        bottom: 10%;
+        left: 0;
+        right: 0;
     }
 }
 @media(max-width: 800px) {
     #landing {
         .large-logo {
             width: 75vw;
-        }
+            top: 45%;
 
-        .plus {
-            bottom: 10%;
-        }
+            .new-york {
+                font-size: 3.75vw;
+                margin-right: 1.75vw;
+            }
 
-        .new-york {
-            font-size: 3.75vw;
-            margin-right: 1.75vw;
+            .plus {
+                top: 150%;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+        }
+        .bottom {
+            bottom: 5%;
         }
     }
 }
 @media(max-width: 600px) {
     #landing {
-        .plus {
-            bottom: 20vw;
+        .large-logo {
+            .plus {
+                top: 175%;
+            }
         }
     }
 }

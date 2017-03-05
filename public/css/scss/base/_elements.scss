@@ -22,6 +22,14 @@ h2{
   font-size: 1.56vw; //25px
 }
 
+h5{
+  font-size: 1.25vw;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.25vw;
+  opacity: 0.25;
+}
+
 h6{
   font-size: 1.56vw; //25px
   text-transform: uppercase;
@@ -105,6 +113,10 @@ p{
     font-size: 2.5vw; //25px
   }
 
+  h5{
+    font-size: 1.75vw;
+  }
+
   h6{
     font-size: 3.5vw;
     top: 8.25vw;
@@ -128,6 +140,10 @@ p{
 
   h2{
     font-size: 3.33vw; //25px
+  }
+
+  h5{
+    font-size: 2.25vw;
   }
 
   h6{
