@@ -1,4 +1,11 @@
 app.controller("processCtrl", function($scope, $state) {
+  $scope.modalShown = false;
+
+  $scope.toggleModal = function() {
+    $scope.modalShown = !$scope.modalShown;
+  };
+
+  $scope.modalContent = "Collect existing project-related benchmark data including master plan guides, consultants contracts, design intent and construction drawing issuances, pricing documents, construction and purchasing agreements, regulatory filings, property agreements, marketing and donor packages, and other similar related owner-level documentation."
 
   $scope.process = [{
     step: "analyze",

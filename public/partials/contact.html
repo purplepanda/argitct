@@ -12,8 +12,10 @@
             <li>{{contactPage.moreInformation.email}}</li>
         </ul>
 
-        <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-        <a href="#" class="plus"></a>
+        <a ng-click='toggleModal()' class="plus"></a>
+        <modal-dialog show='modalShown'>
+            <p>{{contactPage.modalContent}}</p>
+        </modal-dialog>
     </div>
 
     <a ui-sref="home"> <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>

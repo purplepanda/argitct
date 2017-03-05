@@ -5,8 +5,10 @@
     <div class="subject-content">
         <p class="intro-text">{{teamPage.introText}}</p>
         <p class="more-text">{{teamPage.moreInformation}}</p>
-        <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-        <a href="#" class="plus"></a>
+        <a ng-click='toggleModal()' class="plus"></a>
+        <modal-dialog show='modalShown'>
+            <p>{{teamPage.modalContent}}</p>
+        </modal-dialog>
     </div>
 
     <a ui-sref="home"> <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>

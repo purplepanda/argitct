@@ -1,15 +1,15 @@
 <div ng-include=" 'partials/nav.html' "></div>
 <div id="services" class="subject-page">
-  <h6>{{servicesPage.title}}</h6>
+    <h6>{{servicesPage.title}}</h6>
 
-  <div class="subject-content">
-   <p class="intro-text">{{servicesPage.introText}}</p>
-   <p class="more-text">{{servicesPage.moreInformation}}</p>
-   <a href="#" class="plus"></a>
-  </div>
+    <div class="subject-content">
+        <p class="intro-text">{{servicesPage.introText}}</p>
+        <p class="more-text">{{servicesPage.moreInformation}}</p>
+        <a ng-click='toggleModal()' class="plus"></a>
+        <modal-dialog show='modalShown'>
+            <p>{{servicesPage.modalContent}}</p>
+        </modal-dialog>
+    </div>
 
-  <a ui-sref="home">  <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>
-
-  <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-
+    <a ui-sref="home"> <img src="images/logo/arg_aubergine.svg" alt="Argitct logo" class="logo"></a>
 </div>

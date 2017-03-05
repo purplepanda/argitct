@@ -6,7 +6,10 @@
     <div class="subject-content">
         <!-- <p class="intro-text">{{biographyPage.introText}}</p>
   <p class="more-text">{{biographyPage.moreInformation}}</p>  -->
-        <a href="#" class="plus"></a>
+        <a ng-click='toggleModal()' class="plus"></a>
+        <modal-dialog show='modalShown'>
+            <p>{{modalContent}}</p>
+        </modal-dialog>
     </div>
 
     <a ui-sref="services" class="forward"></a>

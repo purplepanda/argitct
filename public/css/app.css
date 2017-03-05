@@ -136,8 +136,8 @@ p {
     font-size: 1.95vw; }
   h6 {
     font-size: 1.95vw;
-    top: 2.75vw;
-    right: 3.25vw; }
+    top: 2.9vw;
+    right: 3vw; }
   p {
     font-size: 1.25vw;
     margin-bottom: 0.5vw; }
@@ -155,7 +155,7 @@ p {
     font-size: 1.75vw; }
   h6 {
     font-size: 3.5vw;
-    top: 8.25vw;
+    top: 4.9vw;
     right: 4vw; }
   .intro-text {
     font-size: 4vw; }
@@ -171,7 +171,7 @@ p {
     font-size: 2.25vw; }
   h6 {
     font-size: 4vw;
-    top: 11vw;
+    top: 5.5%;
     right: 6vw; }
   .intro-text {
     font-size: 4.75vw; }
@@ -185,8 +185,8 @@ p {
   left: 2vw;
   width: 3vw;
   height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 30px;
+  min-height: 30px;
   background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
@@ -487,66 +487,62 @@ p {
     background: url("../../images/icons/aubergine_menu.svg") center no-repeat transparent;
     background-size: contain;
     opacity: 0.70; }
-    #home .menu:hover, #home .menu:active {
+    #home .menu:hover {
       opacity: 0.90; }
+    #home .menu:active {
+      background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
+      background-size: contain;
+      opacity: 0.25; }
   #home h6 {
-    color: #54414e; }
+    color: rgba(84, 65, 78, 0.8); }
   #home .subject-content {
     position: relative;
-    top: 13%;
-    width: 55%;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    -moz-transform: perspective(1px) translateY(-50%);
+    -ms-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+    width: 65vw;
     margin: auto;
     text-align: justify; }
     #home .subject-content .intro-text {
       font-size: 2vw;
-      color: #54414e; }
-  #home .large-logo {
-    position: relative;
-    top: 35%;
-    -webkit-transform: perspective(1px) translateY(-40%);
-    -moz-transform: perspective(1px) translateY(-40%);
-    -ms-transform: perspective(1px) translateY(-40%);
-    transform: perspective(1px) translateY(-40%);
-    width: 65vw;
-    margin: auto;
-    opacity: 0.75; }
-  #home footer {
-    position: relative;
-    top: 27%;
-    margin-bottom: 3vw; }
-  #home .nav-home {
-    text-align: center; }
-    #home .nav-home a {
-      color: #54414e;
-      font-size: 1.25vw;
-      text-decoration: none; }
-      #home .nav-home a:hover, #home .nav-home a:active {
-        color: #b1b3b3; }
-      #home .nav-home a:after {
-        content: "|";
-        padding: 0 0.5vw 0 1vw; }
-        #home .nav-home a:after:last-of-type {
-          display: none; }
-      #home .nav-home a:visited {
-        color: #54414e; }
+      color: rgba(84, 65, 78, 0.8); }
+    #home .subject-content .large-logo {
+      opacity: 0.75;
+      padding: 5vw 0; }
+    #home .subject-content .nav-home {
+      text-align: center; }
+      #home .subject-content .nav-home a {
+        color: rgba(84, 65, 78, 0.8);
+        font-size: 1.25vw;
+        text-decoration: none; }
+        #home .subject-content .nav-home a:active, #home .subject-content .nav-home a:hover {
+          color: #b1b3b3; }
+        #home .subject-content .nav-home a:after {
+          content: "|";
+          padding: 0 0.5vw 0 1vw; }
+          #home .subject-content .nav-home a:after:last-of-type {
+            display: none; }
+        #home .subject-content .nav-home a:visited {
+          color: rgba(84, 65, 78, 0.8); }
 
 @media (max-width: 800px) {
   #home .subject-content {
-    top: 20%;
-    width: 75%; }
-    #home .subject-content .intro-text {
-      font-size: 5vw; }
-  #home .large-logo {
-    top: 40%;
     width: 75vw; }
-  #home .nav-home {
-    display: none; } }
+    #home .subject-content .intro-text {
+      font-size: 4vw; }
+    #home .subject-content .large-logo {
+      width: 75vw;
+      padding: 10vw 0; }
+    #home .subject-content .nav-home a {
+      font-size: 1.75vw; } }
 
 @media (max-width: 600px) {
   #home .subject-content .intro-text {
-    font-size: 6.5vw; }
-  #home .large-logo {
-    top: 40%; } }
+    font-size: 4.75vw; }
+  #home .subject-content .nav-home {
+    display: none; } }
 
 #landing {
   width: 100%;
@@ -851,4 +847,4 @@ nav {
 
 @media (max-width: 600px) {
   .subject-page .logo {
-    width: 15vw; } }
+    width: 20vw; } }

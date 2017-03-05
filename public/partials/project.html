@@ -1,6 +1,6 @@
 <div class="project">
 
-    <slick infinite=true slides-to-show=1 slides-to-scroll=1 speed=1000 >
+    <slick infinite=true slides-to-show=1 slides-to-scroll=1 speed=1000>
         <div ng-repeat="image in project.images">
             <img ng-src="{{ image.path }}" />
         </div>
@@ -15,11 +15,9 @@
         <p><span class="special">designer: </span>{{project.designer}}</p>
         <p><span class="special">description: </span>{{project.description}}</p>
 
-        <!-- <a ui-sref="#" class="project-plus"></a> -->
         <a ng-click='toggleModal()' class="project-plus"></a>
-        <!-- <button ng-click='toggleModal()' class="project-plus"></button> -->
-        <modal-dialog show='modalShown' width='750px' height='60%'>
-          <p>{{project.longdescription}}<p>
+        <modal-dialog show='modalShown'>
+            <p>{{project.longdescription}}</p>
         </modal-dialog>
 
     </div>

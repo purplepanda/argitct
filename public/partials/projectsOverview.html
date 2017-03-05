@@ -6,8 +6,10 @@
         <p class="intro-text">{{projectsPage.introText}}</p>
         <p class="more-text">{{projectsPage.moreInformation}}</p>
 
-        <!-- to trigger modal, if used (try ng-show / ng-hide?) -->
-        <a href="#" class="plus"></a>
+        <a ng-click='toggleModal()' class="plus"></a>
+        <modal-dialog show='modalShown'>
+            <p>{{servicesPage.modalContent}}</p>
+        </modal-dialog>
     </div>
 
     <a ui-sref="projects.project({ projectId: 1 })" class="down"></a>

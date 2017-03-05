@@ -9,9 +9,13 @@
         background-size: contain;
         opacity: 0.70;
 
-        &:hover,
-        &:active{
+        &:hover {
             opacity: 0.90;
+        }
+        &:active{
+          background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
+          background-size: contain;
+          opacity: 0.25;
         }
     }
 
@@ -21,8 +25,9 @@
 
     .subject-content {
         position: relative;
-        top: 13%;
-        width: 55%;
+        top: 50%;
+        @include translateY(-50%);
+        width: 65vw;
         margin: auto;
         text-align: justify;
 
@@ -30,48 +35,38 @@
             font-size: 2vw;
             color: $burntlilac;
         }
-    }
 
-    .large-logo {
-        position: relative;
-        top: 35%;
-        @include translateY(-40%);
-        width: 65vw;
-        margin: auto;
-        opacity: 0.75;
-    }
+        .large-logo {
+            opacity: 0.75;
+            padding: 5vw 0;
+        }
 
-    footer {
-        position: relative;
-        top: 27%;
-        margin-bottom: 3vw;
-    }
+        .nav-home {
+            text-align: center;
 
-    .nav-home {
-        text-align: center;
-
-        a {
-            color: $burntlilac;
-            font-size: 1.25vw;
-            text-decoration: none;
-
-            &:hover,
-            &:active {
-                color: $silver;
-            }
-
-            &:after {
-                // content: "\25BE";
-                content: "|";
-                padding: 0 0.5vw 0 1vw;
-
-                &:last-of-type {
-                    display: none;
-                }
-            }
-
-            &:visited {
+            a {
                 color: $burntlilac;
+                font-size: 1.25vw;
+                text-decoration: none;
+
+                &:active,
+                &:hover {
+                    color: $silver;
+                }
+
+                &:after {
+                    // content: "\25BE";
+                    content: "|";
+                    padding: 0 0.5vw 0 1vw;
+
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+
+                &:visited {
+                    color: $burntlilac;
+                }
             }
         }
     }
@@ -79,20 +74,22 @@
 @media(max-width: 800px) {
     #home {
         .subject-content {
-            top: 20%;
-            width: 75%;
-            .intro-text {
-                font-size: 5vw;
-            }
-        }
-
-        .large-logo {
-            top: 40%;
             width: 75vw;
-        }
 
-        .nav-home {
-            display: none;
+            .intro-text {
+                font-size: 4vw;
+            }
+
+            .large-logo {
+                width: 75vw;
+                padding: 10vw 0;
+            }
+
+            .nav-home {
+                a {
+                    font-size: 1.75vw;
+                }
+            }
         }
     }
 }
@@ -100,14 +97,13 @@
 @media(max-width: 600px) {
     #home {
         .subject-content {
-
             .intro-text {
-                font-size: 6.5vw;
+                font-size: 4.75vw;
             }
-        }
 
-        .large-logo {
-            top: 40%;
+            .nav-home {
+                display: none;
+            }
         }
     }
 }
