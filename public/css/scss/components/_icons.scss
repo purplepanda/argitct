@@ -3,215 +3,188 @@ $iconSizeDesktop: 4vw;
 $iconSizeTablet: 6vw;
 $iconSizeMobile: 7vw;
 
-.menu{
-  position: absolute;
-  top: 1.75vw;
-  left: 2vw;
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 30px;
-  min-height: 30px;
-  background: url(../../images/icons/white_menu.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.25;
-  z-index: 10;
-  &:hover{
-    opacity: 0.75;
-    // animation: icon-hover 0.5s ease-in-out forwards;
-  }
-}
-
-.forward{
-  position: absolute;
-  top: 1.75vw;
-  right: 2.5vw;
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 40px;
-  min-height: 40px;
-  background: url(../../images/icons/silver_forward.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.75;
-  z-index: 5;
-  &:hover{
-    opacity: 1;
-  }
-}
-
-.back{
-  position: absolute;
-  top: 1.75vw;
-  right: 8.25vw;
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 40px;
-  min-height: 40px;
-  background: url(../../images/icons/silver_back.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.75;
-  z-index: 5;
-  &:hover{
-    opacity: 1;
-  }
-}
-
-.down{
-  animation: down 5s ease-in-out infinite;
-  position: absolute;
-  bottom: 3.13vw;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 40px;
-  min-height: 40px;
-  background: url(../../images/icons/white_down.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.25;
-  &:hover{
-    opacity: 0.75;
-  }
-}
-
-.plus{
-  position: absolute;
-  bottom: 3.13vw;
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 40px;
-  min-height: 40px;
-  background: url(../../images/icons/white_plus.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.25;
-  &:hover{
-    opacity: 0.5;
-  }
-}
-
-.project-plus{
-  position: absolute;
-  top: 50%;
-  right: 20vw;
-  @include translateY(-50%);
-  width: $iconSize;
-  height: $iconSize;
-  min-width: 40px;
-  min-height: 40px;
-  background: url(../../images/icons/silver_plus.svg) center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.75;
-  &:hover{
-    opacity: 1;
-  }
-}
-
-@media(max-width: 1100px) {
-  .menu,
-  .forward,
-  .back,
-  .down,
-  .plus,
-  .project-plus{
-    width: $iconSizeDesktop;
-    height: $iconSizeDesktop;
-  }
-
-  .menu,
-  .forward,
-  .back{
-    top: 1.5vw;
-  }
-
-  .forward{
+.forward {
+    position: absolute;
+    top: 1.75vw;
     right: 2.5vw;
-  }
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15;
 
-  .back{
-    right: 10.25vw;
-  }
+    &:hover {
+        opacity: 0.8;
+    }
 }
 
+.back {
+    position: absolute;
+    top: 1.75vw;
+    right: 8.25vw;
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.down {
+    animation: down 5s ease-in-out infinite;
+    position: absolute;
+    bottom: 3.13vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_down.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.25;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.plus {
+    position: absolute;
+    bottom: 3.13vw;
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.25;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.project-plus {
+    position: absolute;
+    top: 50%;
+    right: 2.5vw;
+    @include translateY(-50%);
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/silver_plus.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.75;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+@media(max-width: 1100px) {
+    .back,
+    .down,
+    .forward,
+    .plus,
+    .project-plus {
+        width: $iconSizeDesktop;
+        height: $iconSizeDesktop;
+    }
+
+    .back,
+    .forward {
+        top: 1.5vw;
+    }
+
+    .forward {
+        right: 2.5vw;
+    }
+
+    .back {
+        right: 10.25vw;
+    }
+}
 @media(max-width: 800px) {
-  .menu,
-  .forward,
-  .back,
-  .down,
-  .plus,
-  .project-plus{
-    width: $iconSizeTablet;
-    height: $iconSizeTablet;
-  }
+    .back,
+    .down,
+    .forward,
+    .plus,
+    .project-plus {
+        width: $iconSizeTablet;
+        height: $iconSizeTablet;
+    }
 
-  .down{
-    bottom: 20vw;
-  }
+    .down {
+        bottom: 20vw;
+    }
 
-  .menu{
-    // top: 5.5vw;
-    left: 5.25vw;
-  }
+    .back,
+    .forward {
+        position: absolute;
+        top: 6.5%;
+        @include translateY(-50%);
+    }
 
-  .forward,
-  .back,
-  .menu{
-    position: absolute;
-    top: 6.5%;
-    @include translateY(-50%);
-  }
+    .forward {
+        background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+        background-size: contain;
+        // top: 5.5vw;
+        right: 5.25vw;
+        // opacity: 0.75;
+        // z-index: 5;
+        // &:hover{
+        //   opacity: 1;
+        // }
+    }
 
-  .forward{
-    background: url(../../images/icons/white_forward.svg) center no-repeat transparent;
-    background-size: contain;
-    // top: 5.5vw;
-    right: 5.25vw;
-    // opacity: 0.75;
-    // z-index: 5;
-    // &:hover{
-    //   opacity: 1;
-    // }
-  }
+    .back {
+        background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+        background-size: contain;
+        // top: 5.5vw;
+        right: 14vw;
+        // opacity: 0.75;
+        // z-index: 5;
+        // &:hover{
+        //   opacity: 1;
+        // }
+    }
 
-  .back{
-    background: url(../../images/icons/white_back.svg) center no-repeat transparent;
-    background-size: contain;
-    // top: 5.5vw;
-    right: 14vw;
-    // opacity: 0.75;
-    // z-index: 5;
-    // &:hover{
-    //   opacity: 1;
-    // }
-  }
-
-  .project-plus{
-    right: 6vw;
-  }
+    .project-plus {
+        right: 6vw;
+    }
 }
-
 @media(max-width: 600px) {
-  .menu,
-  .forward,
-  .back,
-  .down,
-  .plus{
-    width: $iconSizeMobile;
-    height: $iconSizeMobile;
-  }
+    .back,
+    .down,
+    .forward,
+    .plus {
+        width: $iconSizeMobile;
+        height: $iconSizeMobile;
+    }
 
-  .forward,
-  .back,
-  .menu{
-    position: absolute;
-    top: 6.5%;
-    @include translateY(-50%);
-  }
+    .back,
+    .forward {
+        position: absolute;
+        top: 6.5%;
+        @include translateY(-50%);
+    }
 
-  .forward{
-    right: 5.5vw;
-  }
+    .forward {
+        right: 5.5vw;
+    }
 
-  .back{
-    right: 23.5vw;
-  }
+    .back {
+        right: 23.5vw;
+    }
 }

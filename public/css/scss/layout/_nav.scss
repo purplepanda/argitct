@@ -35,6 +35,37 @@
 //   transform: translate3d(50vw, 0, 0);
 // }
 // Positions the nav fixed below the push wrapper //
+$width-menu-desktop: 7.5vw;
+$width-menu-tablet: 9.5vw;
+$width-menu-mobile: 13vw;
+$width-menu-xsmall: 20vw;
+
+.aside-menu {
+    position: absolute;
+    width: $width-menu-desktop;
+    height: 100vh;
+
+    .menu {
+        position: absolute;
+        top: 1.75vw;
+        right: 50%;
+        @include translateX(50%);
+        width: 2.5vw;
+        height: 2.5vw;
+        // min-width: 30px;
+        // min-height: 30px;
+        background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
+        background-size: contain;
+        opacity: 0.25;
+        z-index: 10;
+
+        &:hover {
+            opacity: 0.75;
+            // animation: icon-hover 0.5s ease-in-out forwards;
+        }
+    }
+}
+
 nav {
     font-family: $font-fancy;
     text-transform: uppercase;
@@ -63,64 +94,81 @@ nav {
             color: $white;
         }
 
-        &:hover,
-        &:active {
+        &:active,
+        &:hover {
             color: $rosegold;
             font-weight: 400;
             text-decoration: underline;
         }
     }
 }
-
-// .nav-home {
-//     li {
-//         display: inline-block;
-//         color: $aubergine-light;
-//
-//         a{
-//           &:visited{
-//             color: $aubergine-light;
-//           }
-//           &:hover,
-//           &:active {
-//             color: $rosegold;
-//             font-weight: 400;
-//             text-decoration: underline;
-//           }
-//         }
-//     }
-// }
-
 @media(max-width: 1100px) {
+    .aside-menu {
+        .menu {
+            width: $iconSize; //3vw
+            height: $iconSize; //3vw
+        }
+    }
+
     .nav-hamburger {
-        a{
-          font-size: 3.44vw;
-          line-height: 6vw;
-          padding-left: 6vw;
+        a {
+            font-size: 3.44vw;
+            line-height: 6vw;
+            padding-left: 6vw;
         }
     }
 }
-
 @media(max-width: 800px) {
+    .aside-menu {
+        width: $width-menu-tablet;
+
+        .menu {
+            width: 4vw;
+            height: 4vw;
+            top: 3.25vw;
+        }
+    }
+
     .nav-hamburger {
         width: 100vw;
         padding-top: 20vw;
-        a{
-          font-size: 5vw;
-          line-height: 8.5vw;
-          padding-left: 11vw;
+
+        a {
+            font-size: 5vw;
+            line-height: 8.5vw;
+            padding-left: 11vw;
         }
     }
 }
-
 @media(max-width: 600px) {
+    .aside-menu {
+        width: $width-menu-mobile;
+
+        .menu {
+            width: 5vw;
+            height: 5vw;
+            min-width: 30px;
+            min-height: 30px;
+            top: 4vw;
+        }
+    }
+
     .nav-hamburger {
         padding-top: 25vw;
-        a{
-          font-size: 6.5vw;
-          line-height: 10vw;
-          padding-left: 13.5vw;
 
+        a {
+            font-size: 6.5vw;
+            line-height: 10vw;
+            padding-left: 13.5vw;
+        }
+    }
+}
+@media(max-width: 450px) {
+    .aside-menu {
+        width: $width-menu-xsmall;
+
+        .menu {
+            top: 5vw;
         }
     }
 }
