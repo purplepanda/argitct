@@ -150,7 +150,7 @@ $iconSizeMobile: 7vw;
     .down,
     .forward,
     .plus,
-    .project-plus {
+    .project-plus{
         width: $iconSizeDesktop;
         height: $iconSizeDesktop;
     }
@@ -173,7 +173,8 @@ $iconSizeMobile: 7vw;
     .down,
     .forward,
     .plus,
-    .project-plus {
+    .project-plus,
+    .landing-plus {
         width: $iconSizeTablet;
         height: $iconSizeTablet;
     }
@@ -221,7 +222,8 @@ $iconSizeMobile: 7vw;
     .back,
     .down,
     .forward,
-    .plus {
+    .plus,
+    .landing-plus {
         width: $iconSizeMobile;
         height: $iconSizeMobile;
     }

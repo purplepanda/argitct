@@ -5,6 +5,10 @@ app.controller("subjectPageCtrl", function($scope, $state) {
     $scope.modalShown = !$scope.modalShown;
   };
 
+  $(function() {
+    jcf.replaceAll();
+  });
+
   $scope.servicesPage = {
     title: "Services",
     introText: "Service content will go here. This will be a one-page section and will not require additional routing. This may use modals to display additional information.",
@@ -48,6 +52,10 @@ app.controller("subjectPageCtrl", function($scope, $state) {
     },
     modalContent: "Content to encourage visitors to contact Argitct will go here, as well as actual contact information. This will be a one-page section and not require additional routing or modals."
   };
+
+
+
+
 
 
 });

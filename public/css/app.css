@@ -70,15 +70,15 @@ table {
     -webkit-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
     -moz-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
     box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9); }
-  25% {
+  25% { }
+  35% {
     background: url("../../images/icons/aubergine_plus.svg");
     background-size: contain;
-    opacity: 1; }
-  40% {
-    -webkit-box-shadow: inset 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-    -moz-box-shadow: inset 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-    box-shadow: inset 0px 0px 15px 2px rgba(74, 47, 64, 0.9); }
-  60% {
+    opacity: 0.9;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, 0.6); }
+  65% {
     -webkit-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
     -moz-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
     box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9); }
@@ -321,7 +321,8 @@ p {
   .down,
   .forward,
   .plus,
-  .project-plus {
+  .project-plus,
+  .landing-plus {
     width: 6vw;
     height: 6vw; }
   .down {
@@ -349,7 +350,8 @@ p {
   .back,
   .down,
   .forward,
-  .plus {
+  .plus,
+  .landing-plus {
     width: 7vw;
     height: 7vw; }
   .back,
@@ -364,6 +366,44 @@ p {
     right: 5.5vw; }
   .back {
     right: 23.5vw; } }
+
+/* scrollbars */
+.jcf-scrollable-wrapper {
+  box-sizing: content-box;
+  position: relative;
+  border: 2px solid grey; }
+
+.jcf-scrollbar-vertical {
+  position: absolute;
+  cursor: default;
+  background: purple;
+  width: 0.75vw;
+  bottom: 0;
+  right: 0;
+  top: 0; }
+
+/* square spaces at top and bottom */
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  background: purple;
+  height: 0.75vw;
+  width: 0.75vw;
+  left: 0;
+  top: 0; }
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  top: auto;
+  bottom: 0; }
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+  background: white;
+  opacity: 0.35;
+  height: 15% !important;
+  width: 0.75vw;
+  border-radius: 0.25vw; }
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+  visibility: hidden; }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -547,8 +587,6 @@ p {
             padding: 0 0.5vw 0 1vw; }
             #home .subject-content .nav-home li a:after:last-of-type {
               display: none; }
-          #home .subject-content .nav-home li a:visited {
-            color: rgba(84, 65, 78, 0.8); }
 
 @media (max-width: 800px) {
   #home .subject-content {
