@@ -5,8 +5,12 @@ app.controller("projectsCtrl", function($scope, $state, projectData) {
     return parseInt($state.params.projectId)
   }
 
+  $scope.project = _.find(projectData, function(x) {
+    return x.id == $state.params.projectId
+  })
+
   $scope.title = "Projects";
-  $scope.currentProject = projectIds;
+  // $scope.currentProject = projectIds;
   $scope.projectLength = projectIds.length;
 
   $scope.goToFirstProj = function() {
