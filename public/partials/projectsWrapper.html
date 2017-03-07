@@ -1,8 +1,11 @@
 <div class="project-background">
     <div ng-include=" 'partials/nav.html' "></div>
     <div>
+      <div class="project-controls">
         <div ng-click="goToNextProj()" class="forward"></div>
         <div ng-click="goToPreviousProj()" class="back"></div>
+        <h4>Project <span class="purple">{{currentProjectId}}</span> / {{projectLength}}</h4>
+      </div>
         <ui-view></ui-view>
     </div>
 

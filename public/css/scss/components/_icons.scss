@@ -3,41 +3,41 @@ $iconSizeDesktop: 4vw;
 $iconSizeTablet: 6vw;
 $iconSizeMobile: 7vw;
 
-.forward {
-    position: absolute;
-    top: 1.75vw;
-    right: 2.5vw;
-    width: $iconSize;
-    height: $iconSize;
-    min-width: 40px;
-    min-height: 40px;
-    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-    background-size: contain;
-    opacity: 0.5;
-    z-index: 15;
-
-    &:hover {
-        opacity: 0.8;
-    }
-}
-
-.back {
-    position: absolute;
-    top: 1.75vw;
-    right: 8.25vw;
-    width: $iconSize;
-    height: $iconSize;
-    min-width: 40px;
-    min-height: 40px;
-    background: url("../../images/icons/white_back.svg") center no-repeat transparent;
-    background-size: contain;
-    opacity: 0.5;
-    z-index: 15;
-
-    &:hover {
-        opacity: 0.8;
-    }
-}
+// .forward {
+//     position: absolute;
+//     top: 1.75vw;
+//     right: 2.5vw;
+//     width: $iconSize;
+//     height: $iconSize;
+//     min-width: 40px;
+//     min-height: 40px;
+//     background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+//     background-size: contain;
+//     opacity: 0.5;
+//     z-index: 15;
+//
+//     &:hover {
+//         opacity: 0.8;
+//     }
+// }
+//
+// .back {
+//     position: absolute;
+//     top: 1.75vw;
+//     right: 8.25vw;
+//     width: $iconSize;
+//     height: $iconSize;
+//     min-width: 40px;
+//     min-height: 40px;
+//     background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+//     background-size: contain;
+//     opacity: 0.5;
+//     z-index: 15;
+//
+//     &:hover {
+//         opacity: 0.8;
+//     }
+// }
 
 .down {
     animation: down 5s ease-in-out infinite;

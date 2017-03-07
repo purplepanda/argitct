@@ -9,6 +9,55 @@ $width-mobile: 100vw;
 // $width-menu-mobile: 13vw;
 // $width-menu-xsmall: 20vw;
 
+.project-controls{
+  float: right;
+  h4{
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    padding-right: 2.5vw;
+
+    .purple{
+      color: $aubergine;
+      font-weight: 400;
+    }
+  }
+  .forward {
+      position: absolute;
+      top: 1.75vw;
+      right: 2.5vw;
+      width: $iconSize;
+      height: $iconSize;
+      min-width: 40px;
+      min-height: 40px;
+      background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 15;
+
+      &:hover {
+          opacity: 0.8;
+      }
+  }
+
+  .back {
+      position: absolute;
+      top: 1.75vw;
+      right: 8.25vw;
+      width: $iconSize;
+      height: $iconSize;
+      min-width: 40px;
+      min-height: 40px;
+      background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+      background-size: contain;
+      opacity: 0.5;
+      z-index: 15;
+
+      &:hover {
+          opacity: 0.8;
+      }
+  }
+}
+
 .project-background {
     background-color: $silver;
     width: 100%;

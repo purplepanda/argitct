@@ -191,36 +191,6 @@ p {
     right: 7vw; } }
 
 /* Web Fonts -------------------- */
-.forward {
-  position: absolute;
-  top: 1.75vw;
-  right: 2.5vw;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
-  background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.5;
-  z-index: 15; }
-  .forward:hover {
-    opacity: 0.8; }
-
-.back {
-  position: absolute;
-  top: 1.75vw;
-  right: 8.25vw;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
-  background: url("../../images/icons/white_back.svg") center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.5;
-  z-index: 15; }
-  .back:hover {
-    opacity: 0.8; }
-
 .down {
   animation: down 5s ease-in-out infinite;
   position: absolute;
@@ -722,6 +692,44 @@ nav {
     width: 20vw; }
     .aside-menu .menu {
       top: 5vw; } }
+
+.project-controls {
+  float: right; }
+  .project-controls h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    padding-right: 2.5vw; }
+    .project-controls h4 .purple {
+      color: #4a3041;
+      font-weight: 400; }
+  .project-controls .forward {
+    position: absolute;
+    top: 1.75vw;
+    right: 2.5vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15; }
+    .project-controls .forward:hover {
+      opacity: 0.8; }
+  .project-controls .back {
+    position: absolute;
+    top: 1.75vw;
+    right: 8.25vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15; }
+    .project-controls .back:hover {
+      opacity: 0.8; }
 
 .project-background {
   background-color: #b1b3b3;

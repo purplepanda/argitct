@@ -6,6 +6,8 @@ app.controller("projectsCtrl", function($scope, $state, projectData) {
   }
 
   $scope.title = "Projects";
+  $scope.currentProjectId = (projectIds.indexOf(currentProjectId()) + 1);
+  $scope.projectLength = projectIds.length;
 
   $scope.goToFirstProj = function() {
     $state.go("projects.project", {
