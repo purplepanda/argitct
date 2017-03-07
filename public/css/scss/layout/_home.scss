@@ -12,10 +12,11 @@
         &:hover {
             opacity: 0.90;
         }
-        &:active{
-          background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
-          background-size: contain;
-          opacity: 0.25;
+
+        &:active {
+            background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
+            background-size: contain;
+            opacity: 0.25;
         }
     }
 
@@ -44,28 +45,33 @@
         .nav-home {
             text-align: center;
 
-            a {
-                color: $burntlilac;
-                font-size: 1.25vw;
-                text-decoration: none;
+            li {
+                display: inline-block;
 
-                &:active,
-                &:hover {
-                    color: $silver;
-                }
-
-                &:after {
-                    // content: "\25BE";
-                    content: "|";
-                    padding: 0 0.5vw 0 1vw;
-
-                    &:last-of-type {
-                        display: none;
-                    }
-                }
-
-                &:visited {
+                a {
                     color: $burntlilac;
+                    font-size: 1.25vw;
+                    text-decoration: none;
+
+
+                    &:hover {
+                        color: $silver;
+                        font-weight: 400;
+                    }
+
+                    &:after {
+                        // content: "\25BE";
+                        content: "|";
+                        padding: 0 0.5vw 0 1vw;
+
+                        &:last-of-type {
+                            display: none;
+                        }
+                    }
+
+                    &:visited {
+                        color: $burntlilac;
+                    }
                 }
             }
         }
@@ -93,7 +99,6 @@
         }
     }
 }
-
 @media(max-width: 600px) {
     #home {
         .subject-content {

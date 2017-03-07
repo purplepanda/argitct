@@ -134,6 +134,8 @@ p {
     font-size: 3.44vw; }
   h2 {
     font-size: 1.95vw; }
+  h5 {
+    font-size: 1.5vw; }
   h6 {
     font-size: 1.95vw;
     top: 2.9vw;
@@ -152,7 +154,7 @@ p {
   h2 {
     font-size: 2.5vw; }
   h5 {
-    font-size: 1.75vw; }
+    font-size: 2.25vw; }
   h6 {
     font-size: 3.5vw;
     top: 4.9vw;
@@ -168,7 +170,7 @@ p {
   h2 {
     font-size: 3.33vw; }
   h5 {
-    font-size: 2.25vw; }
+    font-size: 2.75vw; }
   h6 {
     font-size: 4vw;
     top: 5.5%;
@@ -513,19 +515,22 @@ p {
       padding: 5vw 0; }
     #home .subject-content .nav-home {
       text-align: center; }
-      #home .subject-content .nav-home a {
-        color: rgba(84, 65, 78, 0.8);
-        font-size: 1.25vw;
-        text-decoration: none; }
-        #home .subject-content .nav-home a:active, #home .subject-content .nav-home a:hover {
-          color: #b1b3b3; }
-        #home .subject-content .nav-home a:after {
-          content: "|";
-          padding: 0 0.5vw 0 1vw; }
-          #home .subject-content .nav-home a:after:last-of-type {
-            display: none; }
-        #home .subject-content .nav-home a:visited {
-          color: rgba(84, 65, 78, 0.8); }
+      #home .subject-content .nav-home li {
+        display: inline-block; }
+        #home .subject-content .nav-home li a {
+          color: rgba(84, 65, 78, 0.8);
+          font-size: 1.25vw;
+          text-decoration: none; }
+          #home .subject-content .nav-home li a:hover {
+            color: #b1b3b3;
+            font-weight: 400; }
+          #home .subject-content .nav-home li a:after {
+            content: "|";
+            padding: 0 0.5vw 0 1vw; }
+            #home .subject-content .nav-home li a:after:last-of-type {
+              display: none; }
+          #home .subject-content .nav-home li a:visited {
+            color: rgba(84, 65, 78, 0.8); }
 
 @media (max-width: 800px) {
   #home .subject-content {
@@ -598,29 +603,34 @@ p {
   #landing .large-logo .plus {
     top: 175%; } }
 
-.ng-modal-overlay {
+.project-modal .ng-modal-overlay {
   position: absolute;
-  z-index: 9999;
+  z-index: 999;
   bottom: 15vw;
   right: 15vw;
-  height: 70vw;
+  height: 90vh;
   width: 50vw;
   background-color: rgba(74, 48, 65, 0.95); }
 
-.ng-modal-dialog {
-  position: absolute;
-  z-index: 10000;
+.project-modal .ng-modal-dialog {
+  position: relative;
+  z-index: 1000;
   top: 50%;
   -webkit-transform: perspective(1px) translateY(-50%);
   -moz-transform: perspective(1px) translateY(-50%);
   -ms-transform: perspective(1px) translateY(-50%);
   transform: perspective(1px) translateY(-50%); }
+  .project-modal .ng-modal-dialog .project .project-bottom p {
+    padding: 2vw;
+    text-align: left;
+    color: white; }
 
-.ng-modal-dialog-content {
+.project-modal .ng-modal-dialog-content {
   padding: 2vw;
-  text-align: left; }
+  text-align: left;
+  color: white; }
 
-.ng-modal-close {
+.project-modal .ng-modal-close {
   position: absolute;
   top: 1vw;
   right: 1vw;
@@ -655,15 +665,9 @@ nav {
     .nav-hamburger a:visited {
       color: white; }
     .nav-hamburger a:hover, .nav-hamburger a:active {
-      color: #8B634B; }
-
-.nav-home li {
-  display: inline-block;
-  color: rgba(74, 48, 65, 0.75); }
-  .nav-home li a:visited {
-    color: rgba(74, 48, 65, 0.75); }
-  .nav-home li a:hover, .nav-home li a:active {
-    color: #8B634B; }
+      color: #8B634B;
+      font-weight: 400;
+      text-decoration: underline; }
 
 @media (max-width: 1100px) {
   .nav-hamburger a {

@@ -66,26 +66,30 @@ nav {
         &:hover,
         &:active {
             color: $rosegold;
+            font-weight: 400;
+            text-decoration: underline;
         }
     }
 }
 
-.nav-home {
-    li {
-        display: inline-block;
-        color: $aubergine-light;
-
-        a{
-          &:visited{
-            color: $aubergine-light;
-          }
-          &:hover,
-          &:active {
-            color: $rosegold;
-          }
-        }
-    }
-}
+// .nav-home {
+//     li {
+//         display: inline-block;
+//         color: $aubergine-light;
+//
+//         a{
+//           &:visited{
+//             color: $aubergine-light;
+//           }
+//           &:hover,
+//           &:active {
+//             color: $rosegold;
+//             font-weight: 400;
+//             text-decoration: underline;
+//           }
+//         }
+//     }
+// }
 
 @media(max-width: 1100px) {
     .nav-hamburger {

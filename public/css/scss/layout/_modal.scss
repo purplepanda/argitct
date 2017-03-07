@@ -1,34 +1,49 @@
-.ng-modal-overlay {
-  position: absolute;
-  z-index: 9999;
-  bottom: 15vw;
-  right: 15vw;
-  height: 70vw;
-  width: 50vw;
-  background-color: $aubergine-medium;
+.project-modal{
+  .ng-modal-overlay {
+    position: absolute;
+    z-index: 999;
+    bottom: 15vw;
+    right: 15vw;
+    height: 90vh;
+    width: 50vw;
+    background-color: $aubergine-medium;
+  }
+
+  .ng-modal-dialog {
+    position: relative;
+    z-index: 1000;
+    top: 50%;
+    @include translateY(-50%);
+    
+    .project .project-bottom p{
+      padding: 2vw;
+      text-align: left;
+      color: $white;
+    }
+  }
+
+  .ng-modal-dialog-content {
+    padding: 2vw;
+    text-align: left;
+    color: $white;
+  }
+
+  .ng-modal-close {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    padding: 1vw;
+    cursor: pointer;
+    font-size: 3vw;
+    display: inline-block;
+    font-weight: 400;
+    font-family: $font-fancy;
+  }
 }
 
-
-.ng-modal-dialog {
-  position: absolute;
-  z-index: 10000;
-  top: 50%;
-  @include translateY(-50%);
-}
-
-.ng-modal-dialog-content {
-  padding: 2vw;
-  text-align: left;
-}
-
-.ng-modal-close {
-  position: absolute;
-  top: 1vw;
-  right: 1vw;
-  padding: 1vw;
-  cursor: pointer;
-  font-size: 3vw;
-  display: inline-block;
-  font-weight: 400;
-  font-family: $font-fancy;
+.subject-modal{
+  .ng-modal-overlay{}
+  .ng-modal-dialog{}
+  .ng-modal-dialog-content{}
+  .ng-modal-close{}
 }
