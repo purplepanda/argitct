@@ -53,20 +53,21 @@
     height: 85vh;
     width: 85vw;
     background-color: $aubergine-medium;
+    overflow-y: scroll;
   }
   .ng-modal-dialog{
     position: relative;
     top: 50%;
     @include translateY(-50%);
     width: 75%;
-    height: auto;
+    height: 75%;
     margin: auto;
   }
   p{
     color: $white;
     font-size: 1.75vw;
     line-height: 2.25vw;
-    margin-bottom: 2.5vw; 
+    margin-bottom: 2.5vw;
   }
   .ng-modal-dialog-content{}
   .ng-modal-close{

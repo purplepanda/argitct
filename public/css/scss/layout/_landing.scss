@@ -20,7 +20,7 @@
             margin-top: -2.5vw;
         }
 
-        .plus {
+        .landing-plus {
             bottom: auto;
             right: -16%;
             top: 46%;
@@ -46,7 +46,7 @@
                 margin-right: 1.75vw;
             }
 
-            .plus {
+            .landing-plus {
                 top: 150%;
                 right: 0;
                 left: 0;
@@ -61,7 +61,7 @@
 @media(max-width: 600px) {
     #landing {
         .large-logo {
-            .plus {
+            .landing-plus {
                 top: 175%;
             }
         }

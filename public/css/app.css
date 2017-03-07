@@ -253,6 +253,23 @@ p {
   .plus:hover {
     opacity: 0.75; }
 
+.landing-plus {
+  position: absolute;
+  bottom: 3.13vw;
+  width: 3vw;
+  height: 3vw;
+  min-width: 40px;
+  min-height: 40px;
+  background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
+  background-size: contain;
+  opacity: 0.5;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 50%; }
+  .landing-plus:hover {
+    opacity: 0.75; }
+
 .project-plus {
   position: absolute;
   top: 50%;
@@ -571,7 +588,7 @@ p {
       letter-spacing: 0.5vw;
       margin-right: 1.5vw;
       margin-top: -2.5vw; }
-    #landing .large-logo .plus {
+    #landing .large-logo .landing-plus {
       bottom: auto;
       right: -16%;
       top: 46%;
@@ -592,7 +609,7 @@ p {
     #landing .large-logo .new-york {
       font-size: 3.75vw;
       margin-right: 1.75vw; }
-    #landing .large-logo .plus {
+    #landing .large-logo .landing-plus {
       top: 150%;
       right: 0;
       left: 0;
@@ -601,7 +618,7 @@ p {
     bottom: 5%; } }
 
 @media (max-width: 600px) {
-  #landing .large-logo .plus {
+  #landing .large-logo .landing-plus {
     top: 175%; } }
 
 .project-modal .ng-modal-overlay {
@@ -655,7 +672,8 @@ p {
   z-index: 999;
   height: 85vh;
   width: 85vw;
-  background-color: rgba(74, 48, 65, 0.95); }
+  background-color: rgba(74, 48, 65, 0.95);
+  overflow-y: scroll; }
 
 .subject-modal .ng-modal-dialog {
   position: relative;
@@ -665,7 +683,7 @@ p {
   -ms-transform: perspective(1px) translateY(-50%);
   transform: perspective(1px) translateY(-50%);
   width: 75%;
-  height: auto;
+  height: 75%;
   margin: auto; }
 
 .subject-modal p {

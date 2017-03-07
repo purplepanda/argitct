@@ -90,6 +90,27 @@ $iconSizeMobile: 7vw;
     }
 }
 
+.landing-plus {
+    // animation: plus 60s ease-in-out infinite;
+    position: absolute;
+    bottom: 3.13vw;
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.4);
+    border-radius: 50%;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
 .project-plus {
     position: absolute;
     top: 50%;
