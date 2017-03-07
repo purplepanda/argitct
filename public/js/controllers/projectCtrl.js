@@ -7,5 +7,6 @@ app.controller("projectCtrl", function($scope, $state, projectData) {
 
   $scope.toggleModal = function() {
     $scope.modalShown = !$scope.modalShown;
+
   };
 });
