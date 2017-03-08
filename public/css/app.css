@@ -1045,6 +1045,23 @@ nav {
     bottom: 2.5vw;
     left: 2vw;
     width: 6vw; }
+  .subject-page .more {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 8vw;
+    text-align: center; }
+    .subject-page .more a {
+      color: #8B6F4E;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 400; }
+      .subject-page .more a:hover {
+        text-decoration: underline; }
+    .subject-page .more .down {
+      bottom: auto;
+      margin-top: 3vw; }
 
 @media (max-width: 1100px) {
   .subject-page .logo {
@@ -1060,8 +1077,18 @@ nav {
     left: 0;
     right: 0;
     margin: auto;
-    width: 12vw; } }
+    width: 12vw; }
+  .subject-page .more {
+    bottom: 13vw; }
+    .subject-page .more a {
+      font-size: 2.25vw; }
+    .subject-page .more .down {
+      display: none; } }
 
 @media (max-width: 600px) {
   .subject-page .logo {
-    width: 20vw; } }
+    width: 20vw; }
+  .subject-page .more {
+    bottom: 18vw; }
+    .subject-page .more a {
+      font-size: 3vw; } }
