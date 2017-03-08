@@ -367,44 +367,6 @@ p {
   .back {
     right: 23.5vw; } }
 
-/* scrollbars */
-.jcf-scrollable-wrapper {
-  box-sizing: content-box;
-  position: relative;
-  border: 2px solid grey; }
-
-.jcf-scrollbar-vertical {
-  position: absolute;
-  cursor: default;
-  background: purple;
-  width: 0.75vw;
-  bottom: 0;
-  right: 0;
-  top: 0; }
-
-/* square spaces at top and bottom */
-.jcf-scrollbar-vertical .jcf-scrollbar-dec,
-.jcf-scrollbar-vertical .jcf-scrollbar-inc {
-  background: purple;
-  height: 0.75vw;
-  width: 0.75vw;
-  left: 0;
-  top: 0; }
-
-.jcf-scrollbar-vertical .jcf-scrollbar-inc {
-  top: auto;
-  bottom: 0; }
-
-.jcf-scrollbar-vertical .jcf-scrollbar-handle {
-  background: white;
-  opacity: 0.35;
-  height: 15% !important;
-  width: 0.75vw;
-  border-radius: 0.25vw; }
-
-.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
-  visibility: hidden; }
-
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("/bower_components/slick-carousel/slick/ajax-loader.gif") center center no-repeat; }
@@ -664,8 +626,8 @@ p {
   z-index: 999;
   bottom: 15vw;
   right: 15vw;
-  height: 90vh;
-  width: 50vw;
+  height: 90vh !important;
+  width: 50vw !important;
   background-color: rgba(74, 48, 65, 0.95); }
 
 .project-modal .ng-modal-dialog {
@@ -729,6 +691,43 @@ p {
   font-size: 1.75vw;
   line-height: 2.25vw;
   margin-bottom: 2.5vw; }
+
+/* scrollbars */
+.jcf-scrollable-wrapper {
+  box-sizing: content-box;
+  border: 2px solid grey; }
+
+.jcf-scrollbar-vertical {
+  position: absolute;
+  cursor: default;
+  background: #87234B;
+  width: 0.75vw;
+  bottom: 0;
+  right: 0;
+  top: 0; }
+
+/* square spaces at top and bottom */
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  background: #87234B;
+  height: 0.75vw;
+  width: 0.75vw;
+  left: 0;
+  top: 0; }
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+  top: auto;
+  bottom: 0; }
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+  background: white;
+  opacity: 0.35;
+  height: 15% !important;
+  width: 0.75vw;
+  border-radius: 0.25vw; }
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+  visibility: hidden; }
 
 .aside-menu {
   position: absolute;
@@ -950,6 +949,69 @@ nav {
     width: 15vw; }
   .project .project-bottom p {
     font-size: 2.67vw; } }
+
+.recovery {
+  width: 100%;
+  min-height: 600px;
+  height: 100vh;
+  background-color: #4a3041; }
+
+.process-controls {
+  float: right; }
+  .process-controls h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+    padding-right: 2.5vw; }
+    .process-controls h4 .purple {
+      color: rgba(84, 65, 78, 0.8);
+      font-weight: 400; }
+  .process-controls .forward {
+    position: absolute;
+    top: 1.75vw;
+    right: 2.5vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15; }
+    .process-controls .forward:hover {
+      opacity: 0.8; }
+  .process-controls .back {
+    position: absolute;
+    top: 1.75vw;
+    right: 8.25vw;
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: 15; }
+    .process-controls .back:hover {
+      opacity: 0.8; }
+
+.logo {
+  position: absolute;
+  bottom: 2.5vw;
+  left: 1vw;
+  width: 5.25vw; }
+
+@media (max-width: 800px) {
+  .logo {
+    bottom: 2.25vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 12vw; } }
+
+@media (max-width: 600px) {
+  .logo {
+    bottom: 5.25vw;
+    width: 15vw; } }
 
 .subject-page {
   width: 100%;

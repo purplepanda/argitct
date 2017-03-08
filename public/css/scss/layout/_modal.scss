@@ -1,14 +1,14 @@
 .project-modal{
-  .ng-modal-overlay {
+  .ng-modal-overlay{
     position: absolute;
     z-index: 999;
     bottom: 15vw;
     right: 15vw;
-    height: 90vh;
-    width: 50vw;
+    height: 90vh !important;
+    width: 50vw !important;
     background-color: $aubergine-medium;
   }
-
+// .jcf-scrollable
   .ng-modal-dialog {
     position: relative;
     z-index: 1000;
@@ -73,4 +73,45 @@
   .ng-modal-close{
 
   }
+}
+
+
+
+/* scrollbars */
+.jcf-scrollable-wrapper {
+	box-sizing: content-box;
+	// position: relative;
+	border: 2px solid grey;
+}
+.jcf-scrollbar-vertical {
+	position: absolute;
+	cursor: default;
+	background: $magenta;
+	width: 0.75vw;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+/* square spaces at top and bottom */
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	background: $magenta;
+	height: 0.75vw;
+	width: 0.75vw;
+	left: 0;
+	top: 0;
+}
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	top: auto;
+	bottom: 0;
+}
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+	background: white;
+  opacity: 0.35;
+	height: 15% !important;
+	width: 0.75vw;
+  border-radius: 0.25vw;
+}
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+	visibility: hidden;
 }

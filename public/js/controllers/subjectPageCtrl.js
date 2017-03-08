@@ -16,6 +16,13 @@ app.controller("subjectPageCtrl", function($scope, $state) {
     modalContent: "Service content will go here. This will be a one-page section and will not require additional routing. This may use modals to display additional information."
   };
 
+  $scope.recoveryPage = {
+    title: "Project Recovery",
+    introText: "Introduction of Project Recovery. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    moreInformation: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi temp.",
+    modalContent: "Collect existing project-related benchmark data including master plan guides, consultants contracts, design intent and construction drawing issuances, pricing documents, construction and purchasing agreements, regulatory filings, property agreements, marketing and donor packages, and other similar related owner-level documentation."
+  };
+
   $scope.projectsPage = {
     title: "Projects",
     introText: "An engaging yet brief introduction to the work ... maybe include various specialties. Some content from biography might be better suited for this section. Mostly we want to capture the user’s attention and encourage them to click below.",

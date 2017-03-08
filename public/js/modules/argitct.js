@@ -35,10 +35,20 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       templateUrl: "partials/project.html",
       controller: "projectCtrl"
     })
-    .state("process", {
+    .state("recovery", {
       url: "/project-recovery",
-      templateUrl: "partials/process.html",
-      controller: "processCtrl"
+      templateUrl: "partials/recovery.html",
+      controller: "subjectPageCtrl"
+    })
+    .state("recoveryProcess", {
+      url: "/recoveryProcess",
+      templateUrl: "partials/recoveryWrapper.html",
+      controller: "recoveryWrapperCtrl"
+    })
+    .state("recoveryProcess.process", {
+      url: "/{processId}",
+      templateUrl: "partials/recoveryProcess.html",
+      controller: "recoveryProcessCtrl"
     })
     .state("services", {
       url: "/services",
