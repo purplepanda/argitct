@@ -1,61 +1,80 @@
 $width: 100vh;
 $width-desktop: 91vw;
-$width-mobile: 100vw;
-// $left: 7vw;
+$width-mobile: 100vw; // $left: 7vw;
 // $left-desktop: 9vw;
 // $left-mobile: 0;
 // $width-menu-desktop: 7.5vw;
 // $width-menu-tablet: 9.5vw;
 // $width-menu-mobile: 13vw;
 // $width-menu-xsmall: 20vw;
+$width-special: calc(100vw - 100vh - 7.5vw);
 
-.project-controls{
-  float: right;
-  h4{
-    text-transform: uppercase;
-    letter-spacing: 0.1vw;
-    padding-right: 2.5vw;
+.project-controls {
+    float: right;
+    width: 13vw;
+    height: 10vw;
+    text-align: center;
+    z-index: 50000;
 
-    .purple{
-      color: $aubergine;
-      font-weight: 400;
+    h4 {
+        text-transform: uppercase;
+        letter-spacing: 0.1vw;
+        padding-top: 1.75vw;
+        color: $burntlilac;
+
+        .purple {
+            color: $aubergine;
+            font-weight: 400;
+        }
     }
-  }
-  .forward {
-      position: absolute;
-      top: 1.75vw;
-      right: 2.5vw;
-      width: $iconSize;
-      height: $iconSize;
-      min-width: 40px;
-      min-height: 40px;
-      background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-      background-size: contain;
-      opacity: 0.5;
-      z-index: 15;
 
-      &:hover {
-          opacity: 0.8;
-      }
-  }
+    .forward {
+        display: inline-block;
+        position: relative;
+        top: 1.25vw;
+        right: auto;
+        margin: 0 1vw;
+        width: $iconSize;
+        height: $iconSize;
+        min-width: 40px;
+        min-height: 40px;
+        background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+        background-size: contain;
+        -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        border-radius: 50%;
+        opacity: 0.5;
+        z-index: 15;
 
-  .back {
-      position: absolute;
-      top: 1.75vw;
-      right: 8.25vw;
-      width: $iconSize;
-      height: $iconSize;
-      min-width: 40px;
-      min-height: 40px;
-      background: url("../../images/icons/white_back.svg") center no-repeat transparent;
-      background-size: contain;
-      opacity: 0.5;
-      z-index: 15;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 
-      &:hover {
-          opacity: 0.8;
-      }
-  }
+    .back {
+        display: inline-block;
+        position: relative;
+        top: 1.25vw;
+        right: auto;
+        margin: 0 1vw;
+        width: $iconSize;
+        height: $iconSize;
+        min-width: 40px;
+        min-height: 40px;
+        background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+        background-size: contain;
+        -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        border-radius: 50%;
+        opacity: 0.5;
+        z-index: 15;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }
 
 .project-background {
@@ -64,11 +83,21 @@ $width-mobile: 100vw;
     min-height: $min-height;
     height: 100vh;
     position: relative;
+    z-index: 50000;
 
+
+.project-logo{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: $width-special;
+}
     .logo {
         position: absolute;
         bottom: 2.5vw;
-        left: 1vw;
+        left: auto;
+        right: 50%;
+        @include translateX(50%);
         width: 5.25vw;
     }
 }
@@ -84,6 +113,7 @@ $width-mobile: 100vw;
     .slick-slide img {
         height: 100vh;
         width: auto;
+        z-index: 0;
     }
 
     .project-top {
@@ -91,7 +121,8 @@ $width-mobile: 100vw;
         position: absolute;
         top: 0;
         width: $width;
-        padding: 1.5vw 2vw 1vw;
+        padding: 1.5vw 2vw;
+        z-index: 5;
 
         h1,
         h2 {
@@ -118,41 +149,11 @@ $width-mobile: 100vw;
         }
     }
 }
-//
-// @media(max-width: 1100px) {
-//   .project-background{
-//     .logo{
-//       bottom: 2.5vw;
-//       left: 1vw;
-//       width: 7vw;
-//     }
-//   }
-//
-//   .project{
-//     // width: $width-desktop;
-//     left: $left-desktop;
-//
-//     .project-top{
-//       width: $width-desktop;
-//       padding: 1.5vw 2vw 1vw 2vw;
-//
-//       h1, h2{
-//         text-transform: uppercase;
-//         color: $aubergine;
-//         font-weight: 400;
-//       }
-//     }
-//
-//     .project-bottom{
-//       width: $width-desktop;
-//       padding: 1vw 2vw;
-//
-//       p{
-//         font-size: 1.45vw;
-//       }
-//     }
-//   }
-// }
+@media(max-width: 1100px) {
+    .project-controls {
+        width: 18vw;
+    }
+}
 @media(max-width: 800px) {
     .project-background {
         .logo {

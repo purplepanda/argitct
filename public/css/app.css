@@ -230,9 +230,9 @@ li {
   background: url("../../images/icons/white_down.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
+  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
   border-radius: 50%; }
   .down:hover {
     opacity: 0.75; }
@@ -248,9 +248,9 @@ li {
   background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.25;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0px 0px 15px 2px rgba(74, 47, 64, 0.9);
+  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
   border-radius: 50%; }
   .plus:hover {
     opacity: 0.75; }
@@ -266,9 +266,9 @@ li {
   background: url("../../images/icons/white_minus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.5;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
   border-radius: 50%; }
   .minus:hover {
     opacity: 0.75; }
@@ -283,9 +283,9 @@ li {
   background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.5;
-  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
   border-radius: 50%; }
   .landing-plus:hover {
     opacity: 0.75; }
@@ -304,6 +304,10 @@ li {
   min-height: 40px;
   background: url("../../images/icons/silver_plus.svg") center no-repeat transparent;
   background-size: contain;
+  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
   opacity: 0.75; }
   .project-plus:hover {
     opacity: 1; }
@@ -340,9 +344,9 @@ li {
   .back,
   .down,
   .forward,
+  .landing-plus,
   .plus,
-  .project-plus,
-  .landing-plus {
+  .project-plus {
     width: 6vw;
     height: 6vw; }
   .down {
@@ -370,8 +374,8 @@ li {
   .back,
   .down,
   .forward,
-  .plus,
-  .landing-plus {
+  .landing-plus,
+  .plus {
     width: 7vw;
     height: 7vw; }
   .back,
@@ -400,14 +404,14 @@ li {
   font-style: normal; }
 
 /* Arrows */
-.slick-prev,
-.slick-next {
+.slick-next,
+.slick-prev {
   position: absolute;
   display: block;
   height: 2.5vw;
   width: 2.5vw;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
@@ -419,11 +423,11 @@ li {
   border: none;
   outline: none;
   z-index: 1; }
-  .slick-prev.slick-disabled:before,
-  .slick-next.slick-disabled:before {
+  .slick-next.slick-disabled:before,
+  .slick-prev.slick-disabled:before {
     opacity: 0.25; }
-  .slick-prev:before,
-  .slick-next:before {
+  .slick-next:before,
+  .slick-prev:before {
     font-family: "slick";
     font-size: 20px;
     line-height: 1;
@@ -433,34 +437,34 @@ li {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  background: url(../../images/icons/white_prev.svg) center no-repeat transparent;
+  background: url("../../images/icons/white_prev.svg") center no-repeat transparent;
   left: 25px;
   opacity: 0.75; }
   [dir="rtl"] .slick-prev {
     left: auto;
     right: 1.95vw; }
-  .slick-prev:hover, .slick-prev:active {
+  .slick-prev:active, .slick-prev:hover {
     opacity: 1; }
 
 .slick-next {
-  background: url(../../images/icons/white_next.svg) center no-repeat transparent;
+  background: url("../../images/icons/white_next.svg") center no-repeat transparent;
   right: 25px;
   opacity: 0.75; }
   [dir="rtl"] .slick-next {
     left: 1.95vw;
     right: auto; }
-  .slick-next:hover, .slick-next:active {
+  .slick-next:active, .slick-next:hover {
     opacity: 1; }
 
 @media (max-width: 800px) {
-  .slick-prev,
-  .slick-next {
+  .slick-next,
+  .slick-prev {
     height: 4vw;
     width: 4vw; } }
 
 @media (max-width: 600px) {
-  .slick-prev,
-  .slick-next {
+  .slick-next,
+  .slick-prev {
     height: 7.5vw;
     width: 7.5vw; } }
 
@@ -492,14 +496,14 @@ li {
       height: 20px;
       width: 20px;
       outline: none;
-      line-height: 0px;
-      font-size: 0px;
+      line-height: 0;
+      font-size: 0;
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      .slick-dots li button:hover, .slick-dots li button:focus {
+      .slick-dots li button:focus, .slick-dots li button:hover {
         outline: none; }
-        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+        .slick-dots li button:focus:before, .slick-dots li button:hover:before {
           opacity: 1; }
       .slick-dots li button:before {
         position: absolute;
@@ -851,38 +855,55 @@ nav {
       top: 5vw; } }
 
 .project-controls {
-  float: right; }
+  float: right;
+  width: 13vw;
+  height: 10vw;
+  text-align: center;
+  z-index: 50000; }
   .project-controls h4 {
     text-transform: uppercase;
     letter-spacing: 0.1vw;
-    padding-right: 2.5vw; }
+    padding-top: 1.75vw;
+    color: rgba(84, 65, 78, 0.8); }
     .project-controls h4 .purple {
       color: #4a3041;
       font-weight: 400; }
   .project-controls .forward {
-    position: absolute;
-    top: 1.75vw;
-    right: 2.5vw;
+    display: inline-block;
+    position: relative;
+    top: 1.25vw;
+    right: auto;
+    margin: 0 1vw;
     width: 3vw;
     height: 3vw;
     min-width: 40px;
     min-height: 40px;
     background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
     background-size: contain;
+    -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
     opacity: 0.5;
     z-index: 15; }
     .project-controls .forward:hover {
       opacity: 0.8; }
   .project-controls .back {
-    position: absolute;
-    top: 1.75vw;
-    right: 8.25vw;
+    display: inline-block;
+    position: relative;
+    top: 1.25vw;
+    right: auto;
+    margin: 0 1vw;
     width: 3vw;
     height: 3vw;
     min-width: 40px;
     min-height: 40px;
     background: url("../../images/icons/white_back.svg") center no-repeat transparent;
     background-size: contain;
+    -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
     opacity: 0.5;
     z-index: 15; }
     .project-controls .back:hover {
@@ -893,11 +914,22 @@ nav {
   width: 100%;
   min-height: 600px;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  z-index: 50000; }
+  .project-background .project-logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100vw - 100vh - 7.5vw); }
   .project-background .logo {
     position: absolute;
     bottom: 2.5vw;
-    left: 1vw;
+    left: auto;
+    right: 50%;
+    -webkit-transform: perspective(1px) translateX(50%);
+    -moz-transform: perspective(1px) translateX(50%);
+    -ms-transform: perspective(1px) translateX(50%);
+    transform: perspective(1px) translateX(50%);
     width: 5.25vw; }
 
 .project {
@@ -909,13 +941,15 @@ nav {
   background-color: #b1b3b3; }
   .project .slick-slide img {
     height: 100vh;
-    width: auto; }
+    width: auto;
+    z-index: 0; }
   .project .project-top {
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     top: 0;
     width: 100vh;
-    padding: 1.5vw 2vw 1vw; }
+    padding: 1.5vw 2vw;
+    z-index: 5; }
     .project .project-top h1,
     .project .project-top h2 {
       text-transform: uppercase;
@@ -934,6 +968,10 @@ nav {
       max-width: 63vw;
       line-height: 1.4;
       font-size: 1vw; }
+
+@media (max-width: 1100px) {
+  .project-controls {
+    width: 18vw; } }
 
 @media (max-width: 800px) {
   .project-background .logo {
