@@ -46,6 +46,12 @@
     -ms-transform: perspective(1px) translateX($val);
     transform: perspective(1px) translateX($val);
 }
+@mixin translateXY($valX, $valY) {
+    -webkit-transform: perspective(1px) translate($valX, $valY);
+    -moz-transform: perspective(1px) translate($valX, $valY);
+    -ms-transform: perspective(1px) translate($valX, $valY);
+    transform: perspective(1px) translate($valX, $valY);
+}
 @mixin transition($val) {
     -webkit-transition: $val;
     -moz-transition: $val;

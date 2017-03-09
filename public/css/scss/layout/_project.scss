@@ -8,6 +8,7 @@ $width-mobile: 100vw; // $left: 7vw;
 // $width-menu-mobile: 13vw;
 // $width-menu-xsmall: 20vw;
 $width-special: calc(100vw - 100vh - 7.5vw);
+$height-special: 8vw;
 
 .project-controls {
     float: right;
@@ -84,14 +85,15 @@ $width-special: calc(100vw - 100vh - 7.5vw);
     height: 100vh;
     position: relative;
     z-index: 50000;
+    overflow: hidden;
 
+    .project-logo {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: $width-special;
+    }
 
-.project-logo{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: $width-special;
-}
     .logo {
         position: absolute;
         bottom: 2.5vw;
@@ -138,6 +140,7 @@ $width-special: calc(100vw - 100vh - 7.5vw);
         bottom: 0;
         width: $width;
         padding: 1vw 7vw 1vw 2vw;
+        z-index: 100;
 
         p {
             color: $aubergine;
@@ -149,12 +152,138 @@ $width-special: calc(100vw - 100vh - 7.5vw);
         }
     }
 }
+
+.project-plus {
+    position: absolute;
+    top: 50%;
+    right: 2.5vw;
+    @include translateY(-50%);
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/silver_plus.svg") center no-repeat transparent;
+    background-size: contain;
+    -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.2);
+    // -webkit-box-shadow: 0px 0px 7px 1px rgba(139,99,75,0.3);
+    // -moz-box-shadow: 0px 0px 7px 1px rgba(139,99,75,0.3);
+    // box-shadow: 0px 0px 7px 1px rgba(139,99,75,0.3);
+    border-radius: 50%;
+    opacity: 0.95;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+////////// MODAL ON PROJECTS PAGE //////////
+$width-special: calc(100vw - 100vh - 11vw);
+$width-special2: calc((100vw - 100vh - 6.75vw) * -1);
+
+.project-modal{
+
+}
+.project-modal .ng-modal-overlay {
+    position: absolute;
+    right: $width-special2;
+    top: -50%;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include translateY(-50%);
+    z-index: 999;
+    height: 80vh;
+    width: $width-special;
+    background-color: $aubergine;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+    -moz-box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+    box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+}
+
+.project-modal .ng-modal-dialog {
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+    width: 75%;
+    height: 75%;
+    margin: auto;
+}
+
+.project-modal .ng-modal-dialog-content {
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+}
+
+.project-modal p {
+    color: $white !important;
+    font-size: 1.75vw !important;
+    line-height: 2.25vw !important;
+    margin-bottom: 2.5vw !important;
+    font-style: normal !important;
+}
+
+.project-modal .ng-close-box {
+    position: absolute;
+    padding: 2vw;
+    margin: 2vw;
+    top: 0;
+    right: 0;
+}
+
+.project-modal .ng-modal-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $iconSize;
+    height: $iconSize;
+    min-width: 40px;
+    min-height: 40px;
+    background: url("../../images/icons/white_minus.svg") center no-repeat transparent;
+    background-size: contain;
+    opacity: 0.5;
+    -webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+    border-radius: 50%;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+////////// MEDIA QUERIES //////////
 @media(max-width: 1100px) {
     .project-controls {
         width: 18vw;
     }
+
+    // .project-modal{
+    //   position: absolute;
+    //   top: 50%;
+    //   right: 50%;
+    //   @include translateXY(-50%, 50%);
+    // }
 }
 @media(max-width: 800px) {
+
+  .project-controls {
+      width: 45vw;
+
+      h4 {
+          font-size: 3.33vw;
+          padding-top: 7.75vw;
+      }
+
+      .forward,
+      .back {
+          top: 12.5vw;
+          margin: 0 2vw;
+      }
+  }
+
     .project-background {
         .logo {
             bottom: 2.25vw;
@@ -184,13 +313,6 @@ $width-special: calc(100vw - 100vh - 7.5vw);
             top: 0;
             width: $width-mobile;
             padding: 2.5vw 5vw 1vw;
-
-            h1,
-            h2 {
-                // text-transform: uppercase;
-                // color: $aubergine;
-                // font-weight: 400;
-            }
         }
 
         .project-bottom {
@@ -200,12 +322,7 @@ $width-special: calc(100vw - 100vh - 7.5vw);
 
             p {
                 font-size: 2vw;
-                // color: $aubergine;
-                // font-weight: 400;
-                // font-style: italic;
                 max-width: 75vw;
-                // line-height: 1.4;
-                // font-size: 1vw;
             }
         }
     }

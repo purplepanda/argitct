@@ -1,120 +1,187 @@
-.project-modal{
-  .ng-modal-overlay{
-    position: absolute;
-    z-index: 999;
-    bottom: 15vw;
-    right: 15vw;
-    height: 90vh !important;
-    width: 50vw !important;
-    background-color: $aubergine-medium;
-  }
-// .jcf-scrollable
-  .ng-modal-dialog {
-    position: relative;
-    z-index: 1000;
-    top: 50%;
-    @include translateY(-50%);
+$width-special: calc(100vw - 100vh - 11vw);
+$width-special2: calc((100vw - 100vh - 6.75vw) * -1);
 
-    .project .project-bottom p{
-      padding: 2vw;
-      text-align: left;
-      color: $white;
+// .project-modal {
+//     .ng-modal-overlay {
+//         position: absolute;
+//         right: $width-special2;
+//         top: -50%;
+//         bottom: 0;
+//         margin-top: auto;
+//         margin-bottom: auto;
+//         @include translateY(-50%);
+//         z-index: 999;
+//         height: 80vh;
+//         width: $width-special;
+//         background-color: $aubergine;
+//         overflow-y: scroll;
+//         overflow-x: hidden;
+//         -webkit-box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+//         -moz-box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+//         box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
+//     }
+//
+//     .ng-modal-dialog {
+//         position: relative;
+//         top: 50%;
+//         @include translateY(-50%);
+//         width: 75%;
+//         height: 75%;
+//         margin: auto;
+//     }
+//
+//     p {
+//         color: $white !important;
+//         font-size: 1.75vw !important;
+//         line-height: 2.25vw !important;
+//         margin-bottom: 2.5vw !important;
+//         font-style: normal !important;
+//     }
+//
+//     .ng-modal-dialog-content {
+//         position: relative;
+//         top: 50%;
+//         @include translateY(-50%);
+//     }
+//
+//     .ng-close-box {
+//         position: absolute;
+//         padding: 2vw;
+//         margin: 2vw;
+//         top: 0;
+//         right: 0;
+//     }
+//
+//     .ng-modal-close {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: $iconSize;
+//         height: $iconSize;
+//         min-width: 40px;
+//         min-height: 40px;
+//         background: url("../../images/icons/white_minus.svg") center no-repeat transparent;
+//         background-size: contain;
+//         opacity: 0.5;
+//         // -webkit-box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.9);
+//         // -moz-box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.9);
+//         // box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.9);
+//         -webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+//         -moz-box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+//         box-shadow: 0 0 15px 2px rgba(0,0,0,0.6);
+//         border-radius: 50%;
+//
+//         &:hover {
+//             opacity: 0.75;
+//         }
+//     }
+// }
+
+.subject-modal {
+    .ng-modal-overlay {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include translateX(50%);
+        z-index: 999;
+        height: 80vh;
+        width: 80vw;
+        background-color: $white;
+        overflow-y: scroll;
+        -webkit-box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
+        -moz-box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
+        box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
     }
-  }
 
-  .ng-modal-dialog-content {
-    padding: 2vw;
-    text-align: left;
-    color: $white;
-  }
+    .ng-modal-dialog {
+        position: relative;
+        top: 50%;
+        @include translateY(-50%);
+        width: 75%;
+        height: 75%;
+        margin: auto;
+    }
 
-  .ng-modal-close {
-    position: absolute;
-    top: 1vw;
-    right: 1vw;
-    padding: 1vw;
-    cursor: pointer;
-    font-size: 3vw;
-    display: inline-block;
-    font-weight: 400;
-    font-family: $font-fancy;
-  }
+    p {
+        color: $aubergine;
+        font-size: 1.75vw;
+        line-height: 2.25vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .ng-modal-dialog-content {
+        position: relative;
+        top: 50%;
+        @include translateY(-50%);
+    }
+
+    .ng-close-box {
+        position: absolute;
+        padding: 1vw;
+        margin: 1vw;
+        top: 0;
+        right: 0;
+    }
+
+    .ng-modal-close {
+        width: $iconSize;
+        height: $iconSize;
+        min-width: 40px;
+        min-height: 40px;
+        background: url("../../images/icons/aubergine_minus.svg") center no-repeat transparent;
+        background-size: contain;
+        opacity: 0.75;
+        -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.90;
+        }
+    }
 }
-
-.subject-modal{
-  .ng-modal-overlay{
-    position: absolute;
-    right: 50%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    @include translateX(50%);
-    z-index: 999;
-    height: 85vh;
-    width: 85vw;
-    background-color: $aubergine;
-    overflow-y: scroll;
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.6);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.6);
-    box-shadow: 0px 0px 15px 2px rgba(74,47,64,0.6);
-  }
-  .ng-modal-dialog{
-    position: relative;
-    top: 50%;
-    @include translateY(-50%);
-    width: 75%;
-    height: 75%;
-    margin: auto;
-  }
-  p{
-    color: $white;
-    font-size: 1.75vw;
-    line-height: 2.25vw;
-    margin-bottom: 2.5vw;
-  }
-  .ng-modal-dialog-content{}
-  .ng-modal-close{
-
-  }
-}
-
-
-
 /* scrollbars */
 .jcf-scrollable-wrapper {
-	box-sizing: content-box;
-	// position: relative;
-	border: 2px solid grey;
+    box-sizing: content-box;
+    // position: relative;
+    border: 2px solid grey;
 }
+
 .jcf-scrollbar-vertical {
-	position: absolute;
-	cursor: default;
-	background: $magenta;
-	width: 0.75vw;
-	bottom: 0;
-	right: 0;
-	top: 0;
+    position: absolute;
+    cursor: default;
+    background: $magenta;
+    width: 0.75vw;
+    bottom: 0;
+    right: 0;
+    top: 0;
 }
 /* square spaces at top and bottom */
 .jcf-scrollbar-vertical .jcf-scrollbar-dec,
 .jcf-scrollbar-vertical .jcf-scrollbar-inc {
-	background: $magenta;
-	height: 0.75vw;
-	width: 0.75vw;
-	left: 0;
-	top: 0;
+    background: $magenta;
+    height: 0.75vw;
+    width: 0.75vw;
+    left: 0;
+    top: 0;
 }
+
 .jcf-scrollbar-vertical .jcf-scrollbar-inc {
-	top: auto;
-	bottom: 0;
+    top: auto;
+    bottom: 0;
 }
+
 .jcf-scrollbar-vertical .jcf-scrollbar-handle {
-	background: white;
-  opacity: 0.35;
-	height: 15% !important;
-	width: 0.75vw;
-  border-radius: 0.25vw;
+    background: white;
+    opacity: 0.35;
+    height: 15% !important;
+    width: 0.75vw;
+    border-radius: 0.25vw;
 }
+
 .jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
-	visibility: hidden;
+    visibility: hidden;
 }
