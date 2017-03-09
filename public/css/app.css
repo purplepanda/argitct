@@ -319,7 +319,6 @@ li {
     opacity: 0.75; }
 
 .plus {
-  animation: plus 60s ease-in-out infinite;
   position: absolute;
   bottom: 3.13vw;
   width: 3vw;
@@ -416,7 +415,8 @@ li {
   .down,
   .forward,
   .landing-plus,
-  .plus {
+  .plus,
+  .project-plus {
     width: 7vw;
     height: 7vw; }
   .back,
@@ -607,8 +607,7 @@ li {
           font-size: 1.25vw;
           text-decoration: none; }
           #home .subject-content .nav-home li a:hover {
-            color: #b1b3b3;
-            font-weight: 400; }
+            color: #b1b3b3; }
           #home .subject-content .nav-home li a:after {
             content: "|";
             padding: 0 0.5vw 0 1vw; }
@@ -686,72 +685,6 @@ li {
   #landing .large-logo .landing-plus {
     top: 175%; } }
 
-.subject-modal .ng-modal-overlay {
-  position: absolute;
-  right: 50%;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  -webkit-transform: perspective(1px) translateX(50%);
-  -moz-transform: perspective(1px) translateX(50%);
-  -ms-transform: perspective(1px) translateX(50%);
-  transform: perspective(1px) translateX(50%);
-  z-index: 999;
-  height: 80vh;
-  width: 80vw;
-  background-color: white;
-  overflow-y: scroll;
-  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9); }
-
-.subject-modal .ng-modal-dialog {
-  position: relative;
-  top: 50%;
-  -webkit-transform: perspective(1px) translateY(-50%);
-  -moz-transform: perspective(1px) translateY(-50%);
-  -ms-transform: perspective(1px) translateY(-50%);
-  transform: perspective(1px) translateY(-50%);
-  width: 75%;
-  height: 75%;
-  margin: auto; }
-
-.subject-modal p {
-  color: #4a3041;
-  font-size: 1.75vw;
-  line-height: 2.25vw;
-  margin-bottom: 2.5vw; }
-
-.subject-modal .ng-modal-dialog-content {
-  position: relative;
-  top: 50%;
-  -webkit-transform: perspective(1px) translateY(-50%);
-  -moz-transform: perspective(1px) translateY(-50%);
-  -ms-transform: perspective(1px) translateY(-50%);
-  transform: perspective(1px) translateY(-50%); }
-
-.subject-modal .ng-close-box {
-  position: absolute;
-  padding: 1vw;
-  margin: 1vw;
-  top: 0;
-  right: 0; }
-
-.subject-modal .ng-modal-close {
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
-  background: url("../../images/icons/aubergine_minus.svg") center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.75;
-  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 50%; }
-  .subject-modal .ng-modal-close:hover {
-    opacity: 0.90; }
-
 /* scrollbars */
 .jcf-scrollable-wrapper {
   box-sizing: content-box;
@@ -806,7 +739,7 @@ li {
     background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
     background-size: contain;
     opacity: 0.25;
-    z-index: 10; }
+    z-index: 90000; }
     .aside-menu .menu:hover {
       opacity: 0.75; }
 
@@ -822,7 +755,7 @@ nav {
   top: 0;
   left: 0;
   background-color: #4a3041;
-  z-index: 9;
+  z-index: 80000;
   padding-top: 10vw;
   -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
@@ -842,21 +775,28 @@ nav {
       text-decoration: underline; }
 
 @media (max-width: 1100px) {
-  .aside-menu .menu {
-    width: 3vw;
-    height: 3vw; }
+  .aside-menu {
+    width: 7.5vw;
+    height: 7.5vw; }
+    .aside-menu .menu {
+      width: 3vw;
+      height: 3vw;
+      top: 3.75vw;
+      -webkit-transform: perspective(1px) translate(50%, -50%);
+      -moz-transform: perspective(1px) translate(50%, -50%);
+      -ms-transform: perspective(1px) translate(50%, -50%);
+      transform: perspective(1px) translate(50%, -50%); }
   .nav-hamburger a {
     font-size: 3.44vw;
     line-height: 6vw;
     padding-left: 6vw; } }
 
 @media (max-width: 800px) {
-  .aside-menu {
-    width: 9.5vw; }
-    .aside-menu .menu {
-      width: 4vw;
-      height: 4vw;
-      top: 3.25vw; }
+  .aside-menu .menu {
+    width: 5vw;
+    height: 5vw;
+    top: 6.5vw;
+    right: 0; }
   .nav-hamburger {
     width: 100vw;
     padding-top: 20vw; }
@@ -869,11 +809,10 @@ nav {
   .aside-menu {
     width: 13vw; }
     .aside-menu .menu {
-      width: 5vw;
-      height: 5vw;
-      min-width: 30px;
-      min-height: 30px;
-      top: 4vw; }
+      width: 6vw;
+      height: 6vw;
+      top: 8.5vw;
+      right: 4vw; }
   .nav-hamburger {
     padding-top: 25vw; }
     .nav-hamburger a {
@@ -883,64 +822,55 @@ nav {
 
 @media (max-width: 450px) {
   .aside-menu {
-    width: 20vw; }
+    width: 20vw;
+    height: 22vw; }
     .aside-menu .menu {
-      top: 5vw; } }
+      width: 9vw;
+      height: 9vw;
+      top: 13vw;
+      right: 4vw; } }
 
 .project-controls {
   float: right;
-  width: 13vw;
-  height: 10vw;
-  text-align: center;
+  width: 10vw;
+  height: auto;
   z-index: 50000; }
   .project-controls h4 {
     text-transform: uppercase;
     letter-spacing: 0.1vw;
     padding-top: 1.75vw;
-    color: rgba(84, 65, 78, 0.8); }
+    color: rgba(84, 65, 78, 0.8);
+    width: 100%; }
     .project-controls h4 .purple {
       color: #4a3041;
       font-weight: 400; }
+  .project-controls .back,
   .project-controls .forward {
     display: inline-block;
     position: relative;
     top: 1.25vw;
     right: auto;
-    margin: 0 1vw;
     width: 3vw;
     height: 3vw;
     min-width: 40px;
     min-height: 40px;
-    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-    background-size: contain;
     -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     opacity: 0.5;
     z-index: 15; }
+    .project-controls .back:hover,
     .project-controls .forward:hover {
       opacity: 0.8; }
+  .project-controls .forward {
+    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+    background-size: contain;
+    margin: 0 auto 0 1vw; }
   .project-controls .back {
-    display: inline-block;
-    position: relative;
-    top: 1.25vw;
-    right: auto;
-    margin: 0 1vw;
-    width: 3vw;
-    height: 3vw;
-    min-width: 40px;
-    min-height: 40px;
     background: url("../../images/icons/white_back.svg") center no-repeat transparent;
     background-size: contain;
-    -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-    border-radius: 50%;
-    opacity: 0.5;
-    z-index: 15; }
-    .project-controls .back:hover {
-      opacity: 0.8; }
+    margin: 0 1vw 0 auto; }
 
 .project-background {
   background-color: #b1b3b3;
@@ -1028,10 +958,11 @@ nav {
 
 .project-modal .ng-modal-overlay {
   position: absolute;
-  right: calc((100vw - 100vh - 6.75vw) * -1);
+  right: calc((100vw - 100vh - 7.5vw) * -1);
   top: -50%;
   bottom: 0;
   margin-top: auto;
+  margin-right: 1vw;
   margin-bottom: auto;
   -webkit-transform: perspective(1px) translateY(-50%);
   -moz-transform: perspective(1px) translateY(-50%);
@@ -1039,8 +970,8 @@ nav {
   transform: perspective(1px) translateY(-50%);
   z-index: 999;
   height: 80vh;
-  width: calc(100vw - 100vh - 11vw);
-  background-color: #4a3041;
+  width: calc(100vw - 100vh - 9.5vw);
+  background-color: rgba(74, 48, 65, 0.99);
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.6);
@@ -1064,14 +995,16 @@ nav {
   -webkit-transform: perspective(1px) translateY(-50%);
   -moz-transform: perspective(1px) translateY(-50%);
   -ms-transform: perspective(1px) translateY(-50%);
-  transform: perspective(1px) translateY(-50%); }
+  transform: perspective(1px) translateY(-50%);
+  height: 100%; }
 
 .project-modal p {
   color: white !important;
   font-size: 1.75vw !important;
-  line-height: 2.25vw !important;
+  line-height: 1.4 !important;
   margin-bottom: 2.5vw !important;
-  font-style: normal !important; }
+  font-style: normal !important;
+  font-weight: 300 !important; }
 
 .project-modal .ng-close-box {
   position: absolute;
@@ -1099,58 +1032,168 @@ nav {
     opacity: 0.75; }
 
 @media (max-width: 1100px) {
+  .project-background .project-logo {
+    width: calc(100vw - (100vh - 7.5vw)); }
   .project-controls {
-    width: 18vw; } }
+    width: 16vw;
+    height: 7.5vw;
+    text-align: left; }
+    .project-controls .back,
+    .project-controls .forward {
+      top: 3.75vw;
+      -webkit-transform: perspective(1px) translate(50%, -50%);
+      -moz-transform: perspective(1px) translate(50%, -50%);
+      -ms-transform: perspective(1px) translate(50%, -50%);
+      transform: perspective(1px) translate(50%, -50%); }
+    .project-controls h4 {
+      padding-top: 2.25vw;
+      padding-left: 1.65vw; }
+  .project {
+    height: calc(100vh - 7.5vw);
+    width: calc(100vh - 7.5vw);
+    top: 7.5vw;
+    left: 0; }
+    .project .slick-slide img {
+      height: calc(100vh - 7.5vw); }
+    .project .project-top {
+      width: calc(100vh - 7.5vw); }
+    .project .project-bottom {
+      width: calc(100vh - 7.5vw); }
+  .project-modal .ng-modal-overlay {
+    top: 0;
+    width: calc(100vw - (100vh - 4.5vw));
+    right: calc((100vw - (100vh - 10.5vw)) * -1);
+    margin-right: 4.5vw; } }
+
+@media (max-width: 925px) {
+  .project-modal .ng-modal-overlay {
+    width: 45vw; } }
 
 @media (max-width: 800px) {
+  .project-controls {
+    width: 20vw; }
+    .project-controls h4 {
+      font-size: 2vw;
+      padding-top: 4vw;
+      padding-left: 0;
+      margin-left: 3.75vw; }
+    .project-controls .back,
+    .project-controls .forward {
+      width: 6vw;
+      height: 6vw;
+      top: 6.5vw; }
+  .project-background {
+    min-height: 1024px; }
+    .project-background .project-logo {
+      width: 100vw; }
+    .project-background .logo {
+      bottom: 2.25vw;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 12vw;
+      transform: none; }
+  .project {
+    height: 108.5vw;
+    width: 100vw;
+    top: 13vw;
+    overflow: hidden;
+    background-color: white; }
+    .project .slick-slide img {
+      height: auto;
+      width: 100vw; }
+    .project .project-top {
+      width: 100vw;
+      padding-left: 4.5vw; }
+    .project .project-bottom {
+      width: 100vw;
+      padding-left: 4.5vw; }
+      .project .project-bottom p {
+        font-size: 1.75vw; }
+  .project-plus {
+    width: 6vw;
+    height: 6vw;
+    right: 9vw; }
+  .project-modal .ng-modal-overlay {
+    width: 90vw;
+    height: 75vh;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  .project-modal p {
+    font-size: 2.75vw !important;
+    margin-bottom: 3.5vw !important; }
+  .project-modal .ng-close-box {
+    padding: 3vw;
+    margin: 4vw; }
+  .project-modal .ng-modal-close {
+    width: 6vw;
+    height: 6vw; } }
+
+@media (max-width: 600px) {
+  .project-controls {
+    width: 30vw;
+    height: 14vw; }
+    .project-controls h4 {
+      font-size: 2.75vw;
+      padding-top: 6.5vw;
+      margin-left: 4vw; }
+    .project-controls .back,
+    .project-controls .forward {
+      width: 7vw;
+      height: 7vw;
+      top: 8.5vw; }
+    .project-controls .back {
+      margin: 0 1.5vw 0 auto; }
+    .project-controls .forward {
+      margin: 0 auto 0 1.5vw; }
+  .project-background {
+    min-height: 568px; }
+    .project-background .logo {
+      bottom: 5vw;
+      width: 15vw; }
+  .project {
+    top: 14vh; }
+    .project .project-top {
+      padding: 2vw 2.5vw; }
+    .project .project-bottom p {
+      font-size: 2vw; }
+  .project-plus {
+    width: 7vw;
+    height: 7vw; }
+  .project-modal p {
+    font-size: 3vw !important;
+    margin-bottom: 4.5vw !important; }
+  .project-modal .ng-close-box {
+    padding: 3vw;
+    margin: 4vw; }
+  .project-modal .ng-modal-close {
+    width: 7vw;
+    height: 7vw; } }
+
+@media (max-width: 450px) {
   .project-controls {
     width: 45vw; }
     .project-controls h4 {
       font-size: 3.33vw;
-      padding-top: 7.75vw; }
-    .project-controls .forward,
-    .project-controls .back {
+      padding-top: 8vw;
+      margin-left: 11vw; }
+    .project-controls .back,
+    .project-controls .forward {
       top: 12.5vw;
       margin: 0 2vw; }
-  .project-background .logo {
-    bottom: 2.25vw;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 12vw; }
   .project {
-    left: 0;
-    width: 100vw;
-    background-color: white;
-    height: 78vh;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: perspective(1px) translateY(-48%);
-    -moz-transform: perspective(1px) translateY(-48%);
-    -ms-transform: perspective(1px) translateY(-48%);
-    transform: perspective(1px) translateY(-48%);
-    overflow: hidden; }
-    .project .slick-slide img {
-      width: 100%;
-      height: auto; }
-    .project .project-top {
-      top: 0;
-      width: 100vw;
-      padding: 2.5vw 5vw 1vw; }
-    .project .project-bottom {
-      bottom: 0;
-      width: 100vw;
-      padding: 2vw 5vw; }
-      .project .project-bottom p {
-        font-size: 2vw;
-        max-width: 75vw; } }
-
-@media (max-width: 600px) {
-  .project-background .logo {
-    bottom: 5.25vw;
-    width: 15vw; }
-  .project .project-bottom p {
-    font-size: 2.67vw; } }
+    top: 15vh;
+    height: 132.5vw; }
+    .project .project-bottom p {
+      font-size: 2.75vw; }
+  .project-modal .ng-modal-overlay {
+    height: 64vh; }
+  .project-modal .ng-close-box {
+    padding: 6vw; }
+  .project-modal p {
+    font-size: 3.5vw !important;
+    margin-bottom: 5vw !important; } }
 
 .recovery {
   width: 100%;
@@ -1266,6 +1309,73 @@ nav {
       bottom: auto;
       margin-top: 3vw; }
 
+.subject-modal .ng-modal-overlay {
+  position: absolute;
+  right: 50%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: perspective(1px) translateX(50%);
+  -moz-transform: perspective(1px) translateX(50%);
+  -ms-transform: perspective(1px) translateX(50%);
+  transform: perspective(1px) translateX(50%);
+  z-index: 999;
+  height: 80vh;
+  width: 80vw;
+  background-color: white;
+  overflow-y: scroll;
+  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
+  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9); }
+
+.subject-modal .ng-modal-dialog {
+  position: relative;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -moz-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+  width: 75%;
+  height: 75%;
+  margin: auto; }
+
+.subject-modal p {
+  color: #4a3041;
+  font-size: 1.75vw;
+  line-height: 2.25vw;
+  margin-bottom: 2.5vw; }
+
+.subject-modal .ng-modal-dialog-content {
+  position: relative;
+  top: 50%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -moz-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%);
+  height: 100%; }
+
+.subject-modal .ng-close-box {
+  position: absolute;
+  padding: 1vw;
+  margin: 1vw;
+  top: 0;
+  right: 0; }
+
+.subject-modal .ng-modal-close {
+  width: 3vw;
+  height: 3vw;
+  min-width: 40px;
+  min-height: 40px;
+  background: url("../../images/icons/aubergine_minus.svg") center no-repeat transparent;
+  background-size: contain;
+  opacity: 0.75;
+  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 50%; }
+  .subject-modal .ng-modal-close:hover {
+    opacity: 0.90; }
+
 #contact ul {
   margin-top: 5vw; }
 
@@ -1293,7 +1403,17 @@ nav {
     .subject-page .more a {
       font-size: 2.25vw; }
     .subject-page .more .down {
-      display: none; } }
+      display: none; }
+  .subject-modal p {
+    font-size: 2.25vw;
+    line-height: 2.75vw;
+    margin-bottom: 3.5vw; }
+  .subject-modal .ng-close-box {
+    padding: 1.25vw;
+    margin: 1.25vw; }
+  .subject-modal .ng-modal-close {
+    width: 6vw;
+    height: 6vw; } }
 
 @media (max-width: 600px) {
   .subject-page .logo {
@@ -1301,4 +1421,14 @@ nav {
   .subject-page .more {
     bottom: 18vw; }
     .subject-page .more a {
-      font-size: 3vw; } }
+      font-size: 3vw; }
+  .subject-modal p {
+    font-size: 3.25vw;
+    line-height: 4vw;
+    margin-bottom: 5.5vw; }
+  .subject-modal .ng-close-box {
+    padding: 2.25vw;
+    margin: 2.25vw; }
+  .subject-modal .ng-modal-close {
+    width: 7vw;
+    height: 7vw; } }

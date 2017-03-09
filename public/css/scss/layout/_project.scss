@@ -1,27 +1,26 @@
 $width: 100vh;
 $width-desktop: 91vw;
-$width-mobile: 100vw; // $left: 7vw;
-// $left-desktop: 9vw;
-// $left-mobile: 0;
-// $width-menu-desktop: 7.5vw;
-// $width-menu-tablet: 9.5vw;
-// $width-menu-mobile: 13vw;
-// $width-menu-xsmall: 20vw;
+$width-mobile: 100vw;
 $width-special: calc(100vw - 100vh - 7.5vw);
 $height-special: 8vw;
+$height-tablet-carousel: calc(100vh - 7.5vw);
+$width-minus-carousel: calc(100vw - (100vh - 7.5vw));
+$width-modal-tablet: calc(100vw - (100vh - 4.5vw));
+$right-modal-tablet: calc((100vw - (100vh - 10.5vw)) * -1);
 
 .project-controls {
     float: right;
-    width: 13vw;
-    height: 10vw;
-    text-align: center;
+    width: 10vw;
+    height: auto;
     z-index: 50000;
 
     h4 {
         text-transform: uppercase;
         letter-spacing: 0.1vw;
         padding-top: 1.75vw;
+        // padding-left: 0.25vw;
         color: $burntlilac;
+        width: 100%;
 
         .purple {
             color: $aubergine;
@@ -29,18 +28,16 @@ $height-special: 8vw;
         }
     }
 
+    .back,
     .forward {
         display: inline-block;
         position: relative;
         top: 1.25vw;
         right: auto;
-        margin: 0 1vw;
         width: $iconSize;
         height: $iconSize;
         min-width: 40px;
         min-height: 40px;
-        background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-        background-size: contain;
         -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
         -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
         box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
@@ -53,28 +50,16 @@ $height-special: 8vw;
         }
     }
 
+    .forward {
+        background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+        background-size: contain;
+        margin: 0 auto 0 1vw;
+    }
+
     .back {
-        display: inline-block;
-        position: relative;
-        top: 1.25vw;
-        right: auto;
-        margin: 0 1vw;
-        width: $iconSize;
-        height: $iconSize;
-        min-width: 40px;
-        min-height: 40px;
         background: url("../../images/icons/white_back.svg") center no-repeat transparent;
         background-size: contain;
-        -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
-        -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
-        box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
-        border-radius: 50%;
-        opacity: 0.5;
-        z-index: 15;
-
-        &:hover {
-            opacity: 0.8;
-        }
+        margin: 0 1vw 0 auto;
     }
 }
 
@@ -178,24 +163,23 @@ $height-special: 8vw;
     }
 }
 ////////// MODAL ON PROJECTS PAGE //////////
-$width-special: calc(100vw - 100vh - 11vw);
-$width-special2: calc((100vw - 100vh - 6.75vw) * -1);
+// $width-special: calc(100vw - 100vh - 11vw);
+$width-special2: calc((100vw - 100vh - 7.5vw) * -1);
+$width-special3: calc(100vw - 100vh - 9.5vw);
 
-.project-modal{
-
-}
 .project-modal .ng-modal-overlay {
     position: absolute;
     right: $width-special2;
     top: -50%;
     bottom: 0;
     margin-top: auto;
+    margin-right: 1vw;
     margin-bottom: auto;
     @include translateY(-50%);
     z-index: 999;
     height: 80vh;
-    width: $width-special;
-    background-color: $aubergine;
+    width: $width-special3;
+    background-color: $aubergine-dark;
     overflow-y: scroll;
     overflow-x: hidden;
     -webkit-box-shadow: 0 0 15px 2px rgba(74,47,64,0.6);
@@ -216,14 +200,16 @@ $width-special2: calc((100vw - 100vh - 6.75vw) * -1);
     position: relative;
     top: 50%;
     @include translateY(-50%);
+    height: 100%;
 }
 
 .project-modal p {
     color: $white !important;
     font-size: 1.75vw !important;
-    line-height: 2.25vw !important;
+    line-height: 1.4 !important;
     margin-bottom: 2.5vw !important;
     font-style: normal !important;
+    font-weight: 300 !important;
 }
 
 .project-modal .ng-close-box {
@@ -256,115 +242,260 @@ $width-special2: calc((100vw - 100vh - 6.75vw) * -1);
 }
 ////////// MEDIA QUERIES //////////
 @media(max-width: 1100px) {
-    .project-controls {
-        width: 18vw;
+    .project-background {
+        .project-logo {
+            width: $width-minus-carousel;
+        }
     }
 
-    // .project-modal{
-    //   position: absolute;
-    //   top: 50%;
-    //   right: 50%;
-    //   @include translateXY(-50%, 50%);
-    // }
+    .project-controls {
+        width: 16vw;
+        height: $width-menu-tablet;
+        text-align: left;
+
+        .back,
+        .forward {
+            top: 3.75vw;
+            @include translateXY(50%, -50%);
+        }
+
+        h4 {
+            padding-top: 2.25vw;
+            padding-left: 1.65vw;
+        }
+    }
+
+    .project {
+        height: $height-tablet-carousel;
+        width: $height-tablet-carousel;
+        top: $width-menu-tablet;
+        left: 0;
+
+        .slick-slide img {
+            height: $height-tablet-carousel;
+        }
+
+        .project-top {
+            width: $height-tablet-carousel;
+        }
+
+        .project-bottom {
+            width: $height-tablet-carousel;
+        }
+    }
+
+    .project-modal .ng-modal-overlay {
+        top: 0;
+        width: $width-modal-tablet;
+        right: $right-modal-tablet;
+        margin-right: 4.5vw;
+    }
+}
+@media(max-width: 925px) {
+    .project-modal .ng-modal-overlay {
+        width: 45vw;
+    }
 }
 @media(max-width: 800px) {
+    .project-controls {
+        width: 20vw;
 
-  .project-controls {
-      width: 45vw;
+        h4 {
+            font-size: 2vw;
+            padding-top: 4vw;
+            padding-left: 0;
+            margin-left: 3.75vw;
+        }
 
-      h4 {
-          font-size: 3.33vw;
-          padding-top: 7.75vw;
-      }
-
-      .forward,
-      .back {
-          top: 12.5vw;
-          margin: 0 2vw;
-      }
-  }
+        .back,
+        .forward {
+            width: $iconSizeTablet;
+            height: $iconSizeTablet;
+            top: 6.5vw;
+        }
+    }
 
     .project-background {
+        min-height: 1024px;
+
+        .project-logo {
+            width: 100vw;
+        }
+
         .logo {
             bottom: 2.25vw;
             left: 0;
             right: 0;
             margin: auto;
             width: 12vw;
+            transform: none;
         }
     }
 
     .project {
-        left: 0;
-        width: $width-mobile;
-        background-color: $white;
-        height: 78vh;
-        position: absolute;
-        top: 50%;
-        @include translateY(-48%);
+        height: 108.5vw;
+        width: 100vw;
+        top: $width-menu-mobile;
         overflow: hidden;
+        background-color: $white;
 
         .slick-slide img {
-            width: 100%;
             height: auto;
+            width: 100vw;
         }
 
         .project-top {
-            top: 0;
-            width: $width-mobile;
-            padding: 2.5vw 5vw 1vw;
+            width: 100vw;
+            padding-left: 4.5vw;
         }
 
         .project-bottom {
-            bottom: 0;
-            width: $width-mobile;
-            padding: 2vw 5vw;
+            width: 100vw;
+            padding-left: 4.5vw;
 
             p {
-                font-size: 2vw;
-                max-width: 75vw;
+                font-size: 1.75vw;
             }
         }
     }
+
+    .project-plus {
+        width: $iconSizeTablet;
+        height: $iconSizeTablet;
+        right: 9vw;
+    }
+
+    .project-modal .ng-modal-overlay {
+        width: 90vw;
+        height: 75vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .project-modal p {
+        font-size: 2.75vw !important;
+        margin-bottom: 3.5vw !important;
+    }
+
+    .project-modal .ng-close-box {
+        padding: 3vw;
+        margin: 4vw;
+    }
+
+    .project-modal .ng-modal-close {
+        width: $iconSizeTablet;
+        height: $iconSizeTablet;
+    }
 }
 @media(max-width: 600px) {
+    .project-controls {
+        width: 30vw;
+        height: 14vw;
+
+        h4 {
+            font-size: 2.75vw;
+            padding-top: 6.5vw;
+            margin-left: 4vw;
+        }
+
+        .back,
+        .forward {
+            width: $iconSizeMobile;
+            height: $iconSizeMobile;
+            top: 8.5vw;
+        }
+
+        .back {
+            margin: 0 1.5vw 0 auto;
+        }
+
+        .forward {
+            margin: 0 auto 0 1.5vw;
+        }
+    }
+
     .project-background {
+        min-height: 568px;
+
         .logo {
-            bottom: 5.25vw;
+            bottom: 5vw;
             width: 15vw;
         }
     }
 
     .project {
-        // top: 10vh;
-        // height: 80vh;
-        .slick-slide img {
-            // height: auto;
-            // max-height: 80vh;
-            // width: 100vw;
-            // position: relative;
-            // top: 50%;
-            // @include translateY(-50%);
-            // margin: auto;
-        }
+        top: 14vh;
 
         .project-top {
-            // top: 0;
-            // padding: 1.5vw 2vw 1vw 2vw;
-            h1,
-            h2 {
-                // text-transform: uppercase;
-                // color: $aubergine;
-                // font-weight: 400;
-            }
+            padding: 2vw 2.5vw;
         }
 
         .project-bottom {
-            // bottom: 0;
-            // padding: 1vw 2vw;
             p {
-                font-size: 2.67vw;
+                font-size: 2vw;
             }
         }
+    }
+
+    .project-plus {
+        width: $iconSizeMobile;
+        height: $iconSizeMobile;
+    }
+
+    .project-modal p {
+        font-size: 3vw !important;
+        margin-bottom: 4.5vw !important;
+    }
+
+    .project-modal .ng-close-box {
+        padding: 3vw;
+        margin: 4vw;
+    }
+
+    .project-modal .ng-modal-close {
+        width: $iconSizeMobile;
+        height: $iconSizeMobile;
+    }
+}
+@media(max-width: 450px) {
+    .project-controls {
+        width: 45vw;
+
+        h4 {
+            font-size: 3.33vw;
+            padding-top: 8vw;
+            margin-left: 11vw;
+        }
+
+        .back,
+        .forward {
+            top: 12.5vw;
+            margin: 0 2vw;
+        }
+    }
+
+    .project {
+        top: 15vh;
+        height: 132.5vw;
+
+        .project-bottom {
+            p {
+                font-size: 2.75vw;
+            }
+        }
+    }
+
+    .project-modal .ng-modal-overlay {
+        height: 64vh;
+    }
+
+    .project-modal .ng-close-box {
+      padding: 6vw;
+    }
+
+    .project-modal p {
+        font-size: 3.5vw !important;
+        margin-bottom: 5vw !important;
     }
 }

@@ -5,6 +5,10 @@ app.controller("projectsCtrl", function($scope, $state, projectData) {
     return parseInt($state.params.projectId)
   }
 
+  $scope.currentProjectNumber = function() {
+    return projectIds.indexOf(currentProjectId()) + 1;
+  }
+
   $scope.project = _.find(projectData, function(x) {
     return x.id == $state.params.projectId
   })

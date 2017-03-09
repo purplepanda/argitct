@@ -4,7 +4,7 @@
       <div class="process-controls">
         <div ng-click="goToNextProcess()" class="forward"></div>
         <div ng-click="goToPreviousProcess()" class="back"></div>
-        <h4>Step <span class="purple"> {{process.id}}</span> / {{processLength}}</h4>
+        <h4>Step <span class="purple"> {{currentProcessNumber()}}</span> / {{processLength}}</h4>
       </div>
         <ui-view></ui-view>
     </div>

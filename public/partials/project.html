@@ -15,10 +15,9 @@
         <p><span class="special">designer: </span>{{project.designer}}</p>
         <p><span class="special">description: </span>{{project.description}}</p>
 
-        <a ng-click='toggleModal()' class="project-plus">
-            <modal-dialog show='modalShown' class="project-modal">
-                <p>{{project.longdescription}}</p>
-            </modal-dialog>
-        </a>
+        <a ng-click='toggleModal()' class="project-plus"></a>
+        <modal-dialog show='modalShown' class="project-modal">
+            <p>{{project.longdescription}}</p>
+        </modal-dialog>
     </div>
 </div>

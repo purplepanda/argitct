@@ -61,6 +61,76 @@
         }
     }
 }
+$width-special: calc(100vw - 100vh - 11vw);
+$width-special2: calc((100vw - 100vh - 6.75vw) * -1);
+
+.subject-modal {
+    .ng-modal-overlay {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include translateX(50%);
+        z-index: 999;
+        height: 80vh;
+        width: 80vw;
+        background-color: $white;
+        overflow-y: scroll;
+        -webkit-box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
+        -moz-box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
+        box-shadow: 0 0 15px 2px rgba(74,47,64,0.9);
+    }
+
+    .ng-modal-dialog {
+        position: relative;
+        top: 50%;
+        @include translateY(-50%);
+        width: 75%;
+        height: 75%;
+        margin: auto;
+    }
+
+    p {
+        color: $aubergine;
+        font-size: 1.75vw;
+        line-height: 2.25vw;
+        margin-bottom: 2.5vw;
+    }
+
+    .ng-modal-dialog-content {
+        position: relative;
+        top: 50%;
+        @include translateY(-50%);
+        height: 100%;
+    }
+
+    .ng-close-box {
+        position: absolute;
+        padding: 1vw;
+        margin: 1vw;
+        top: 0;
+        right: 0;
+    }
+
+    .ng-modal-close {
+        width: $iconSize;
+        height: $iconSize;
+        min-width: 40px;
+        min-height: 40px;
+        background: url("../../images/icons/aubergine_minus.svg") center no-repeat transparent;
+        background-size: contain;
+        opacity: 0.75;
+        -webkit-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        -moz-box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.90;
+        }
+    }
+}
 
 #contact {
     ul {
@@ -74,18 +144,6 @@
 }
 @media(max-width: 1100px) {
     .subject-page {
-        // .subject-content{
-        //
-        //   .intro-text{
-        //
-        //   }
-        //   .more-text{
-        //
-        //   }
-        //   .plus{
-        //
-        //   }
-        // }
         .logo {
             bottom: 2.5vw;
             left: 2vw;
@@ -96,10 +154,6 @@
 @media(max-width: 800px) {
     .subject-page {
         .subject-content {
-            .intro-text {}
-
-            .more-text {}
-
             .plus {
                 right: -15.75vw;
             }
@@ -125,21 +179,27 @@
             }
         }
     }
+
+    .subject-modal {
+        p {
+            font-size: 2.25vw;
+            line-height: 2.75vw;
+            margin-bottom: 3.5vw;
+        }
+
+        .ng-close-box {
+            padding: 1.25vw;
+            margin: 1.25vw;
+        }
+
+        .ng-modal-close {
+            width: $iconSizeTablet;
+            height: $iconSizeTablet;
+        }
+    }
 }
 @media(max-width: 600px) {
     .subject-page {
-        // .subject-content{
-        //
-        //   .intro-text{
-        //
-        //   }
-        //   .more-text{
-        //
-        //   }
-        //   .plus{
-        //     // right: -15.75vw;
-        //   }
-        // }
         .logo {
             width: 20vw;
         }
@@ -152,4 +212,22 @@
             }
         }
     }
+    .subject-modal {
+        p {
+            font-size: 3.25vw;
+            line-height: 4vw;
+            margin-bottom: 5.5vw;
+        }
+
+        .ng-close-box {
+            padding: 2.25vw;
+            margin: 2.25vw;
+        }
+
+        .ng-modal-close {
+            width: $iconSizeMobile;
+            height: $iconSizeMobile;
+        }
+    }
+
 }

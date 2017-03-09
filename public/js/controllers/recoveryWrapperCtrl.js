@@ -5,6 +5,10 @@ app.controller("recoveryWrapperCtrl", function($scope, $state, processData) {
     return parseInt($state.params.processId)
   }
 
+  $scope.currentProcessNumber = function() {
+    return processIds.indexOf(currentProcessId()) + 1;
+  }
+
   $scope.process = _.find(processData, function(x) {
     return x.id == $state.params.processId
   })

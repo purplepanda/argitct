@@ -4,12 +4,14 @@
 
 
     <div class="subject-content">
-      <p class="intro-text">{{recoveryPage.introText}}</p>
-      <p class="more-text">{{recoveryPage.moreInformation}}</p>
+        <p class="intro-text">{{recoveryPage.introText}}</p>
+        <p class="more-text">{{recoveryPage.moreInformation}}</p>
         <a ng-click='toggleModal()' class="plus"></a>
         <modal-dialog show='modalShown' class="subject-modal">
             <p>{{recoveryPage.modalContent}}</p>
         </modal-dialog>
+
+
     </div>
 
     <a ui-sref="recoveryProcess.process({ processId: 1 })" class="down"></a>
