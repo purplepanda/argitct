@@ -1,4 +1,4 @@
-var app = angular.module("argitct", ["ui.router", "slickCarousel"]);
+var app = angular.module("argitct", ["ui.router", "ngAnimate", "slickCarousel"]);
 
 app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
@@ -72,3 +72,5 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
     });
 
 }]);
+
+app.run(run);

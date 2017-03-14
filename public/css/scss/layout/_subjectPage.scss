@@ -5,6 +5,22 @@
     background-color: $berry-light;
     overflow: hidden;
 
+    &.ng-enter{
+      transition: 1s;
+      opacity: 0;
+    }
+    &.ng-enter-active {
+      opacity: 1;
+    }
+
+    &.ng-leave{
+      transition: 1s;
+      opacity: 1;
+    }
+    &.ng-leave-active {
+      opacity: 0;
+    }
+
     .subject-content {
         position: relative;
         top: 50%;

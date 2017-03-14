@@ -1264,6 +1264,16 @@ nav {
   height: 100vh;
   background-color: rgba(68, 45, 59, 0.8);
   overflow: hidden; }
+  .subject-page.ng-enter {
+    transition: 1s;
+    opacity: 0; }
+  .subject-page.ng-enter-active {
+    opacity: 1; }
+  .subject-page.ng-leave {
+    transition: 1s;
+    opacity: 1; }
+  .subject-page.ng-leave-active {
+    opacity: 0; }
   .subject-page .subject-content {
     position: relative;
     top: 50%;
