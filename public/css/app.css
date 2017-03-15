@@ -190,7 +190,10 @@ h5,
 h6 {
   font-family: "Josefin Sans", sans-serif;
   color: white;
-  font-weight: 300; }
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -webkit-perspective: 0px !important;
+  -webkit-backface-visibility: visible !important; }
 
 h1 {
   font-size: 2.75vw; }
@@ -219,7 +222,10 @@ p {
   line-height: normal;
   letter-spacing: 0.04vw;
   font-size: 1vw;
-  margin-bottom: 0.63vw; }
+  margin-bottom: 0.63vw;
+  -webkit-font-smoothing: antialiased;
+  -webkit-perspective: 0px !important;
+  -webkit-backface-visibility: visible !important; }
 
 li {
   font-family: "Lato", Helvetica, sans-serif;
@@ -227,7 +233,10 @@ li {
   line-height: normal;
   letter-spacing: 0.04vw;
   font-size: 2vw;
-  margin-bottom: 0.63vw; }
+  margin-bottom: 0.63vw;
+  -webkit-font-smoothing: antialiased;
+  -webkit-perspective: 0px !important;
+  -webkit-backface-visibility: visible !important; }
 
 .special {
   text-transform: uppercase;
@@ -1301,6 +1310,8 @@ nav {
     bottom: 2.5vw;
     left: 2vw;
     width: 6vw; }
+  .subject-page svg {
+    fill: yellow; }
   .subject-page .more {
     position: fixed;
     left: 0;
