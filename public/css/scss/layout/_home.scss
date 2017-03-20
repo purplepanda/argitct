@@ -43,11 +43,27 @@
         }
 
         .nav-home {
-            text-align: center;
+            ul{
+              display: -webkit-box;
+              display: -mox-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+
+              -webkit-box-direction: normal;
+              -moz-box-direction: normal;
+              -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+              flex-direction: row;
+
+              -webkit-box-pack: space-around;
+              -moz-box-pack: space-around;
+              -ms-flex-pack: space-around; 
+              -webkit-justify-content: space-around;
+              justify-content: space-around;
+            }
 
             li {
-                display: inline-block;
-
                 a {
                     color: $burntlilac;
                     font-size: 1.25vw;
@@ -56,19 +72,6 @@
                     &:hover {
                         color: $silver;
                     }
-
-                    &:after {
-                        // content: "\25BE";
-                        content: "|";
-                        padding: 0 0.5vw 0 1vw;
-
-                        &:last-of-type {
-                            display: none;
-                        }
-                    }
-                    // &:visited {
-                    //     color: $burntlilac;
-                    // }
                 }
             }
         }

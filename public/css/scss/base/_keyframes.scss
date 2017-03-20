@@ -79,3 +79,22 @@
         box-shadow: 0 0 10px 5px rgba(135,35,75,0.75);
     }
 }
+
+@keyframes enter {
+  0%{
+    opacity: 0.15;
+  }
+  // 25%{
+  //   opacity: 0.15;
+  // }
+  50%{
+    opacity: 0.35;
+    // fill: $rosegold;
+  }
+  // 75%{
+  //   opacity: 0.15;
+  // }
+  100%{
+    opacity: 0.15;
+  }
+}
