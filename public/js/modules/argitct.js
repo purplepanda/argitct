@@ -73,4 +73,4 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
 
 }]);
 
-app.run(run);
+// app.run(run);

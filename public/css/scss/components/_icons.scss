@@ -55,7 +55,6 @@ $iconSizeMobile: 7vw; // .forward {
 }
 
 .landing-plus {
-    // animation: enter 5s ease infinite 1s;
     position: absolute;
     bottom: 3.13vw;
     width: $iconSize;
@@ -72,14 +71,18 @@ $iconSizeMobile: 7vw; // .forward {
 
     path{
       opacity: 0.15;
-      animation: enter 10s linear infinite 5s;
+      // animation: enter 10s linear infinite 5s;
       -webkit-font-smoothing: antialiased;
       -webkit-perspective: 0px !important;
       -webkit-backface-visibility: visible !important;
+      &:hover {
+          fill: $rosegold;
+          opacity: 1;
+      }
     }
 
     &:hover {
-        opacity: 0.5;
+        opacity: 1;
     }
 }
 

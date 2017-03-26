@@ -4,6 +4,10 @@
     min-height: $min-height;
     background-color: $aubergine;
 
+    .hidden {
+        display: none;
+    }
+
     .large-logo {
         position: relative;
         top: 50%;
@@ -22,17 +26,31 @@
 
         .landing-plus {
             bottom: auto;
-            right: -16%;
-            top: 46%;
+            right: -15%;
+            top: 33%;
             @include translateY(-50%);
+        }
+
+        .subtitle {
+            text-align: center;
+            padding-top: 8vw;
         }
     }
 
-    .bottom {
+    #outline-argitct {
+        path,
+        polygon,
+        rect {
+            stroke: $silver;
+        }
+    }
+
+    #landing-fadein,
+    #landing-fadeout {
         position: absolute;
-        bottom: 10%;
-        left: 0;
-        right: 0;
+        top: 50%;
+        @include translateY(-50%);
+        width: 100%;
     }
 }
 @media(max-width: 800px) {

@@ -98,3 +98,25 @@
     opacity: 0.15;
   }
 }
+
+
+@keyframes plus-rotate {
+  0%{
+    @include rotate(0deg);
+  }
+  50% {
+    @include rotate(-15deg);
+  }
+  100% {
+    @include rotate(0deg);
+  }
+}
+
+@keyframes outline-fade {
+  0%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

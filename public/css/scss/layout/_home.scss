@@ -45,7 +45,7 @@
         .nav-home {
             ul{
               display: -webkit-box;
-              display: -mox-box;
+              display: -moz-box;
               display: -ms-flexbox;
               display: -webkit-flex;
               display: flex;
@@ -58,7 +58,7 @@
 
               -webkit-box-pack: space-around;
               -moz-box-pack: space-around;
-              -ms-flex-pack: space-around; 
+              -ms-flex-pack: space-around;
               -webkit-justify-content: space-around;
               justify-content: space-around;
             }
@@ -71,6 +71,7 @@
 
                     &:hover {
                         color: $silver;
+                        text-decoration: underline;
                     }
                 }
             }
