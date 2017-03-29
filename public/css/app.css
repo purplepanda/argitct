@@ -125,13 +125,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@keyframes icon-hover {
-  100% {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); } }
-
 @keyframes down {
   50% {
     -webkit-transform: scale(1.1);
@@ -146,20 +139,15 @@ table {
 
 @keyframes plus {
   0% {
-    background: url("../../images/icons/white_plus.svg");
-    background-size: contain;
-    -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-    -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-    box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9); }
-  25% { }
-  50% {
-    background: url("../../images/icons/aubergine_plus.svg");
-    background-size: contain;
-    opacity: 0.9; }
-  65% { }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
   100% {
-    background: url("../../images/icons/white_plus.svg");
-    background-size: contain; } }
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); } }
 
 @keyframes glow {
   50% { }
@@ -377,31 +365,6 @@ li {
   .plus:hover {
     opacity: 0.75; }
 
-.landing-plus {
-  position: absolute;
-  bottom: 3.13vw;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%; }
-  .landing-plus path {
-    opacity: 0.15;
-    -webkit-font-smoothing: antialiased;
-    -webkit-perspective: 0px !important;
-    -webkit-backface-visibility: visible !important; }
-    .landing-plus path:hover {
-      fill: #8B634B;
-      opacity: 1; }
-  .landing-plus:hover {
-    opacity: 1; }
-
 .close {
   position: relative;
   width: 3vw;
@@ -481,6 +444,31 @@ li {
     right: 5.5vw; }
   .back {
     right: 23.5vw; } }
+
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition: 0.5s linear all;
+  opacity: 0; }
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.fade {
+  transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all; }
+
+.fade.ng-enter {
+  opacity: 0; }
+
+.fade.ng-enter.ng-enter-active {
+  opacity: 1; }
+
+.fade.ng-leave {
+  opacity: 1; }
+
+.fade.ng-leave.ng-leave-active {
+  opacity: 0; }
 
 /* Slider */
 .slick-loading .slick-list {
@@ -713,13 +701,35 @@ li {
       margin-right: 1.5vw;
       margin-top: -2.5vw; }
     #landing .large-logo .landing-plus {
+      position: absolute;
+      width: 3vw;
+      height: 3vw;
       bottom: auto;
       right: -15%;
       top: 33%;
       -webkit-transform: perspective(1px) translateY(-50%);
       -moz-transform: perspective(1px) translateY(-50%);
       -ms-transform: perspective(1px) translateY(-50%);
-      transform: perspective(1px) translateY(-50%); }
+      transform: perspective(1px) translateY(-50%);
+      min-width: 40px;
+      min-height: 40px;
+      -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+      #landing .large-logo .landing-plus path {
+        opacity: 0.15;
+        -webkit-font-smoothing: antialiased;
+        -webkit-perspective: 0px !important;
+        -webkit-backface-visibility: visible !important; }
+        #landing .large-logo .landing-plus path:hover {
+          fill: #8B634B;
+          opacity: 1; }
+      #landing .large-logo .landing-plus:hover {
+        opacity: 1; }
     #landing .large-logo .subtitle {
       text-align: center;
       padding-top: 8vw; }
