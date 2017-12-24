@@ -9,7 +9,7 @@
         background-size: contain;
         opacity: 0.70;
 
-        &:hover {
+        &:hover, &:active, &:focus {
             opacity: 0.90;
         }
 
@@ -68,10 +68,11 @@
                     color: $burntlilac;
                     font-size: 1.25vw;
                     text-decoration: none;
+                    padding-bottom: .25vw;
 
-                    &:hover {
+                    &:hover, &:active, &:focus {
                         color: $silver;
-                        text-decoration: underline;
+                        border-bottom: 1px solid $silver;
                     }
                 }
             }

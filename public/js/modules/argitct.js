@@ -70,7 +70,6 @@ app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $ur
       templateUrl: "partials/contact.html",
       controller: "subjectPageCtrl"
     });
-
 }]);
 
 // app.run(run);

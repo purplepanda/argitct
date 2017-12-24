@@ -64,7 +64,7 @@ $width-special2: calc((100vw - 100vh - 6.75vw) * -1);
 //         box-shadow: 0 0 7px 1px rgba(0,0,0,0.4);
 //         border-radius: 50%;
 //
-//         &:hover {
+//         &:hover, &:active, &:focus {
 //             opacity: 0.90;
 //         }
 //     }

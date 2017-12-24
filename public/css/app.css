@@ -327,64 +327,95 @@ li {
     right: 7vw; } }
 
 /* Web Fonts -------------------- */
+.back,
+.down,
+.forward,
+.landing-plus,
+.plus,
+.project-plus,
+.close {
+  width: 7vw;
+  height: 7vw;
+  min-width: 40px;
+  min-height: 40px; }
+  @media (min-width: 600px) {
+    .back,
+    .down,
+    .forward,
+    .landing-plus,
+    .plus,
+    .project-plus,
+    .close {
+      width: 6vw;
+      height: 6vw; } }
+  @media (min-width: 800px) {
+    .back,
+    .down,
+    .forward,
+    .landing-plus,
+    .plus,
+    .project-plus,
+    .close {
+      width: 4vw;
+      height: 4vw; } }
+  @media (min-width: 1100px) {
+    .back,
+    .down,
+    .forward,
+    .landing-plus,
+    .plus,
+    .project-plus,
+    .close {
+      width: 3vw;
+      height: 3vw; } }
+
+.back,
+.forward {
+  position: absolute;
+  top: 6.5%;
+  -webkit-transform: perspective(1px) translateY(-50%);
+  -moz-transform: perspective(1px) translateY(-50%);
+  -ms-transform: perspective(1px) translateY(-50%);
+  transform: perspective(1px) translateY(-50%); }
+
+.forward {
+  right: 5.5vw; }
+
+.back {
+  right: 23.5vw; }
+
+.down, .plus {
+  position: absolute;
+  opacity: 0.25;
+  border-radius: 50%; }
+  .down:hover, .down:active, .down:focus, .plus:hover, .plus:active, .plus:focus {
+    opacity: 0.75; }
+  @media (min-width: 1100px) {
+    .down, .plus {
+      bottom: 3.13vw; } }
+
 .down {
   animation: down 5s ease-in-out infinite;
-  position: absolute;
-  bottom: 3.13vw;
   right: 0;
   left: 0;
+  bottom: 20vw;
   margin: auto;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
   background: url("../../images/icons/white_down.svg") center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.25;
-  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  border-radius: 50%; }
-  .down:hover {
-    opacity: 0.75; }
+  background-size: contain; }
 
 .plus {
-  position: absolute;
-  bottom: 3.13vw;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
   background: url("../../images/icons/white_plus.svg") center no-repeat transparent;
-  background-size: contain;
-  opacity: 0.25;
-  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  border-radius: 50%; }
-  .plus:hover {
-    opacity: 0.75; }
+  background-size: contain; }
 
 .close {
   position: relative;
-  width: 3vw;
-  height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
   background: url("../../images/icons/white_minus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.75; }
-  .close:hover {
+  .close:hover, .close:active, .close:focus {
     opacity: 1; }
 
 @media (max-width: 1100px) {
-  .back,
-  .down,
-  .forward,
-  .plus,
-  .project-plus {
-    width: 4vw;
-    height: 4vw; }
   .back,
   .forward {
     top: 1.5vw; }
@@ -394,16 +425,6 @@ li {
     right: 10.25vw; } }
 
 @media (max-width: 800px) {
-  .back,
-  .down,
-  .forward,
-  .landing-plus,
-  .plus,
-  .project-plus {
-    width: 6vw;
-    height: 6vw; }
-  .down {
-    bottom: 20vw; }
   .back,
   .forward {
     position: absolute;
@@ -422,28 +443,6 @@ li {
     right: 14vw; }
   .project-plus {
     right: 6vw; } }
-
-@media (max-width: 600px) {
-  .back,
-  .down,
-  .forward,
-  .landing-plus,
-  .plus,
-  .project-plus {
-    width: 7vw;
-    height: 7vw; }
-  .back,
-  .forward {
-    position: absolute;
-    top: 6.5%;
-    -webkit-transform: perspective(1px) translateY(-50%);
-    -moz-transform: perspective(1px) translateY(-50%);
-    -ms-transform: perspective(1px) translateY(-50%);
-    transform: perspective(1px) translateY(-50%); }
-  .forward {
-    right: 5.5vw; }
-  .back {
-    right: 23.5vw; } }
 
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {
@@ -532,7 +531,7 @@ li {
   [dir="rtl"] .slick-next {
     left: 1.95vw;
     right: auto; }
-  .slick-next:active, .slick-next:hover {
+  .slick-next:hover, .slick-next:active, .slick-next:focus {
     opacity: 1; }
 
 @media (max-width: 800px) {
@@ -580,9 +579,9 @@ li {
       color: transparent;
       padding: 5px;
       cursor: pointer; }
-      .slick-dots li button:focus, .slick-dots li button:hover {
+      .slick-dots li button:hover, .slick-dots li button:active, .slick-dots li button:focus {
         outline: none; }
-        .slick-dots li button:focus:before, .slick-dots li button:hover:before {
+        .slick-dots li button:hover:before, .slick-dots li button:active:before, .slick-dots li button:focus:before {
           opacity: 1; }
       .slick-dots li button:before {
         position: absolute;
@@ -612,7 +611,7 @@ li {
     background: url("../../images/icons/aubergine_menu.svg") center no-repeat transparent;
     background-size: contain;
     opacity: 0.70; }
-    #home .menu:hover {
+    #home .menu:hover, #home .menu:active, #home .menu:focus {
       opacity: 0.90; }
     #home .menu:active {
       background: url("../../images/icons/white_menu.svg") center no-repeat transparent;
@@ -655,10 +654,11 @@ li {
     #home .subject-content .nav-home li a {
       color: rgba(84, 65, 78, 0.8);
       font-size: 1.25vw;
-      text-decoration: none; }
-      #home .subject-content .nav-home li a:hover {
+      text-decoration: none;
+      padding-bottom: .25vw; }
+      #home .subject-content .nav-home li a:hover, #home .subject-content .nav-home li a:active, #home .subject-content .nav-home li a:focus {
         color: #b1b3b3;
-        text-decoration: underline; }
+        border-bottom: 1px solid #b1b3b3; }
 
 @media (max-width: 800px) {
   #home .subject-content {
@@ -713,9 +713,6 @@ li {
       transform: perspective(1px) translateY(-50%);
       min-width: 40px;
       min-height: 40px;
-      -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
@@ -725,10 +722,10 @@ li {
         -webkit-font-smoothing: antialiased;
         -webkit-perspective: 0px !important;
         -webkit-backface-visibility: visible !important; }
-        #landing .large-logo .landing-plus path:hover {
+        #landing .large-logo .landing-plus path:hover, #landing .large-logo .landing-plus path:active, #landing .large-logo .landing-plus path:focus {
           fill: #8B634B;
           opacity: 1; }
-      #landing .large-logo .landing-plus:hover {
+      #landing .large-logo .landing-plus:hover, #landing .large-logo .landing-plus:active, #landing .large-logo .landing-plus:focus {
         opacity: 1; }
     #landing .large-logo .subtitle {
       text-align: center;
@@ -821,7 +818,7 @@ li {
     background-size: contain;
     opacity: 0.25;
     z-index: 90000; }
-    .aside-menu .menu:hover {
+    .aside-menu .menu:hover, .aside-menu .menu:active, .aside-menu .menu:focus {
       opacity: 0.75; }
 
 nav {
@@ -837,23 +834,21 @@ nav {
   left: 0;
   background-color: #4a3041;
   z-index: 80000;
-  padding-top: 10vw;
-  -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4); }
+  padding-top: 10vw; }
+  .nav-hamburger > ul {
+    margin-left: 6vw; }
   .nav-hamburger a {
     color: white;
     text-decoration: none;
     font-size: 2.75vw;
     line-height: 4.5vw;
-    font-weight: 300;
-    padding-left: 6vw; }
+    font-weight: 300; }
     .nav-hamburger a:visited {
       color: white; }
-    .nav-hamburger a:active, .nav-hamburger a:hover {
+    .nav-hamburger a:hover, .nav-hamburger a:active, .nav-hamburger a:focus {
       color: #8B634B;
       font-weight: 400;
-      text-decoration: underline; }
+      border-bottom: 3px solid #8B634B; }
 
 @media (max-width: 1100px) {
   .aside-menu {
@@ -869,8 +864,7 @@ nav {
       transform: perspective(1px) translate(50%, -50%); }
   .nav-hamburger a {
     font-size: 3.44vw;
-    line-height: 6vw;
-    padding-left: 6vw; } }
+    line-height: 6vw; } }
 
 @media (max-width: 800px) {
   .aside-menu .menu {
@@ -881,10 +875,11 @@ nav {
   .nav-hamburger {
     width: 100vw;
     padding-top: 20vw; }
+    .nav-hamburger > ul {
+      margin-left: 11vw; }
     .nav-hamburger a {
       font-size: 5vw;
-      line-height: 8.5vw;
-      padding-left: 11vw; } }
+      line-height: 8.5vw; } }
 
 @media (max-width: 600px) {
   .aside-menu {
@@ -896,10 +891,11 @@ nav {
       right: 4vw; }
   .nav-hamburger {
     padding-top: 25vw; }
+    .nav-hamburger > ul {
+      margin-left: 13.5vw; }
     .nav-hamburger a {
       font-size: 6.5vw;
-      line-height: 10vw;
-      padding-left: 13.5vw; } }
+      line-height: 10vw; } }
 
 @media (max-width: 450px) {
   .aside-menu {
@@ -935,14 +931,13 @@ nav {
     height: 3vw;
     min-width: 40px;
     min-height: 40px;
-    -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
     border-radius: 50%;
     opacity: 0.5;
     z-index: 15; }
-    .project-controls .back:hover,
-    .project-controls .forward:hover {
+    .project-controls .back:hover, .project-controls .back:active, .project-controls .back:focus,
+    .project-controls .forward:hover,
+    .project-controls .forward:active,
+    .project-controls .forward:focus {
       opacity: 0.8; }
   .project-controls .forward {
     background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
@@ -1029,12 +1024,9 @@ nav {
   min-height: 40px;
   background: url("../../images/icons/silver_plus.svg") center no-repeat transparent;
   background-size: contain;
-  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   opacity: 0.95; }
-  .project-plus:hover {
+  .project-plus:hover, .project-plus:active, .project-plus:focus {
     opacity: 1; }
 
 .project-modal .ng-modal-overlay {
@@ -1054,10 +1046,7 @@ nav {
   width: calc(100vw - 100vh - 9.5vw);
   background-color: rgba(74, 48, 65, 0.99);
   overflow-y: scroll;
-  overflow-x: hidden;
-  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.6);
-  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.6);
-  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.6); }
+  overflow-x: hidden; }
 
 .project-modal .ng-modal-dialog {
   position: relative;
@@ -1105,11 +1094,8 @@ nav {
   background: url("../../images/icons/white_minus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.5;
-  -webkit-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.6);
   border-radius: 50%; }
-  .project-modal .ng-modal-close:hover {
+  .project-modal .ng-modal-close:hover, .project-modal .ng-modal-close:active, .project-modal .ng-modal-close:focus {
     opacity: 0.75; }
 
 @media (max-width: 1100px) {
@@ -1303,7 +1289,7 @@ nav {
     background-size: contain;
     opacity: 0.5;
     z-index: 15; }
-    .process-controls .forward:hover {
+    .process-controls .forward:hover, .process-controls .forward:active, .process-controls .forward:focus {
       opacity: 0.8; }
   .process-controls .back {
     position: absolute;
@@ -1317,7 +1303,7 @@ nav {
     background-size: contain;
     opacity: 0.5;
     z-index: 15; }
-    .process-controls .back:hover {
+    .process-controls .back:hover, .process-controls .back:active, .process-controls .back:focus {
       opacity: 0.8; }
 
 .logo {
@@ -1396,7 +1382,7 @@ nav {
       text-decoration: none;
       font-family: "Josefin Sans", sans-serif;
       font-weight: 400; }
-      .subject-page .more a:hover {
+      .subject-page .more a:hover, .subject-page .more a:active, .subject-page .more a:focus {
         text-decoration: underline; }
     .subject-page .more .down {
       bottom: auto;
@@ -1416,10 +1402,7 @@ nav {
   height: 80vh;
   width: 80vw;
   background-color: white;
-  overflow-y: scroll;
-  -webkit-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  -moz-box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9);
-  box-shadow: 0 0 15px 2px rgba(74, 47, 64, 0.9); }
+  overflow-y: scroll; }
 
 .subject-modal .ng-modal-dialog {
   position: relative;
@@ -1462,11 +1445,8 @@ nav {
   background: url("../../images/icons/aubergine_minus.svg") center no-repeat transparent;
   background-size: contain;
   opacity: 0.75;
-  -webkit-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.4);
   border-radius: 50%; }
-  .subject-modal .ng-modal-close:hover {
+  .subject-modal .ng-modal-close:hover, .subject-modal .ng-modal-close:active, .subject-modal .ng-modal-close:focus {
     opacity: 0.90; }
 
 #contact ul {

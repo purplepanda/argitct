@@ -70,7 +70,7 @@ $slick-offset-from-side: 1.95vw !default;
     border: none;
     outline: none;
     z-index: 1;
-    // &:hover, &:focus {
+    // &:hover, &:active, &:focus {
     //     outline: none;
     //     background: transparent;
     //     color: transparent;
@@ -127,8 +127,7 @@ $slick-offset-from-side: 1.95vw !default;
         right: auto;
     }
 
-    &:active,
-    &:hover {
+    &:hover, &:active, &:focus {
         opacity: $slick-opacity-on-hover;
     }
     // &:before {
@@ -189,8 +188,7 @@ $slick-offset-from-side: 1.95vw !default;
             padding: 5px;
             cursor: pointer;
 
-            &:focus,
-            &:hover {
+            &:hover, &:active, &:focus {
                 outline: none;
 
                 &:before {
