@@ -1,7 +1,7 @@
 app.controller("processCtrl", function($scope, $state, processData) {
   $scope.process = _.find(processData, function(x) {
-    return x.id == $state.params.processId
-  })
+    return x.id == $state.params.processId;
+  });
 
   $scope.modalShown = false;
 

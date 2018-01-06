@@ -377,12 +377,35 @@ li {
   -moz-transform: perspective(1px) translateY(-50%);
   -ms-transform: perspective(1px) translateY(-50%);
   transform: perspective(1px) translateY(-50%); }
+  @media (min-width: 800px) {
+    .back,
+    .forward {
+      top: 1.5vw; } }
 
 .forward {
-  right: 5.5vw; }
+  right: 5.5vw;
+  background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
+  background-size: contain; }
+  @media (min-width: 600px) {
+    .forward {
+      right: 5.25vw; } }
+  @media (min-width: 800px) {
+    .forward {
+      right: 2.5vw; } }
 
 .back {
+  background: url("../../images/icons/white_back.svg") center no-repeat transparent;
+  background-size: contain;
   right: 23.5vw; }
+  @media (min-width: 600px) {
+    .back {
+      right: 14vw; } }
+  @media (min-width: 800px) {
+    .back {
+      right: 10.25vw; } }
+
+.project-plus {
+  right: 6vw; }
 
 .down, .plus {
   position: absolute;
@@ -414,35 +437,6 @@ li {
   opacity: 0.75; }
   .close:hover, .close:active, .close:focus {
     opacity: 1; }
-
-@media (max-width: 1100px) {
-  .back,
-  .forward {
-    top: 1.5vw; }
-  .forward {
-    right: 2.5vw; }
-  .back {
-    right: 10.25vw; } }
-
-@media (max-width: 800px) {
-  .back,
-  .forward {
-    position: absolute;
-    top: 6.5%;
-    -webkit-transform: perspective(1px) translateY(-50%);
-    -moz-transform: perspective(1px) translateY(-50%);
-    -ms-transform: perspective(1px) translateY(-50%);
-    transform: perspective(1px) translateY(-50%); }
-  .forward {
-    background: url("../../images/icons/white_forward.svg") center no-repeat transparent;
-    background-size: contain;
-    right: 5.25vw; }
-  .back {
-    background: url("../../images/icons/white_back.svg") center no-repeat transparent;
-    background-size: contain;
-    right: 14vw; }
-  .project-plus {
-    right: 6vw; } }
 
 /* The starting CSS styles for the enter animation */
 .fade.ng-enter {

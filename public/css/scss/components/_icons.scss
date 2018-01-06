@@ -37,7 +37,6 @@ $iconSizeMobile: 7vw; // .forward {
   top: 6.5%;
   @include translateY(-50%);
   @media(min-width: 800px)  { top: 1.5vw; }
-  }
 }
 .forward {
   right: 5.5vw;

@@ -134,4 +134,4 @@ app.constant("projectData", [{
       }
     ]
   }
-])
+]);
