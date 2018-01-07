@@ -91,3 +91,14 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin icon-hover-text($size, $color) {
+  font-family: $font-fancy;
+  font-size: $size;
+  color: $color; 
+  line-height: normal;
+  font-weight: 300;
+  letter-spacing: .15em;
+  text-decoration: none;
+  text-transform: uppercase;
+}

@@ -112,9 +112,8 @@ $right-modal-tablet: calc((100vw - (100vh - 10.5vw)) * -1);
         padding: 1.5vw 2vw;
         z-index: 5;
 
-        h1,
-        h2 {
-            text-transform: uppercase;
+        h2,
+        h3 {
             color: $aubergine;
             font-weight: 400;
         }
